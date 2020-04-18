@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b0e47/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b0e47.dir/build.make CMakeFiles/cmTC_b0e47.dir/build
-make[1]: se entra en el directorio '/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b0e47.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b0e47.dir/CheckSymbolExists.c.o   -c /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b0e47
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0e47.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b0e47.dir/CheckSymbolExists.c.o  -o cmTC_b0e47 
-CMakeFiles/cmTC_b0e47.dir/CheckSymbolExists.c.o: En la función `main':
+Run Build Command:"/usr/bin/make" "cmTC_203f0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_203f0.dir/build.make CMakeFiles/cmTC_203f0.dir/build
+make[1]: se entra en el directorio '/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_203f0.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_203f0.dir/CheckSymbolExists.c.o   -c /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_203f0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_203f0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_203f0.dir/CheckSymbolExists.c.o  -o cmTC_203f0 
+CMakeFiles/cmTC_203f0.dir/CheckSymbolExists.c.o: En la función `main':
 CheckSymbolExists.c:(.text+0x1b): referencia a `pthread_create' sin definir
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b0e47.dir/build.make:97: recipe for target 'cmTC_b0e47' failed
-make[1]: *** [cmTC_b0e47] Error 1
-make[1]: se sale del directorio '/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b0e47/fast' failed
-make: *** [cmTC_b0e47/fast] Error 2
+CMakeFiles/cmTC_203f0.dir/build.make:97: recipe for target 'cmTC_203f0' failed
+make[1]: *** [cmTC_203f0] Error 1
+make[1]: se sale del directorio '/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_203f0/fast' failed
+make: *** [cmTC_203f0/fast] Error 2
 
-File /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f821e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f821e.dir/build.make CMakeFiles/cmTC_f821e.dir/build
-make[1]: se entra en el directorio '/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f821e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f821e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_f821e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f821e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f821e.dir/CheckFunctionExists.c.o  -o cmTC_f821e -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_cf39a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf39a.dir/build.make CMakeFiles/cmTC_cf39a.dir/build
+make[1]: se entra en el directorio '/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf39a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cf39a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cf39a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf39a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cf39a.dir/CheckFunctionExists.c.o  -o cmTC_cf39a -lpthreads 
 /usr/bin/ld: no se puede encontrar -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f821e.dir/build.make:97: recipe for target 'cmTC_f821e' failed
-make[1]: *** [cmTC_f821e] Error 1
-make[1]: se sale del directorio '/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_f821e/fast' failed
-make: *** [cmTC_f821e/fast] Error 2
+CMakeFiles/cmTC_cf39a.dir/build.make:97: recipe for target 'cmTC_cf39a' failed
+make[1]: *** [cmTC_cf39a] Error 1
+make[1]: se sale del directorio '/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cf39a/fast' failed
+make: *** [cmTC_cf39a/fast] Error 2
 
 

@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/devel:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2:/opt/ros/melodic/share"
+export CMAKE_PREFIX_PATH="/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2:/opt/ros/melodic/share"

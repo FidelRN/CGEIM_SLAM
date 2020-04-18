@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2
+CMAKE_SOURCE_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build
+CMAKE_BINARY_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build
 
 # Utility rule file for rospack_genmsg.
 
@@ -67,6 +67,6 @@ CMakeFiles/rospack_genmsg.dir/clean:
 .PHONY : CMakeFiles/rospack_genmsg.dir/clean
 
 CMakeFiles/rospack_genmsg.dir/depend:
-	cd /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2 /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2 /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rospack_genmsg.dir/depend
 

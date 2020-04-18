@@ -856,25 +856,25 @@ System.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/Converter.cc
+/home/freviriego/MAGVD_SLAM/src/Converter.cc
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 
-/home/freviriego/ORB_SLAM2/src/Frame.cc
+/home/freviriego/MAGVD_SLAM/src/Frame.cc
 Frame.h
-/home/freviriego/ORB_SLAM2/src/Frame.h
+/home/freviriego/MAGVD_SLAM/src/Frame.h
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 thread
 -
 
-/home/freviriego/ORB_SLAM2/src/FrameDrawer.cc
+/home/freviriego/MAGVD_SLAM/src/FrameDrawer.cc
 FrameDrawer.h
-/home/freviriego/ORB_SLAM2/src/FrameDrawer.h
+/home/freviriego/MAGVD_SLAM/src/FrameDrawer.h
 Tracking.h
-/home/freviriego/ORB_SLAM2/src/Tracking.h
+/home/freviriego/MAGVD_SLAM/src/Tracking.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -882,93 +882,93 @@ opencv2/highgui/highgui.hpp
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/Initializer.cc
+/home/freviriego/MAGVD_SLAM/src/Initializer.cc
 Initializer.h
-/home/freviriego/ORB_SLAM2/src/Initializer.h
+/home/freviriego/MAGVD_SLAM/src/Initializer.h
 Thirdparty/DBoW2/DUtils/Random.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/DBoW2/DUtils/Random.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/DBoW2/DUtils/Random.h
 Optimizer.h
-/home/freviriego/ORB_SLAM2/src/Optimizer.h
+/home/freviriego/MAGVD_SLAM/src/Optimizer.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 thread
 -
 
-/home/freviriego/ORB_SLAM2/src/KeyFrame.cc
+/home/freviriego/MAGVD_SLAM/src/KeyFrame.cc
 KeyFrame.h
-/home/freviriego/ORB_SLAM2/src/KeyFrame.h
+/home/freviriego/MAGVD_SLAM/src/KeyFrame.h
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/KeyFrameDatabase.cc
+/home/freviriego/MAGVD_SLAM/src/KeyFrameDatabase.cc
 KeyFrameDatabase.h
-/home/freviriego/ORB_SLAM2/src/KeyFrameDatabase.h
+/home/freviriego/MAGVD_SLAM/src/KeyFrameDatabase.h
 KeyFrame.h
-/home/freviriego/ORB_SLAM2/src/KeyFrame.h
+/home/freviriego/MAGVD_SLAM/src/KeyFrame.h
 Thirdparty/DBoW2/DBoW2/BowVector.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/DBoW2/DBoW2/BowVector.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/DBoW2/DBoW2/BowVector.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/LocalMapping.cc
+/home/freviriego/MAGVD_SLAM/src/LocalMapping.cc
 LocalMapping.h
-/home/freviriego/ORB_SLAM2/src/LocalMapping.h
+/home/freviriego/MAGVD_SLAM/src/LocalMapping.h
 LoopClosing.h
-/home/freviriego/ORB_SLAM2/src/LoopClosing.h
+/home/freviriego/MAGVD_SLAM/src/LoopClosing.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 Optimizer.h
-/home/freviriego/ORB_SLAM2/src/Optimizer.h
+/home/freviriego/MAGVD_SLAM/src/Optimizer.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/LoopClosing.cc
+/home/freviriego/MAGVD_SLAM/src/LoopClosing.cc
 LoopClosing.h
-/home/freviriego/ORB_SLAM2/src/LoopClosing.h
+/home/freviriego/MAGVD_SLAM/src/LoopClosing.h
 Sim3Solver.h
-/home/freviriego/ORB_SLAM2/src/Sim3Solver.h
+/home/freviriego/MAGVD_SLAM/src/Sim3Solver.h
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 Optimizer.h
-/home/freviriego/ORB_SLAM2/src/Optimizer.h
+/home/freviriego/MAGVD_SLAM/src/Optimizer.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 mutex
 -
 thread
 -
 
-/home/freviriego/ORB_SLAM2/src/Map.cc
+/home/freviriego/MAGVD_SLAM/src/Map.cc
 Map.h
-/home/freviriego/ORB_SLAM2/src/Map.h
+/home/freviriego/MAGVD_SLAM/src/Map.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/MapDrawer.cc
+/home/freviriego/MAGVD_SLAM/src/MapDrawer.cc
 MapDrawer.h
-/home/freviriego/ORB_SLAM2/src/MapDrawer.h
+/home/freviriego/MAGVD_SLAM/src/MapDrawer.h
 MapPoint.h
-/home/freviriego/ORB_SLAM2/src/MapPoint.h
+/home/freviriego/MAGVD_SLAM/src/MapPoint.h
 KeyFrame.h
-/home/freviriego/ORB_SLAM2/src/KeyFrame.h
+/home/freviriego/MAGVD_SLAM/src/KeyFrame.h
 pangolin/pangolin.h
 -
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/MapPoint.cc
+/home/freviriego/MAGVD_SLAM/src/MapPoint.cc
 MapPoint.h
-/home/freviriego/ORB_SLAM2/src/MapPoint.h
+/home/freviriego/MAGVD_SLAM/src/MapPoint.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/ORBextractor.cc
+/home/freviriego/MAGVD_SLAM/src/ORBextractor.cc
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -980,11 +980,11 @@ opencv2/imgproc/imgproc.hpp
 vector
 -
 ORBextractor.h
-/home/freviriego/ORB_SLAM2/src/ORBextractor.h
+/home/freviriego/MAGVD_SLAM/src/ORBextractor.h
 
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.cc
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.cc
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 limits.h
 -
 opencv2/core/core.hpp
@@ -992,39 +992,39 @@ opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
 -
 Thirdparty/DBoW2/DBoW2/FeatureVector.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/DBoW2/DBoW2/FeatureVector.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/DBoW2/DBoW2/FeatureVector.h
 stdint-gcc.h
 -
 
-/home/freviriego/ORB_SLAM2/src/Optimizer.cc
+/home/freviriego/MAGVD_SLAM/src/Optimizer.cc
 Optimizer.h
-/home/freviriego/ORB_SLAM2/src/Optimizer.h
+/home/freviriego/MAGVD_SLAM/src/Optimizer.h
 Thirdparty/g2o/g2o/core/block_solver.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/core/block_solver.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/core/block_solver.h
 Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/core/optimization_algorithm_levenberg.h
 Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/solvers/linear_solver_eigen.h
 Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
 Thirdparty/g2o/g2o/core/robust_kernel_impl.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/core/robust_kernel_impl.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/core/robust_kernel_impl.h
 Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/solvers/linear_solver_dense.h
 Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/g2o/g2o/types/types_seven_dof_expmap.h
 Eigen/StdVector
 -
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/PnPsolver.cc
+/home/freviriego/MAGVD_SLAM/src/PnPsolver.cc
 iostream
 -
 PnPsolver.h
-/home/freviriego/ORB_SLAM2/src/PnPsolver.h
+/home/freviriego/MAGVD_SLAM/src/PnPsolver.h
 vector
 -
 cmath
@@ -1032,13 +1032,13 @@ cmath
 opencv2/core/core.hpp
 -
 Thirdparty/DBoW2/DUtils/Random.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/DBoW2/DUtils/Random.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/DBoW2/DUtils/Random.h
 algorithm
 -
 
-/home/freviriego/ORB_SLAM2/src/Sim3Solver.cc
+/home/freviriego/MAGVD_SLAM/src/Sim3Solver.cc
 Sim3Solver.h
-/home/freviriego/ORB_SLAM2/src/Sim3Solver.h
+/home/freviriego/MAGVD_SLAM/src/Sim3Solver.h
 vector
 -
 cmath
@@ -1046,17 +1046,17 @@ cmath
 opencv2/core/core.hpp
 -
 KeyFrame.h
-/home/freviriego/ORB_SLAM2/src/KeyFrame.h
+/home/freviriego/MAGVD_SLAM/src/KeyFrame.h
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 Thirdparty/DBoW2/DUtils/Random.h
-/home/freviriego/ORB_SLAM2/src/Thirdparty/DBoW2/DUtils/Random.h
+/home/freviriego/MAGVD_SLAM/src/Thirdparty/DBoW2/DUtils/Random.h
 
-/home/freviriego/ORB_SLAM2/src/System.cc
+/home/freviriego/MAGVD_SLAM/src/System.cc
 System.h
-/home/freviriego/ORB_SLAM2/src/System.h
+/home/freviriego/MAGVD_SLAM/src/System.h
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 thread
 -
 pangolin/pangolin.h
@@ -1064,35 +1064,35 @@ pangolin/pangolin.h
 iomanip
 -
 
-/home/freviriego/ORB_SLAM2/src/Tracking.cc
+/home/freviriego/MAGVD_SLAM/src/Tracking.cc
 Tracking.h
-/home/freviriego/ORB_SLAM2/src/Tracking.h
+/home/freviriego/MAGVD_SLAM/src/Tracking.h
 opencv2/core/core.hpp
 -
 opencv2/features2d/features2d.hpp
 -
 ORBmatcher.h
-/home/freviriego/ORB_SLAM2/src/ORBmatcher.h
+/home/freviriego/MAGVD_SLAM/src/ORBmatcher.h
 FrameDrawer.h
-/home/freviriego/ORB_SLAM2/src/FrameDrawer.h
+/home/freviriego/MAGVD_SLAM/src/FrameDrawer.h
 Converter.h
-/home/freviriego/ORB_SLAM2/src/Converter.h
+/home/freviriego/MAGVD_SLAM/src/Converter.h
 Map.h
-/home/freviriego/ORB_SLAM2/src/Map.h
+/home/freviriego/MAGVD_SLAM/src/Map.h
 Initializer.h
-/home/freviriego/ORB_SLAM2/src/Initializer.h
+/home/freviriego/MAGVD_SLAM/src/Initializer.h
 Optimizer.h
-/home/freviriego/ORB_SLAM2/src/Optimizer.h
+/home/freviriego/MAGVD_SLAM/src/Optimizer.h
 PnPsolver.h
-/home/freviriego/ORB_SLAM2/src/PnPsolver.h
+/home/freviriego/MAGVD_SLAM/src/PnPsolver.h
 iostream
 -
 mutex
 -
 
-/home/freviriego/ORB_SLAM2/src/Viewer.cc
+/home/freviriego/MAGVD_SLAM/src/Viewer.cc
 Viewer.h
-/home/freviriego/ORB_SLAM2/src/Viewer.h
+/home/freviriego/MAGVD_SLAM/src/Viewer.h
 pangolin/pangolin.h
 -
 mutex
@@ -3035,6 +3035,10 @@ opencv2/core/mat.hpp
 /usr/local/include/opencv2/opencv2/core/mat.hpp
 opencv2/core/persistence.hpp
 /usr/local/include/opencv2/opencv2/core/persistence.hpp
+opencv2/opencv.hpp
+/usr/local/include/opencv2/opencv2/opencv.hpp
+opencv2/xfeatures2d.hpp
+/usr/local/include/opencv2/opencv2/xfeatures2d.hpp
 opencv2/core/operations.hpp
 /usr/local/include/opencv2/opencv2/core/operations.hpp
 opencv2/core/cvstd.inl.hpp
@@ -3050,12 +3054,6 @@ opencv2/core/ovx.hpp
 opencv2/core.hpp
 -
 
-/usr/local/include/opencv2/core/async.hpp
-opencv2/core/mat.hpp
--
-chrono
--
-
 /usr/local/include/opencv2/core/base.hpp
 opencv2/opencv_modules.hpp
 /usr/local/include/opencv2/core/opencv2/opencv_modules.hpp
@@ -3069,16 +3067,8 @@ opencv2/core/cvstd.hpp
 /usr/local/include/opencv2/core/opencv2/core/cvstd.hpp
 opencv2/core/neon_utils.hpp
 /usr/local/include/opencv2/core/opencv2/core/neon_utils.hpp
-opencv2/core/vsx_utils.hpp
-/usr/local/include/opencv2/core/opencv2/core/vsx_utils.hpp
-opencv2/core/check.hpp
-/usr/local/include/opencv2/core/opencv2/core/check.hpp
 
 /usr/local/include/opencv2/core/bufferpool.hpp
-
-/usr/local/include/opencv2/core/check.hpp
-opencv2/core/base.hpp
--
 
 /usr/local/include/opencv2/core/core.hpp
 opencv2/core.hpp
@@ -3099,8 +3089,6 @@ opencv2/core.hpp
 /usr/local/include/opencv2/core/opencv2/core.hpp
 opencv2/core/cuda_types.hpp
 /usr/local/include/opencv2/core/opencv2/core/cuda_types.hpp
-opencv2/opencv.hpp
--
 opencv2/core/cuda.inl.hpp
 /usr/local/include/opencv2/core/opencv2/core/cuda.inl.hpp
 
@@ -3110,11 +3098,11 @@ opencv2/core/cuda.hpp
 
 /usr/local/include/opencv2/core/cuda_types.hpp
 
-/usr/local/include/opencv2/core/cv_cpu_dispatch.h
-cv_cpu_config.h
-/usr/local/include/opencv2/core/cv_cpu_config.h
-cv_cpu_helper.h
-/usr/local/include/opencv2/core/cv_cpu_helper.h
+/usr/local/include/opencv2/core/cvdef.h
+limits.h
+-
+opencv2/core/hal/interface.h
+/usr/local/include/opencv2/core/opencv2/core/hal/interface.h
 emmintrin.h
 -
 pmmintrin.h
@@ -3131,12 +3119,6 @@ popcntintrin.h
 -
 immintrin.h
 -
-arm_neon.h
--
-immintrin.h
--
-immintrin.h
--
 immintrin.h
 -
 Intrin.h
@@ -3145,48 +3127,8 @@ arm_neon.h
 -
 arm_neon.h
 -
-arm_neon.h
--
-altivec.h
--
-hal/msa_macros.h
-/usr/local/include/opencv2/core/hal/msa_macros.h
-wasm_simd128.h
--
-emmintrin.h
--
-Intrin.h
--
-arm_neon.h
--
-arm_neon.h
--
-altivec.h
--
-
-/usr/local/include/opencv2/core/cv_cpu_helper.h
-
-/usr/local/include/opencv2/core/cvdef.h
-cvconfig.h
-/usr/local/include/opencv2/core/cvconfig.h
-limits.h
--
-opencv2/core/hal/interface.h
-/usr/local/include/opencv2/core/opencv2/core/hal/interface.h
-cv_cpu_dispatch.h
-/usr/local/include/opencv2/core/cv_cpu_dispatch.h
 intrin.h
 -
-array
--
-cstdint
--
-stdint.h
--
-stdint.h
--
-opencv2/core/fast_math.hpp
-/usr/local/include/opencv2/core/opencv2/core/fast_math.hpp
 
 /usr/local/include/opencv2/core/cvstd.hpp
 opencv2/core/cvdef.h
@@ -3219,16 +3161,14 @@ ostream
 /usr/local/include/opencv2/core/fast_math.hpp
 opencv2/core/cvdef.h
 /usr/local/include/opencv2/core/opencv2/core/cvdef.h
-cmath
--
 fastmath.h
+-
+cmath
 -
 math.h
 -
-emmintrin.h
--
-altivec.h
--
+tegra_round.hpp
+/usr/local/include/opencv2/core/tegra_round.hpp
 
 /usr/local/include/opencv2/core/hal/interface.h
 cstddef
@@ -3242,12 +3182,6 @@ cstdint
 stdint.h
 -
 
-/usr/local/include/opencv2/core/hal/msa_macros.h
-msa.h
-/usr/local/include/opencv2/core/hal/msa.h
-stdint.h
--
-
 /usr/local/include/opencv2/core/mat.hpp
 opencv2/core/matx.hpp
 /usr/local/include/opencv2/core/opencv2/core/matx.hpp
@@ -3255,8 +3189,6 @@ opencv2/core/types.hpp
 /usr/local/include/opencv2/core/opencv2/core/types.hpp
 opencv2/core/bufferpool.hpp
 /usr/local/include/opencv2/core/opencv2/core/bufferpool.hpp
-type_traits
--
 opencv2/core/mat.inl.hpp
 /usr/local/include/opencv2/core/opencv2/core/mat.inl.hpp
 
@@ -3271,8 +3203,6 @@ opencv2/core/traits.hpp
 /usr/local/include/opencv2/core/opencv2/core/traits.hpp
 opencv2/core/saturate.hpp
 /usr/local/include/opencv2/core/opencv2/core/saturate.hpp
-initializer_list
--
 
 /usr/local/include/opencv2/core/neon_utils.hpp
 opencv2/core/cvdef.h
@@ -3351,66 +3281,12 @@ opencv2/core.hpp
 /usr/local/include/opencv2/core/utility.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/core/opencv2/core.hpp
-ostream
--
-functional
--
 opencv2/core/core_c.h
 /usr/local/include/opencv2/core/opencv2/core/core_c.h
 
 /usr/local/include/opencv2/core/version.hpp
 
-/usr/local/include/opencv2/core/vsx_utils.hpp
-opencv2/core/cvdef.h
-/usr/local/include/opencv2/core/opencv2/core/cvdef.h
-assert.h
--
-
-/usr/local/include/opencv2/dnn.hpp
-opencv2/dnn/dnn.hpp
--
-
-/usr/local/include/opencv2/dnn/dict.hpp
-opencv2/core.hpp
--
-map
--
-ostream
--
-opencv2/dnn/dnn.hpp
--
-
-/usr/local/include/opencv2/dnn/dnn.hpp
-vector
--
-opencv2/core.hpp
--
-opencv2/core/async.hpp
-/usr/local/include/opencv2/dnn/opencv2/core/async.hpp
-opencv2/dnn/dict.hpp
--
-opencv2/dnn/layer.hpp
--
-opencv2/dnn/dnn.inl.hpp
--
-opencv2/dnn/utils/inference_engine.hpp
--
-
-/usr/local/include/opencv2/dnn/dnn.inl.hpp
-opencv2/dnn.hpp
--
-
-/usr/local/include/opencv2/dnn/layer.hpp
-opencv2/dnn.hpp
--
-
-/usr/local/include/opencv2/dnn/utils/inference_engine.hpp
-../dnn.hpp
-/usr/local/include/opencv2/dnn/dnn.hpp
-
 /usr/local/include/opencv2/features2d.hpp
-opencv2/opencv_modules.hpp
-/usr/local/include/opencv2/opencv2/opencv_modules.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
 opencv2/flann/miniflann.hpp
@@ -3467,8 +3343,6 @@ typeinfo
 -
 
 /usr/local/include/opencv2/flann/autotuned_index.h
-sstream
--
 general.h
 /usr/local/include/opencv2/flann/general.h
 nn_index.h
@@ -3873,6 +3747,8 @@ opencv2/videoio/videoio_c.h
 /usr/local/include/opencv2/imgcodecs.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
+opencv2/opencv.hpp
+-
 
 /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h
 opencv2/core/core_c.h
@@ -3881,6 +3757,34 @@ opencv2/core/core_c.h
 /usr/local/include/opencv2/imgproc.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/opencv2/core.hpp
+opencv2/core.hpp
+-
+opencv2/imgproc.hpp
+-
+opencv2/imgcodecs.hpp
+-
+opencv2/highgui.hpp
+-
+iostream
+-
+opencv2/imgproc.hpp
+-
+opencv2/highgui.hpp
+-
+opencv2/imgproc.hpp
+-
+opencv2/highgui.hpp
+-
+math.h
+-
+opencv2/imgproc.hpp
+-
+opencv2/highgui.hpp
+-
+opencv2/imgproc.hpp
+/usr/local/include/opencv2/opencv2/imgproc.hpp
+opencv2/highgui.hpp
+/usr/local/include/opencv2/opencv2/highgui.hpp
 opencv2/imgproc/imgproc_c.h
 /usr/local/include/opencv2/opencv2/imgproc/imgproc_c.h
 
@@ -3905,10 +3809,6 @@ map
 -
 iostream
 -
-opencv2/ml/ml.inl.hpp
--
-
-/usr/local/include/opencv2/ml/ml.inl.hpp
 
 /usr/local/include/opencv2/objdetect.hpp
 opencv2/core.hpp
@@ -3919,8 +3819,6 @@ opencv2/objdetect/objdetect_c.h
 /usr/local/include/opencv2/opencv2/objdetect/objdetect_c.h
 
 /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
-opencv2/core.hpp
--
 vector
 -
 
@@ -3941,8 +3839,6 @@ opencv2/calib3d.hpp
 /usr/local/include/opencv2/opencv2/calib3d.hpp
 opencv2/features2d.hpp
 /usr/local/include/opencv2/opencv2/features2d.hpp
-opencv2/dnn.hpp
-/usr/local/include/opencv2/opencv2/dnn.hpp
 opencv2/flann.hpp
 /usr/local/include/opencv2/opencv2/flann.hpp
 opencv2/highgui.hpp
@@ -4063,8 +3959,6 @@ opencv2/stitching/detail/camera.hpp
 /usr/local/include/opencv2/stitching/detail/blenders.hpp
 opencv2/core.hpp
 /usr/local/include/opencv2/stitching/detail/opencv2/core.hpp
-opencv2/core/cuda.hpp
-/usr/local/include/opencv2/stitching/detail/opencv2/core/cuda.hpp
 
 /usr/local/include/opencv2/stitching/detail/camera.hpp
 opencv2/core.hpp

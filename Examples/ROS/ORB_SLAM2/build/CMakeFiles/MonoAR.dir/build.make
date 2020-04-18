@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2
+CMAKE_SOURCE_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build
+CMAKE_BINARY_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MonoAR.dir/depend.make
@@ -115,16 +115,16 @@ CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /opt/ros/melodic/share/tf2_ros/pa
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /opt/ros/melodic/share/tf/package.xml
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /opt/ros/melodic/share/image_transport/package.xml
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /opt/ros/melodic/share/cv_bridge/package.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o -c /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o -c /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
 
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc > CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc > CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.i
 
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc -o CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc -o CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.s
 
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o.requires:
 
@@ -195,16 +195,16 @@ CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /opt/ros/melodic/share/tf2_ros/packa
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /opt/ros/melodic/share/tf/package.xml
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /opt/ros/melodic/share/image_transport/package.xml
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /opt/ros/melodic/share/cv_bridge/package.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o -c /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o -c /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc
 
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc > CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc > CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.i
 
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc -o CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc -o CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.s
 
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o.requires:
 
@@ -273,7 +273,7 @@ MonoAR_EXTERNAL_OBJECTS =
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libIlmImf.so
 ../MonoAR: CMakeFiles/MonoAR.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../MonoAR"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../MonoAR"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MonoAR.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -291,6 +291,6 @@ CMakeFiles/MonoAR.dir/clean:
 .PHONY : CMakeFiles/MonoAR.dir/clean
 
 CMakeFiles/MonoAR.dir/depend:
-	cd /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2 /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2 /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build /home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MonoAR.dir/depend
 

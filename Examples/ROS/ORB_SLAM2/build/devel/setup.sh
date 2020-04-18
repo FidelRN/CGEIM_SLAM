@@ -11,7 +11,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/devel}
+: ${_CATKIN_SETUP_DIR:=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

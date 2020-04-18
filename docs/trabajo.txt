@@ -1,0 +1,79 @@
+		-Instalacion ORB-SLAM2 https://github.com/raulmur/ORB_SLAM2
+Se instalan dependencias en Ubuntu 18.04 con algunos cambios (en System.h se añade "#include <unistd.h>")
+OpenCV version 3.2 (se puede comprobar con pkg-config --modversion opencv ). Para instalar se descarga version y luego:
+mkdir build && cd build
+cmake ../
+make
+sudo make install
+
+ROS Kinetic
+Se compila el código on ./build.sh
+
+Lanzar Monocular con dataset TUM
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml ../compu/dataset/rgbd_dataset_freiburg1_desk
+
+
+Luego se compila ROS con ./build_ros.sh
+
+		-Correr SLAM en ROS
+Una ventana roscore
+En otra rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt PATH_TO_SETTINGS_FILE
+Ej: rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/Aquaris.yaml			(TUM)
+
+En otra se lanza dataset con formato bag que publique en topic /camera/image_raw con:
+rosbag play --pause /home/freviriego/compu/dataset/MH_01_easy.bag /cam0/image_raw:=/camera/image_raw    (para EuRoC)
+
+
+Para realidad aumentada se usa MonoAR que permite introducir cubos (mediante planos)
+
+
+		-Usar imágenes propias
+Se parte del código https://github.com/raulmur/BagFromImages que transforma una secuencia de imágenes (por ejemplo .jpg como la de la práctica) en un fichero .bag.
+Este código se modifica para que lea de la camára del móvil, convierta la imágen a mensaje de tipo sensor_msgs/Image y la publique en el tópico para que con 
+rosrun ORB_SLAM2 MonoAR Vocabulary/ORBvoc.txt Examples/Monocular/Aquaris.yaml se lea y se ejecute. 
+
+Para usar el móvil como cámara:
+En Android lanzar App "IP webcam" que lanza servidor camara en puerto X
+En Ubuntu redirigir ese puerto (ej 2333) a otro puerto (ej 5555). El movil debe estar conectado al ordenador mediante cable USB.
+adb forward tcp:5555 tcp:2333 
+
+Luego ejecutar:
+rosrun CamToSlam CamToSlam
+
+
+		-Calibración cámara
+Para poder usar ORB-SLAM2 se debe pasar el fichero de configuración para lo cual hay que calibrar la cámara mediante ROS:
+http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
+Se imprime un tablero, se ejecuta:
+rosdep install camera_calibration
+rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.03 image:=/camera/image_raw camera:=/camera  --no-service-check
+Y en otra ventana se lanzan imágenes desde el móvil (CamToSlam)
+
+Se mueve el tablero y luego se pulsa a "Calibrate" y después a "Save". En el resultado se guardan los datos que el primer "data" (camera_matrix) se obtienen fx,cx,fy,cy. En segundo "data" (distortion_coefficients) se obtiene k1,k2,p1,p2,k3
+
+Importante cambiar orden de color de las imágenes con:
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+
+
+NOTAS:
+Tal vez animación tipo un muñeco/persona que se mueva o haga algo (como bailar o guerrera que haga algun ataque o asi). Esto se puede hacer en Unity
+-> No se como integrar ambos mundos
+
+Herramientas y lenguajes: C++, ROS, ORB-SLAM2?, Unity?
+
+
+FALTA:
+Entender como funciona inserción cubos y grid (planos)
+Pensar en proyecto a realizar
+Quedar tutoria (lunes?)
+Desarrollo propuesta con tecnologías a usar ---> 19/04 maximo
+
+
+
+
+adb forward tcp:5555 tcp:2333 
+roscore
+rosrun ORB_SLAM2 MonoAR /home/freviriego/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/freviriego/ORB_SLAM2/Examples/Monocular/Aquaris.yaml
+rosrun CamToSlam CamToSlam

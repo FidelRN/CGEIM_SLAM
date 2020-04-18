@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/freviriego/ORB_SLAM2/Examples/Monocular/mono_euroc.cc" "/home/freviriego/ORB_SLAM2/build/CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o"
+  "/home/freviriego/MAGVD_SLAM/Examples/Monocular/mono_euroc.cc" "/home/freviriego/MAGVD_SLAM/build/CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,7 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/freviriego/ORB_SLAM2/build/CMakeFiles/ORB_SLAM2.dir/DependInfo.cmake"
+  "/home/freviriego/MAGVD_SLAM/build/CMakeFiles/ORB_SLAM2.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

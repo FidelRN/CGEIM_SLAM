@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-  "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/lib/libgtest_main.pdb"
-  "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so"
+  "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.pdb"
+  "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so"
 )
 
 # Per-language clean rules from dependency scanning.

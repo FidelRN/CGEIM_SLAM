@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/ros_mono.cc" "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/Mono.dir/src/ros_mono.cc.o"
+  "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/ros_mono.cc" "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/Mono.dir/src/ros_mono.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

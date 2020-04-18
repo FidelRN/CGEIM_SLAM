@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc" "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
-  "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc" "/home/freviriego/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
+  "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc" "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
+  "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc" "/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

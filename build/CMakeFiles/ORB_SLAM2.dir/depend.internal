@@ -28,7 +28,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
  ../Thirdparty/g2o/g2o/types/types_sba.h
  ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
  ../include/Converter.h
- /home/freviriego/ORB_SLAM2/src/Converter.cc
+ /home/freviriego/MAGVD_SLAM/src/Converter.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -234,23 +234,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -266,13 +261,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
  /usr/local/include/opencv2/flann/all_indices.h
@@ -314,7 +302,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -411,7 +398,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/ORB_SLAM2/src/Frame.cc
+ /home/freviriego/MAGVD_SLAM/src/Frame.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -618,23 +605,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -650,13 +632,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -699,7 +674,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -801,7 +775,7 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/FrameDrawer.cc
+ /home/freviriego/MAGVD_SLAM/src/FrameDrawer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -1072,23 +1046,18 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -1104,13 +1073,6 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -1154,7 +1116,6 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -1259,7 +1220,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/Initializer.cc
+ /home/freviriego/MAGVD_SLAM/src/Initializer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -1530,23 +1491,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -1562,13 +1518,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -1611,7 +1560,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -1708,7 +1656,7 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/ORB_SLAM2/src/KeyFrame.cc
+ /home/freviriego/MAGVD_SLAM/src/KeyFrame.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -1915,23 +1863,18 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -1947,13 +1890,6 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -1996,7 +1932,6 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -2066,30 +2001,25 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/ORB_SLAM2/src/KeyFrameDatabase.cc
+ /home/freviriego/MAGVD_SLAM/src/KeyFrameDatabase.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -2105,13 +2035,6 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
  /usr/local/include/opencv2/flann/all_indices.h
@@ -2153,7 +2076,6 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -2257,7 +2179,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/LocalMapping.cc
+ /home/freviriego/MAGVD_SLAM/src/LocalMapping.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -2528,23 +2450,18 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -2560,13 +2477,6 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -2609,7 +2519,6 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -2716,7 +2625,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/LoopClosing.cc
+ /home/freviriego/MAGVD_SLAM/src/LoopClosing.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -2987,23 +2896,18 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -3019,13 +2923,6 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -3068,7 +2965,6 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -3138,30 +3034,25 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/ORB_SLAM2/src/Map.cc
+ /home/freviriego/MAGVD_SLAM/src/Map.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -3177,13 +3068,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
  /usr/local/include/opencv2/flann/all_indices.h
@@ -3225,7 +3109,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -3296,7 +3179,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/ORB_SLAM2/src/MapDrawer.cc
+ /home/freviriego/MAGVD_SLAM/src/MapDrawer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -3563,23 +3446,18 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -3595,13 +3473,6 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
  /usr/local/include/opencv2/flann/all_indices.h
@@ -3643,7 +3514,6 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -3714,30 +3584,25 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/ORB_SLAM2/src/MapPoint.cc
+ /home/freviriego/MAGVD_SLAM/src/MapPoint.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -3753,13 +3618,6 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -3802,7 +3660,6 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -3857,30 +3714,25 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cc.o
  ../include/ORBextractor.h
- /home/freviriego/ORB_SLAM2/src/ORBextractor.cc
+ /home/freviriego/MAGVD_SLAM/src/ORBextractor.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -3896,13 +3748,6 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -3947,7 +3792,6 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -4018,30 +3862,25 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/ORB_SLAM2/src/ORBmatcher.cc
+ /home/freviriego/MAGVD_SLAM/src/ORBmatcher.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -4057,13 +3896,6 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -4106,7 +3938,6 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -4234,7 +4065,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/Optimizer.cc
+ /home/freviriego/MAGVD_SLAM/src/Optimizer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -4544,23 +4375,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -4576,13 +4402,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -4625,7 +4444,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -4697,30 +4515,25 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/PnPsolver.h
- /home/freviriego/ORB_SLAM2/src/PnPsolver.cc
+ /home/freviriego/MAGVD_SLAM/src/PnPsolver.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -4736,13 +4549,6 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
  /usr/local/include/opencv2/flann/all_indices.h
@@ -4784,7 +4590,6 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -4857,30 +4662,25 @@ CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
  ../include/Sim3Solver.h
- /home/freviriego/ORB_SLAM2/src/Sim3Solver.cc
+ /home/freviriego/MAGVD_SLAM/src/Sim3Solver.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -4896,13 +4696,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -4945,7 +4738,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -5049,7 +4841,7 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/System.cc
+ /home/freviriego/MAGVD_SLAM/src/System.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -5320,23 +5112,18 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -5352,13 +5139,6 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -5401,7 +5181,6 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -5508,7 +5287,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/Tracking.cc
+ /home/freviriego/MAGVD_SLAM/src/Tracking.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -5779,23 +5558,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -5811,13 +5585,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -5860,7 +5627,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
@@ -5962,7 +5728,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/ORB_SLAM2/src/Viewer.cc
+ /home/freviriego/MAGVD_SLAM/src/Viewer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -6233,23 +5999,18 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  /usr/local/include/opencv2/calib3d/calib3d_c.h
  /usr/local/include/opencv2/core.hpp
  /usr/local/include/opencv2/core/affine.hpp
- /usr/local/include/opencv2/core/async.hpp
  /usr/local/include/opencv2/core/base.hpp
  /usr/local/include/opencv2/core/bufferpool.hpp
- /usr/local/include/opencv2/core/check.hpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/cuda.hpp
  /usr/local/include/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv2/core/cuda_types.hpp
- /usr/local/include/opencv2/core/cv_cpu_dispatch.h
- /usr/local/include/opencv2/core/cv_cpu_helper.h
  /usr/local/include/opencv2/core/cvdef.h
  /usr/local/include/opencv2/core/cvstd.hpp
  /usr/local/include/opencv2/core/cvstd.inl.hpp
  /usr/local/include/opencv2/core/fast_math.hpp
  /usr/local/include/opencv2/core/hal/interface.h
- /usr/local/include/opencv2/core/hal/msa_macros.h
  /usr/local/include/opencv2/core/mat.hpp
  /usr/local/include/opencv2/core/mat.inl.hpp
  /usr/local/include/opencv2/core/matx.hpp
@@ -6265,13 +6026,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  /usr/local/include/opencv2/core/types_c.h
  /usr/local/include/opencv2/core/utility.hpp
  /usr/local/include/opencv2/core/version.hpp
- /usr/local/include/opencv2/core/vsx_utils.hpp
- /usr/local/include/opencv2/dnn.hpp
- /usr/local/include/opencv2/dnn/dict.hpp
- /usr/local/include/opencv2/dnn/dnn.hpp
- /usr/local/include/opencv2/dnn/dnn.inl.hpp
- /usr/local/include/opencv2/dnn/layer.hpp
- /usr/local/include/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv2/features2d.hpp
  /usr/local/include/opencv2/features2d/features2d.hpp
  /usr/local/include/opencv2/flann.hpp
@@ -6314,7 +6068,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  /usr/local/include/opencv2/imgproc/imgproc_c.h
  /usr/local/include/opencv2/imgproc/types_c.h
  /usr/local/include/opencv2/ml.hpp
- /usr/local/include/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv2/objdetect.hpp
  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp
  /usr/local/include/opencv2/objdetect/objdetect_c.h
