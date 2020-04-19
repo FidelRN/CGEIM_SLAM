@@ -550,7 +550,7 @@ System.h
 mutex
 -
 
-/home/freviriego/MAGVD_SLAM/Examples/Monocular/mono_kitti.cc
+/home/freviriego/CGEIM_SLAM/Examples/Monocular/mono_kitti.cc
 iostream
 -
 algorithm
@@ -564,7 +564,7 @@ iomanip
 opencv2/core/core.hpp
 -
 System.h
-/home/freviriego/MAGVD_SLAM/Examples/Monocular/System.h
+/home/freviriego/CGEIM_SLAM/Examples/Monocular/System.h
 
 /home/freviriego/Pangolin/build/src/include/pangolin/config.h
 

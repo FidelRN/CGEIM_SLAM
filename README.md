@@ -1,3 +1,10 @@
+# Basic AR module ORB-SLAM2
+**Authors:** Fidel Reviriego Navarro
+
+Inserción de anotaciones de realidad aumentada a frecuencia de video con ORB-SLAM2.
+Trabajo de la asignatura computación gráfica-entornos inmersivos-multimedia del máster de Ingeniería Informática de la Universidad de Zaragoza. Curso 2019-2020
+
+
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
 

@@ -550,7 +550,7 @@ System.h
 mutex
 -
 
-/home/freviriego/MAGVD_SLAM/Examples/Monocular/mono_tum.cc
+/home/freviriego/CGEIM_SLAM/Examples/Monocular/mono_tum.cc
 iostream
 -
 algorithm

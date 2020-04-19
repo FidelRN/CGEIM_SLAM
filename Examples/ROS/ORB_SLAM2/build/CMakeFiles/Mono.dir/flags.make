@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall  -O3 -march=native -std=c++11 -O3 -DNDEBUG   -W -Wall -Wno-un
 
 CXX_DEFINES = -DCOMPILEDWITHC11 -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ORB_SLAM2\"
 
-CXX_INCLUDES = -I/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/include -I/opt/ros/melodic/include -I/usr/include/opencv -I/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 -I/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/../../.. -I/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/../../../include -isystem /home/freviriego/Pangolin/include -isystem /home/freviriego/Pangolin/build/src/include -isystem /usr/local/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/include -I/opt/ros/melodic/include -I/usr/include/opencv -I/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2 -I/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/../../.. -I/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/../../../include -isystem /home/freviriego/Pangolin/include -isystem /home/freviriego/Pangolin/build/src/include -isystem /usr/local/include/eigen3 -isystem /usr/local/include -isystem /usr/local/include/opencv 
 

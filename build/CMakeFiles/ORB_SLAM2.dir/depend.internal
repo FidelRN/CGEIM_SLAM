@@ -28,7 +28,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
  ../Thirdparty/g2o/g2o/types/types_sba.h
  ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
  ../include/Converter.h
- /home/freviriego/MAGVD_SLAM/src/Converter.cc
+ /home/freviriego/CGEIM_SLAM/src/Converter.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -398,7 +398,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/MAGVD_SLAM/src/Frame.cc
+ /home/freviriego/CGEIM_SLAM/src/Frame.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -775,7 +775,7 @@ CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/FrameDrawer.cc
+ /home/freviriego/CGEIM_SLAM/src/FrameDrawer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -1220,7 +1220,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/Initializer.cc
+ /home/freviriego/CGEIM_SLAM/src/Initializer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -1656,7 +1656,7 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/MAGVD_SLAM/src/KeyFrame.cc
+ /home/freviriego/CGEIM_SLAM/src/KeyFrame.cc
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
  /usr/local/include/eigen3/Eigen/Dense
@@ -2001,7 +2001,7 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/MAGVD_SLAM/src/KeyFrameDatabase.cc
+ /home/freviriego/CGEIM_SLAM/src/KeyFrameDatabase.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -2179,7 +2179,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LocalMapping.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/LocalMapping.cc
+ /home/freviriego/CGEIM_SLAM/src/LocalMapping.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -2625,7 +2625,7 @@ CMakeFiles/ORB_SLAM2.dir/src/LoopClosing.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/LoopClosing.cc
+ /home/freviriego/CGEIM_SLAM/src/LoopClosing.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -3034,7 +3034,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/MAGVD_SLAM/src/Map.cc
+ /home/freviriego/CGEIM_SLAM/src/Map.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -3179,7 +3179,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
  ../include/MapPoint.h
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
- /home/freviriego/MAGVD_SLAM/src/MapDrawer.cc
+ /home/freviriego/CGEIM_SLAM/src/MapDrawer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -3584,7 +3584,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/MAGVD_SLAM/src/MapPoint.cc
+ /home/freviriego/CGEIM_SLAM/src/MapPoint.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -3714,7 +3714,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
  /usr/local/include/opencv2/viz/widgets.hpp
 CMakeFiles/ORB_SLAM2.dir/src/ORBextractor.cc.o
  ../include/ORBextractor.h
- /home/freviriego/MAGVD_SLAM/src/ORBextractor.cc
+ /home/freviriego/CGEIM_SLAM/src/ORBextractor.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -3862,7 +3862,7 @@ CMakeFiles/ORB_SLAM2.dir/src/ORBmatcher.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
- /home/freviriego/MAGVD_SLAM/src/ORBmatcher.cc
+ /home/freviriego/CGEIM_SLAM/src/ORBmatcher.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -4065,7 +4065,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/Optimizer.cc
+ /home/freviriego/CGEIM_SLAM/src/Optimizer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -4515,7 +4515,7 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o
  ../include/ORBVocabulary.h
  ../include/ORBextractor.h
  ../include/PnPsolver.h
- /home/freviriego/MAGVD_SLAM/src/PnPsolver.cc
+ /home/freviriego/CGEIM_SLAM/src/PnPsolver.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -4662,7 +4662,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o
  ../include/ORBextractor.h
  ../include/ORBmatcher.h
  ../include/Sim3Solver.h
- /home/freviriego/MAGVD_SLAM/src/Sim3Solver.cc
+ /home/freviriego/CGEIM_SLAM/src/Sim3Solver.cc
  /usr/local/include/opencv/cv.h
  /usr/local/include/opencv/cxcore.h
  /usr/local/include/opencv2/calib3d.hpp
@@ -4841,7 +4841,7 @@ CMakeFiles/ORB_SLAM2.dir/src/System.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/System.cc
+ /home/freviriego/CGEIM_SLAM/src/System.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -5287,7 +5287,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/Tracking.cc
+ /home/freviriego/CGEIM_SLAM/src/Tracking.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -5728,7 +5728,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  ../include/System.h
  ../include/Tracking.h
  ../include/Viewer.h
- /home/freviriego/MAGVD_SLAM/src/Viewer.cc
+ /home/freviriego/CGEIM_SLAM/src/Viewer.cc
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h

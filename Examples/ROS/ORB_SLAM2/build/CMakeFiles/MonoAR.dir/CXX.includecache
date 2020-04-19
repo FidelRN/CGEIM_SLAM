@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc
 ViewerAR.h
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
 opencv2/highgui/highgui.hpp
 -
 mutex
@@ -18,7 +18,7 @@ thread
 cstdlib
 -
 
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
 mutex
 -
 opencv2/core/core.hpp
@@ -28,9 +28,9 @@ pangolin/pangolin.h
 string
 -
 ../../../include/System.h
-/home/freviriego/MAGVD_SLAM/Examples/ROS/include/System.h
+/home/freviriego/CGEIM_SLAM/Examples/ROS/include/System.h
 
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
 iostream
 -
 algorithm
@@ -48,9 +48,9 @@ opencv2/core/core.hpp
 opencv2/imgproc/imgproc.hpp
 -
 ../../../include/System.h
-/home/freviriego/MAGVD_SLAM/Examples/ROS/include/System.h
+/home/freviriego/CGEIM_SLAM/Examples/ROS/include/System.h
 ViewerAR.h
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
 
 /home/freviriego/Pangolin/build/src/include/pangolin/config.h
 

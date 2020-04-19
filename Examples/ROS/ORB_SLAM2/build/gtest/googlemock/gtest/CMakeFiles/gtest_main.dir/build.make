@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2
+CMAKE_SOURCE_DIR = /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build
+CMAKE_BINARY_DIR = /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build
 
 # Include any dependencies generated for this target.
 include gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend.make
@@ -59,16 +59,16 @@ include gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/flags.make
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/flags.make
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: /usr/src/googletest/googletest/src/gtest_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /usr/src/googletest/googletest/src/gtest_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /usr/src/googletest/googletest/src/gtest_main.cc
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest_main.dir/src/gtest_main.cc.i"
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googletest/src/gtest_main.cc > CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest_main.dir/src/gtest_main.cc.s"
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest_main.cc -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.requires:
 
@@ -88,15 +88,15 @@ gtest_main_OBJECTS = \
 # External object files for target gtest_main
 gtest_main_EXTERNAL_OBJECTS =
 
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest.so
-/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so"
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest.so
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so"
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build: /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so
+gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build: /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/lib/libgtest_main.so
 
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 
@@ -105,10 +105,10 @@ gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/requires: gtest/googlemock/gtes
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/requires
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest_main.dir/cmake_clean.cmake
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend:
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /usr/src/googletest/googletest /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2 /usr/src/googletest/googletest /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 

@@ -75,5 +75,5 @@ Desarrollo propuesta con tecnologías a usar ---> 19/04 maximo
 
 adb forward tcp:5555 tcp:2333 
 roscore
-rosrun ORB_SLAM2 MonoAR /home/freviriego/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/freviriego/ORB_SLAM2/Examples/Monocular/Aquaris.yaml
+rosrun ORB_SLAM2 MonoAR /home/freviriego/CGEIM_SLAM/Vocabulary/ORBvoc.txt /home/freviriego/CGEIM_SLAM/Examples/Monocular/Aquaris.yaml
 rosrun CamToSlam CamToSlam

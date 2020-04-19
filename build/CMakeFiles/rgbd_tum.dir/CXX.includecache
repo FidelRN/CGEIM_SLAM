@@ -550,7 +550,7 @@ System.h
 mutex
 -
 
-/home/freviriego/MAGVD_SLAM/Examples/RGB-D/rgbd_tum.cc
+/home/freviriego/CGEIM_SLAM/Examples/RGB-D/rgbd_tum.cc
 iostream
 -
 algorithm

@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall   -O3 -march=native -std=c++11 -O3 -DNDEBUG -fPIC
 
 CXX_DEFINES = -DCOMPILEDWITHC11 -DORB_SLAM2_EXPORTS
 
-CXX_INCLUDES = -I/home/freviriego/MAGVD_SLAM -I/home/freviriego/MAGVD_SLAM/include -isystem /usr/local/include/eigen3 -isystem /home/freviriego/Pangolin/include -isystem /home/freviriego/Pangolin/build/src/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/freviriego/CGEIM_SLAM -I/home/freviriego/CGEIM_SLAM/include -isystem /usr/local/include/eigen3 -isystem /home/freviriego/Pangolin/include -isystem /home/freviriego/Pangolin/build/src/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
 

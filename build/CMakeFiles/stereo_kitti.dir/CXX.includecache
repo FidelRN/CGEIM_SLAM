@@ -550,7 +550,7 @@ System.h
 mutex
 -
 
-/home/freviriego/MAGVD_SLAM/Examples/Stereo/stereo_kitti.cc
+/home/freviriego/CGEIM_SLAM/Examples/Stereo/stereo_kitti.cc
 iostream
 -
 algorithm

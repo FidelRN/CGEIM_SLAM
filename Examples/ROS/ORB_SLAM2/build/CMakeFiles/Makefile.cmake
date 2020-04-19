@@ -16,7 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/ordered_paths.cmake"
-  "/home/freviriego/MAGVD_SLAM/cmake_modules/FindEigen3.cmake"
+  "/home/freviriego/CGEIM_SLAM/cmake_modules/FindEigen3.cmake"
   "/home/freviriego/Pangolin/build/src/PangolinConfig.cmake"
   "/home/freviriego/Pangolin/build/src/PangolinConfigVersion.cmake"
   "/home/freviriego/Pangolin/build/src/PangolinTargets.cmake"

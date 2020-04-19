@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
     const std::string videoStreamAddress = "http://localhost:5555/video";
        //open the video stream and make sure it's opened
-    if(!vcap.open(videoStreamAddress)) {
+    if(!vcap.open(0)) {
         std::cerr << "Error opening video stream or file" << std::endl;
         return -1;
     }

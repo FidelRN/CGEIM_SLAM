@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2
+CMAKE_SOURCE_DIR = /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build
+CMAKE_BINARY_DIR = /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build
 
 # Utility rule file for ROSBUILD_genmsg_lisp.
 
@@ -67,6 +67,6 @@ CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend:
-	cd /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/MAGVD_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/ROSBUILD_genmsg_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_lisp.dir/depend
 
