@@ -31,3 +31,5 @@
 *.out
 *.app
 *.make
+
+Examples/ROS/CamToSlam/build/*

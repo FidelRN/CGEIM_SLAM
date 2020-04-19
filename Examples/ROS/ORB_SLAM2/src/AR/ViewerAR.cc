@@ -83,7 +83,7 @@ void ViewerAR::Run()
     glEnable(GL_DEPTH_TEST);
     glEnable (GL_BLEND);
 
-    pangolin::CreatePanel("menu").SetBounds(0.0,1.0,0.0,pangolin::Attach::Pix(wui));
+    pangolin::Var<string> menu_separator("menu.AR panel");
     pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);
     pangolin::Var<bool> menu_clear("menu.Clear All",false,false);
     pangolin::Var<bool> menu_drawim("menu.Draw Image",true,true);
@@ -98,7 +98,6 @@ void ViewerAR::Run()
     bool bLocalizationMode = false;
 
     pangolin::View& d_image = pangolin::Display("image")
-            .SetBounds(0,1.0f,pangolin::Attach::Pix(wui),1.0f,(float)w/h)
             .SetLock(pangolin::LockLeft, pangolin::LockTop);
 
     pangolin::GlTexture imageTexture(w,h,GL_RGB,false,0,GL_RGB,GL_UNSIGNED_BYTE);

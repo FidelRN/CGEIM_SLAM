@@ -17,6 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/include"
+  "/opt/ros/melodic/include"
+  "/usr/include/opencv"
   "/usr/src/googletest/googletest/include"
   "/usr/src/googletest/googletest"
   )
