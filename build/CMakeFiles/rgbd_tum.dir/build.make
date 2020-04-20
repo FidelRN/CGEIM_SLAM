@@ -126,12 +126,15 @@ rgbd_tum_EXTERNAL_OBJECTS =
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../Examples/RGB-D/rgbd_tum: /usr/lib/libOpenNI.so
+../Examples/RGB-D/rgbd_tum: /usr/lib/libOpenNI2.so
 ../Examples/RGB-D/rgbd_tum: /usr/local/lib/libuvc.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libpng.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libz.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../Examples/RGB-D/rgbd_tum: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../Examples/RGB-D/rgbd_tum: ../Thirdparty/DBoW2/lib/libDBoW2.so
 ../Examples/RGB-D/rgbd_tum: ../Thirdparty/g2o/lib/libg2o.so
 ../Examples/RGB-D/rgbd_tum: CMakeFiles/rgbd_tum.dir/link.txt

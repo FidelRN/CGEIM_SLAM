@@ -266,12 +266,15 @@ MonoAR_EXTERNAL_OBJECTS =
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../MonoAR: /usr/lib/libOpenNI.so
+../MonoAR: /usr/lib/libOpenNI2.so
 ../MonoAR: /usr/local/lib/libuvc.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libpng.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libz.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../MonoAR: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../MonoAR: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../MonoAR: CMakeFiles/MonoAR.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../MonoAR"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MonoAR.dir/link.txt --verbose=$(VERBOSE)

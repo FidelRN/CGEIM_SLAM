@@ -126,12 +126,15 @@ mono_euroc_EXTERNAL_OBJECTS =
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../Examples/Monocular/mono_euroc: /usr/lib/libOpenNI.so
+../Examples/Monocular/mono_euroc: /usr/lib/libOpenNI2.so
 ../Examples/Monocular/mono_euroc: /usr/local/lib/libuvc.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libpng.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libz.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../Examples/Monocular/mono_euroc: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../Examples/Monocular/mono_euroc: ../Thirdparty/DBoW2/lib/libDBoW2.so
 ../Examples/Monocular/mono_euroc: ../Thirdparty/g2o/lib/libg2o.so
 ../Examples/Monocular/mono_euroc: CMakeFiles/mono_euroc.dir/link.txt

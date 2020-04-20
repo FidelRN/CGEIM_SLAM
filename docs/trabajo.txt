@@ -77,3 +77,21 @@ adb forward tcp:5555 tcp:2333
 roscore
 rosrun ORB_SLAM2 MonoAR /home/freviriego/CGEIM_SLAM/Vocabulary/ORBvoc.txt /home/freviriego/CGEIM_SLAM/Examples/Monocular/Aquaris.yaml
 rosrun CamToSlam CamToSlam
+
+
+
+En MapDrawer.cc en linea 63 y 76 parece que esa es la forma de obtener la posicion de un punto (ahi se pintan los vertices)
+
+EN handler de pangolin hay MOuseMOtion
+
+-Modificar para capturar click izquierdo
+ó
+-MOstrar texto (x,y,z) en cada punto y permitir mediante menu introducir valores
+
+Buscar donde se pintan los puntos para poner tambien el texto
+
+Mostrar texto:
+pangolin::GlFont::I().Text("X").Draw(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+
+En drawtext parece que al usar OpenGL luego pangolin lo debe de usar de alguna manera.
+Se puede mirar como poner texto con OpenGL aunque parece complejo (luego para usarlo seria sencillo, un parametro que indique a esa funcion DrawPoints si pintar texto o no)

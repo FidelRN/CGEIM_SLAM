@@ -959,6 +959,8 @@ pangolin/pangolin.h
 -
 mutex
 -
+GL/glut.h
+-
 
 /home/freviriego/CGEIM_SLAM/src/MapPoint.cc
 MapPoint.h

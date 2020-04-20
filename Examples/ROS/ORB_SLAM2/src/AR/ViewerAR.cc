@@ -83,7 +83,7 @@ void ViewerAR::Run()
     glEnable(GL_DEPTH_TEST);
     glEnable (GL_BLEND);
 
-    pangolin::Var<string> menu_separator("menu.AR panel");
+    pangolin::Var<bool> menu_pause("menu.Pause", false, true);
     pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);
     pangolin::Var<bool> menu_clear("menu.Clear All",false,false);
     pangolin::Var<bool> menu_drawim("menu.Draw Image",true,true);
@@ -93,6 +93,12 @@ void ViewerAR::Run()
     pangolin::Var<int> menu_ngrid("menu. Grid Elements",3,1,10);
     pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
     pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
+    pangolin::Var<string> menu_p1x("menu.P1-X");
+    pangolin::Var<string> menu_p1y("menu.P1-Y");
+    pangolin::Var<string> menu_p1z("menu.P1-Z");
+    pangolin::Var<string> menu_p2x("menu.P2-X");
+    pangolin::Var<string> menu_p2y("menu.P2-Y");
+    pangolin::Var<string> menu_p2z("menu.P2-Z");
 
     pangolin::Var<bool> menu_LocalizationMode("menu.Localization Mode",false,true);
     bool bLocalizationMode = false;
@@ -108,124 +114,123 @@ void ViewerAR::Run()
 
     while(1)
     {
-
-        if(menu_LocalizationMode && !bLocalizationMode)
-        {
-            mpSystem->ActivateLocalizationMode();
-            bLocalizationMode = true;
-        }
-        else if(!menu_LocalizationMode && bLocalizationMode)
-        {
-            mpSystem->DeactivateLocalizationMode();
-            bLocalizationMode = false;
-        }
-
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        // Activate camera view
-        d_image.Activate();
-        glColor3f(1.0,1.0,1.0);
-
-        // Get last image and its computed pose from SLAM
-        GetImagePose(im,Tcw,status,vKeys,vMPs);
-
-        // Add text to image
-        PrintStatus(status,bLocalizationMode,im);
-
-        if(menu_drawpoints)
-            DrawTrackedPoints(vKeys,vMPs,im);
-
-        // Draw image
-        if(menu_drawim)
-            DrawImageTexture(imageTexture,im);
-
-        glClear(GL_DEPTH_BUFFER_BIT);
-
-        // Load camera projection
-        glMatrixMode(GL_PROJECTION);
-        P.Load();
-
-        glMatrixMode(GL_MODELVIEW);
-
-        // Load camera pose
-        LoadCameraPose(Tcw);
-
-        // Draw virtual things
-        if(status==2)
-        {
-            if(menu_clear)
+        if (!menu_pause) {
+            if(menu_LocalizationMode && !bLocalizationMode)
             {
-                if(!vpPlane.empty())
-                {
-                    for(size_t i=0; i<vpPlane.size(); i++)
-                    {
-                        delete vpPlane[i];
-                    }
-                    vpPlane.clear();
-                    cout << "All cubes erased!" << endl;
-                }
-                menu_clear = false;
+                mpSystem->ActivateLocalizationMode();
+                bLocalizationMode = true;
             }
-            if(menu_detectplane)
+            else if(!menu_LocalizationMode && bLocalizationMode)
             {
-                Plane* pPlane = DetectPlane(Tcw,vMPs,50);
-                if(pPlane)
-                {
-                    cout << "New virtual cube inserted!" << endl;
-                    vpPlane.push_back(pPlane);
-                }
-                else
-                {
-                    cout << "No plane detected. Point the camera to a planar region." << endl;
-                }
-                menu_detectplane = false;
+                mpSystem->DeactivateLocalizationMode();
+                bLocalizationMode = false;
             }
 
-            if(!vpPlane.empty())
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+            // Activate camera view
+            d_image.Activate();
+            glColor3f(1.0,1.0,1.0);
+
+            // Get last image and its computed pose from SLAM
+            GetImagePose(im,Tcw,status,vKeys,vMPs);
+
+            // Add text to image
+            PrintStatus(status,bLocalizationMode,im);
+
+            if(menu_drawpoints)
+                DrawTrackedPoints(vKeys,vMPs,im);
+
+            // Draw image
+            if(menu_drawim)
+                DrawImageTexture(imageTexture,im);
+
+            glClear(GL_DEPTH_BUFFER_BIT);
+
+            // Load camera projection
+            glMatrixMode(GL_PROJECTION);
+            P.Load();
+
+            glMatrixMode(GL_MODELVIEW);
+
+            // Load camera pose
+            LoadCameraPose(Tcw);
+
+            // Draw virtual things
+            if(status==2)
             {
-                // Recompute plane if there has been a loop closure or global BA
-                // In localization mode, map is not updated so we do not need to recompute
-                bool bRecompute = false;
-                if(!bLocalizationMode)
+                if(menu_clear)
                 {
-                    if(mpSystem->MapChanged())
+                    if(!vpPlane.empty())
                     {
-                        cout << "Map changed. All virtual elements are recomputed!" << endl;
-                        bRecompute = true;
+                        for(size_t i=0; i<vpPlane.size(); i++)
+                        {
+                            delete vpPlane[i];
+                        }
+                        vpPlane.clear();
+                        cout << "All cubes erased!" << endl;
                     }
+                    menu_clear = false;
                 }
-
-                for(size_t i=0; i<vpPlane.size(); i++)
+                if(menu_detectplane)
                 {
-                    Plane* pPlane = vpPlane[i];
-
+                    Plane* pPlane = DetectPlane(Tcw,vMPs,50);
                     if(pPlane)
                     {
-                        if(bRecompute)
-                        {
-                            pPlane->Recompute();
-                        }
-                        glPushMatrix();
-                        pPlane->glTpw.Multiply();
+                        cout << "New virtual cube inserted!" << endl;
+                        vpPlane.push_back(pPlane);
+                    }
+                    else
+                    {
+                        cout << "No plane detected. Point the camera to a planar region." << endl;
+                    }
+                    menu_detectplane = false;
+                }
 
-                        // Draw cube
-                        if(menu_drawcube)
+                if(!vpPlane.empty())
+                {
+                    // Recompute plane if there has been a loop closure or global BA
+                    // In localization mode, map is not updated so we do not need to recompute
+                    bool bRecompute = false;
+                    if(!bLocalizationMode)
+                    {
+                        if(mpSystem->MapChanged())
                         {
-                            DrawCube(menu_cubesize);
+                            cout << "Map changed. All virtual elements are recomputed!" << endl;
+                            bRecompute = true;
                         }
+                    }
 
-                        // Draw grid plane
-                        if(menu_drawgrid)
+                    for(size_t i=0; i<vpPlane.size(); i++)
+                    {
+                        Plane* pPlane = vpPlane[i];
+
+                        if(pPlane)
                         {
-                            DrawPlane(menu_ngrid,menu_sizegrid);
-                        }
+                            if(bRecompute)
+                            {
+                                pPlane->Recompute();
+                            }
+                            glPushMatrix();
+                            pPlane->glTpw.Multiply();
 
-                        glPopMatrix();
+                            // Draw cube
+                            if(menu_drawcube)
+                            {
+                                DrawCube(menu_cubesize);
+                            }
+
+                            // Draw grid plane
+                            if(menu_drawgrid)
+                            {
+                                DrawPlane(menu_ngrid,menu_sizegrid);
+                            }
+
+                            glPopMatrix();
+                        }
                     }
                 }
             }
-
-
         }
 
         pangolin::FinishFrame();

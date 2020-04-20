@@ -126,12 +126,15 @@ stereo_kitti_EXTERNAL_OBJECTS =
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../Examples/Stereo/stereo_kitti: /usr/lib/libOpenNI.so
+../Examples/Stereo/stereo_kitti: /usr/lib/libOpenNI2.so
 ../Examples/Stereo/stereo_kitti: /usr/local/lib/libuvc.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libpng.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libz.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../Examples/Stereo/stereo_kitti: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../Examples/Stereo/stereo_kitti: ../Thirdparty/DBoW2/lib/libDBoW2.so
 ../Examples/Stereo/stereo_kitti: ../Thirdparty/g2o/lib/libg2o.so
 ../Examples/Stereo/stereo_kitti: CMakeFiles/stereo_kitti.dir/link.txt

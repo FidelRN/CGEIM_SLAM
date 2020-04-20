@@ -24,9 +24,20 @@
 #include <pangolin/pangolin.h>
 #include <mutex>
 
+#include <GL/glut.h>
+
 namespace ORB_SLAM2
 {
 
+void displayText( float x, float y, float z, int r, int g, int b, const char *string ) {
+    int j = strlen( string );
+
+    glColor3f( r, g, b );
+    glRasterPos3f(x, y, z);
+    for( int i = 0; i < j; i++ ) {
+        glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_10, string[i] );
+    }
+}
 
 MapDrawer::MapDrawer(Map* pMap, const string &strSettingPath):mpMap(pMap)
 {
@@ -39,9 +50,14 @@ MapDrawer::MapDrawer(Map* pMap, const string &strSettingPath):mpMap(pMap)
     mCameraSize = fSettings["Viewer.CameraSize"];
     mCameraLineWidth = fSettings["Viewer.CameraLineWidth"];
 
+
+
+    int argc = 1;
+    char *argv[1] = {(char*)"Something"};
+    glutInit(&argc, argv);
 }
 
-void MapDrawer::DrawMapPoints()
+void MapDrawer::DrawMapPoints(const bool drawTextPoints)
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
     const vector<MapPoint*> &vpRefMPs = mpMap->GetReferenceMapPoints();
@@ -74,10 +90,27 @@ void MapDrawer::DrawMapPoints()
             continue;
         cv::Mat pos = (*sit)->GetWorldPos();
         glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
-
     }
 
     glEnd();
+
+    // Draw position point (x,y,z) for each point
+    if (drawTextPoints) {
+        for(set<MapPoint*>::iterator sit=spRefMPs.begin(), send=spRefMPs.end(); sit!=send; sit++)
+        {
+            if((*sit)->isBad())
+                continue;
+            cv::Mat pos = (*sit)->GetWorldPos();
+            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+
+
+            string s = "(" + to_string(pos.at<float>(0)) + "," + to_string(pos.at<float>(1)) + 
+                        "," + to_string(pos.at<float>(2)) + ")";
+            char val[s.size()+1];
+            strcpy(val,s.c_str());
+            displayText(pos.at<float>(0), pos.at<float>(1), pos.at<float>(2), 0,0,1, val);
+        }
+    }
 }
 
 void MapDrawer::DrawKeyFrames(const bool bDrawKF, const bool bDrawGraph)

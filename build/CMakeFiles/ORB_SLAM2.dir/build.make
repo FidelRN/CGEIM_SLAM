@@ -595,12 +595,15 @@ ORB_SLAM2_EXTERNAL_OBJECTS =
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../lib/libORB_SLAM2.so: /usr/lib/libOpenNI.so
+../lib/libORB_SLAM2.so: /usr/lib/libOpenNI2.so
 ../lib/libORB_SLAM2.so: /usr/local/lib/libuvc.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libpng.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libz.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library ../lib/libORB_SLAM2.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM2.dir/link.txt --verbose=$(VERBOSE)

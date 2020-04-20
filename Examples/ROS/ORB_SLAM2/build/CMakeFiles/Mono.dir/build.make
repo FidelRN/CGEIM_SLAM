@@ -184,12 +184,15 @@ Mono_EXTERNAL_OBJECTS =
 ../Mono: /usr/lib/x86_64-linux-gnu/libavutil.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libswscale.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libavdevice.so
+../Mono: /usr/lib/libOpenNI.so
+../Mono: /usr/lib/libOpenNI2.so
 ../Mono: /usr/local/lib/libuvc.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libpng.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libz.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libtiff.so
 ../Mono: /usr/lib/x86_64-linux-gnu/libIlmImf.so
+../Mono: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../Mono: CMakeFiles/Mono.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../Mono"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Mono.dir/link.txt --verbose=$(VERBOSE)

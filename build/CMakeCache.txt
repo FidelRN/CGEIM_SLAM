@@ -188,7 +188,7 @@ EIGEN3_INCLUDE_DIR:PATH=/usr/local/include/eigen3
 ORB_SLAM2_BINARY_DIR:STATIC=/home/freviriego/CGEIM_SLAM/build
 
 //Dependencies for the target
-ORB_SLAM2_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;pangolin;general;/home/freviriego/CGEIM_SLAM/Thirdparty/DBoW2/lib/libDBoW2.so;general;/home/freviriego/CGEIM_SLAM/Thirdparty/g2o/lib/libg2o.so;
+ORB_SLAM2_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;pangolin;general;/home/freviriego/CGEIM_SLAM/Thirdparty/DBoW2/lib/libDBoW2.so;general;/home/freviriego/CGEIM_SLAM/Thirdparty/g2o/lib/libg2o.so;general;glut;
 
 //Value Computed by CMake
 ORB_SLAM2_SOURCE_DIR:STATIC=/home/freviriego/CGEIM_SLAM
