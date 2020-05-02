@@ -61,6 +61,7 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
     const vector<MapPoint*> &vpRefMPs = mpMap->GetReferenceMapPoints();
+    const vector<unsigned long int> ARPoints = mpMap->GetARPoints();
 
     set<MapPoint*> spRefMPs(vpRefMPs.begin(), vpRefMPs.end());
 
@@ -76,7 +77,26 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
         if(vpMPs[i]->isBad() || spRefMPs.count(vpMPs[i]))
             continue;
         cv::Mat pos = vpMPs[i]->GetWorldPos();
-        glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+
+        // AR point draw in other color and size
+        if (count(ARPoints.begin(), ARPoints.end(), vpMPs[i]->mnId)){
+            // Change point size
+            glEnd();
+            glPointSize(mPointSize*2);
+            glBegin(GL_POINTS);
+            glColor3f(0.0,1.0,0.0);
+            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+            glEnd();
+            // Set point type as initial
+            glPointSize(mPointSize);
+            glBegin(GL_POINTS);
+            glColor3f(0.0,0.0,0.0);
+        }
+        else {
+            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+        }
+
+        
     }
     glEnd();
 
@@ -89,27 +109,44 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
         if((*sit)->isBad())
             continue;
         cv::Mat pos = (*sit)->GetWorldPos();
-        glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
 
+        // AR point draw in other color and size
+        if (count(ARPoints.begin(), ARPoints.end(), (*sit)->mnId)){
+            // Change point size
+            glEnd();
+            glPointSize(mPointSize*2);
+            glBegin(GL_POINTS);
+            glColor3f(0.0,1.0,0.0);
+            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+            glEnd();
+            // Set point type as initial
+            glPointSize(mPointSize);
+            glBegin(GL_POINTS);
+            glColor3f(1.0,0.0,0.0);
+        }
+        else {
+            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+        }
     }
 
     glEnd();
 
     // Draw position IDs for each point
     if (drawTextPoints) {
-        for(set<MapPoint*>::iterator sit=spRefMPs.begin(), send=spRefMPs.end(); sit!=send; sit++)
+        for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
         {
-            if((*sit)->isBad())
+            if(vpMPs[i]->isBad())
                 continue;
-            cv::Mat pos = (*sit)->GetWorldPos();
-
+            cv::Mat pos = vpMPs[i]->GetWorldPos();
+            
             // Get ID, convert to string and display its
-            string s = to_string((*sit)->mnId);
+            string s = to_string(vpMPs[i]->mnId);
             char val[s.size()+1];
             strcpy(val,s.c_str());
             displayText(pos.at<float>(0), pos.at<float>(1), pos.at<float>(2), 0,0,1, val);
         }
     }
+
 }
 
 void MapDrawer::DrawKeyFrames(const bool bDrawKF, const bool bDrawGraph)
@@ -291,6 +328,44 @@ void MapDrawer::GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M)
     }
     else
         M.SetIdentity();
+}
+
+// Check if point exist and add it to map
+bool MapDrawer::AddMapARPoint(unsigned long int pointID)
+{
+
+
+    const vector<unsigned long int> ARPoints1 = mpMap->GetARPoints();
+
+
+    for(size_t i=0, iend=ARPoints1.size(); i<iend;i++)
+    {
+        cout << "Point["<<i<<"]: "<<ARPoints1[i] << endl;
+    }
+
+
+
+
+    const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
+
+    for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+    {
+        if(vpMPs[i]->isBad())
+            continue;
+        if (vpMPs[i]->mnId == pointID){
+            vector<unsigned long int> ARPoints = mpMap->GetARPoints();
+            if (count(ARPoints.begin(), ARPoints.end(), pointID)){
+                // Point already added
+                return false;
+            } 
+            else {
+                // Add point to map
+                mpMap->AddARPoint(pointID);
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 } //namespace ORB_SLAM

@@ -51,6 +51,13 @@ Viewer::Viewer(System* pSystem, FrameDrawer *pFrameDrawer, MapDrawer *pMapDrawer
     mViewpointF = fSettings["Viewer.ViewpointF"];
 }
 
+// Check if string is a number
+bool is_number(const std::string& s)
+{
+    return !s.empty() && std::find_if(s.begin(), 
+        s.end(), [](unsigned char c) { return !std::isdigit(c); }) == s.end();
+}
+
 void Viewer::Run()
 {
     mbFinished = false;
@@ -101,6 +108,36 @@ void Viewer::Run()
         if (menuPause && bPause){
             menuFollowCamera = false;
             menuLocalizationMode = true;
+
+
+
+            pangolin::Var<string> menu_p1ID("menu.P1-ID");
+
+            if (is_number(menu_p1ID)){
+                
+                long unsigned int p1ID = stoul(menu_p1ID);
+
+                bool addPoint = mpMapDrawer->AddMapARPoint(p1ID);
+                if (addPoint)
+                    cout << "Added point: " << p1ID << endl;
+
+
+
+                // TODO: Verify point exist in Map and set as AR point
+
+
+            }
+            else {
+                // Bad argument
+                menu_p1ID = "";       
+            }
+
+
+
+
+
+
+
         }
         else if(menuPause && !bPause){
             // Store menu options before pause
@@ -110,6 +147,7 @@ void Viewer::Run()
             menuFollowCamera = false;
             menuLocalizationMode = true;
             bPause = true;
+
         }
         else if (!menuPause && bPause){
             // Restore menu options

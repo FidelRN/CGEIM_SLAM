@@ -130,4 +130,19 @@ void Map::clear()
     mvpKeyFrameOrigins.clear();
 }
 
+void Map::AddARPoint(unsigned long int pID)
+{
+    ARpoints.insert(pID);
+}
+
+void Map::EraseARPoint(unsigned long int pID)
+{
+    ARpoints.erase(pID);
+}
+
+vector<unsigned long int> Map::GetARPoints()
+{
+    return vector<unsigned long int>(ARpoints.begin(),ARpoints.end());
+}
+
 } //namespace ORB_SLAM

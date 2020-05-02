@@ -45,6 +45,8 @@ public:
     void SetReferenceKeyFrame(KeyFrame *pKF);
     void GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M);
 
+    bool AddMapARPoint(const unsigned long int pointID);
+
 private:
 
     float mKeyFrameSize;

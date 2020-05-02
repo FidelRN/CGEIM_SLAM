@@ -59,6 +59,11 @@ public:
 
     void clear();
 
+
+    void AddARPoint(unsigned long int pID);
+    void EraseARPoint(unsigned long int pID);
+    vector<unsigned long int> GetARPoints();
+
     vector<KeyFrame*> mvpKeyFrameOrigins;
 
     std::mutex mMutexMapUpdate;
@@ -67,6 +72,9 @@ public:
     std::mutex mMutexPointCreation;
 
 protected:
+    // Points ID of AR
+    std::set<unsigned long int> ARpoints;
+
     std::set<MapPoint*> mspMapPoints;
     std::set<KeyFrame*> mspKeyFrames;
 
