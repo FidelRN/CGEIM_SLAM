@@ -90,22 +90,21 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
             continue;
         cv::Mat pos = (*sit)->GetWorldPos();
         glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
+
     }
 
     glEnd();
 
-    // Draw position point (x,y,z) for each point
+    // Draw position IDs for each point
     if (drawTextPoints) {
         for(set<MapPoint*>::iterator sit=spRefMPs.begin(), send=spRefMPs.end(); sit!=send; sit++)
         {
             if((*sit)->isBad())
                 continue;
             cv::Mat pos = (*sit)->GetWorldPos();
-            glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
 
-
-            string s = "(" + to_string(pos.at<float>(0)) + "," + to_string(pos.at<float>(1)) + 
-                        "," + to_string(pos.at<float>(2)) + ")";
+            // Get ID, convert to string and display its
+            string s = to_string((*sit)->mnId);
             char val[s.size()+1];
             strcpy(val,s.c_str());
             displayText(pos.at<float>(0), pos.at<float>(1), pos.at<float>(2), 0,0,1, val);

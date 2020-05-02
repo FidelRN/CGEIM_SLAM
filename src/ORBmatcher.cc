@@ -956,6 +956,8 @@ int ORBmatcher::Fuse(KeyFrame *pKF, const vector<MapPoint *> &vpMapPoints, const
             {
                 if(!pMPinKF->isBad())
                 {
+                    cout << "Replacing point: " << pMP->mnId << endl;
+                    ;
                     if(pMPinKF->Observations()>pMP->Observations())
                         pMP->Replace(pMPinKF);
                     else

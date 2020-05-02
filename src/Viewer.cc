@@ -73,7 +73,7 @@ void Viewer::Run()
     pangolin::Var<bool> menuLocalizationMode("menu.Localization Mode",false,true);
     pangolin::Var<bool> menuReset("menu.Reset",false,false);
     pangolin::Var<bool> menuPause("menu.Pause", false, true);
-    pangolin::Var<bool> menuShowPointsPos("menu.Show Points pos",false,true);
+    pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
 
     // Define Camera Render Object (for view / scene browsing)
     pangolin::OpenGlRenderState s_cam(
@@ -155,7 +155,7 @@ void Viewer::Run()
         if(menuShowKeyFrames || menuShowGraph)
             mpMapDrawer->DrawKeyFrames(menuShowKeyFrames,menuShowGraph);
         if(menuShowPoints)
-            mpMapDrawer->DrawMapPoints(menuShowPointsPos);
+            mpMapDrawer->DrawMapPoints(menuShowPointsIDs);
 
         pangolin::FinishFrame();
 /*

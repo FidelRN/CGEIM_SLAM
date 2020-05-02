@@ -54,6 +54,13 @@ cv::Mat ExpSO3(const cv::Mat &v)
 
 ViewerAR::ViewerAR(){}
 
+// Check if string is a number
+bool is_number(const std::string& s)
+{
+    return !s.empty() && std::find_if(s.begin(), 
+        s.end(), [](unsigned char c) { return !std::isdigit(c); }) == s.end();
+}
+
 void ViewerAR::Run()
 {
     int w,h,wui;
@@ -93,12 +100,8 @@ void ViewerAR::Run()
     pangolin::Var<int> menu_ngrid("menu. Grid Elements",3,1,10);
     pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
     pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
-    pangolin::Var<string> menu_p1x("menu.P1-X");
-    pangolin::Var<string> menu_p1y("menu.P1-Y");
-    pangolin::Var<string> menu_p1z("menu.P1-Z");
-    pangolin::Var<string> menu_p2x("menu.P2-X");
-    pangolin::Var<string> menu_p2y("menu.P2-Y");
-    pangolin::Var<string> menu_p2z("menu.P2-Z");
+    pangolin::Var<string> menu_p1ID("menu.P1-ID");
+
 
     pangolin::Var<bool> menu_LocalizationMode("menu.Localization Mode",false,true);
     bool bLocalizationMode = false;
@@ -114,7 +117,18 @@ void ViewerAR::Run()
 
     while(1)
     {
-        if (!menu_pause) {
+        if (menu_pause) {
+            if (is_number(menu_p1ID)){
+                long unsigned int p1ID = stoul(menu_p1ID);
+
+                // TODO: Verify point exist in Map and set as AR point
+            }
+            else {
+                // Bad argument
+                menu_p1ID = "";       
+            }
+        }
+        else {
             if(menu_LocalizationMode && !bLocalizationMode)
             {
                 mpSystem->ActivateLocalizationMode();
