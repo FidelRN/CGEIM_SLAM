@@ -100,7 +100,6 @@ void ViewerAR::Run()
     pangolin::Var<int> menu_ngrid("menu. Grid Elements",3,1,10);
     pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
     pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
-    pangolin::Var<string> menu_p1ID("menu.P1-ID");
 
 
     pangolin::Var<bool> menu_LocalizationMode("menu.Localization Mode",false,true);
@@ -120,31 +119,7 @@ void ViewerAR::Run()
         if (menu_pause) {
             // Add text to image
             PrintStatus(status,bLocalizationMode,im);
-/*
-            if (is_number(menu_p1ID)){
-                
-                long unsigned int p1ID = stoul(menu_p1ID);
-                cout << "p1ID: " << p1ID << endl;
-                // TODO: Verify point exist in Map and set as AR point
 
-                //std::vector<MapPoint*> mvMPs;
-                for(size_t i=0, iend=mvMPs.size(); i<iend;i++)
-                {
-                    cout << "point: " << i << endl;
-                    if(mvMPs[i]->isBad())
-                        continue;
-                    cv::Mat pos = mvMPs[i]->GetWorldPos();
-                    //glVertex3f(pos.at<float>(0),pos.at<float>(1),pos.at<float>(2));
-                    if (mvMPs[i]->mnId == p1ID){
-                        cout << "Punto: " << p1ID << "; existe." << endl;
-                    }
-                }
-
-            }
-            else {
-                // Bad argument
-                menu_p1ID = "";       
-            }*/
         }
         else {
             if(menu_LocalizationMode && !bLocalizationMode)

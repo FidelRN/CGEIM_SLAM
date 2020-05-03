@@ -46,6 +46,8 @@ public:
     void GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M);
 
     bool AddMapARPoint(const unsigned long int pointID);
+    void ResetARPoint();
+    void DrawAR();
 
 private:
 

@@ -80,7 +80,36 @@ void Viewer::Run()
     pangolin::Var<bool> menuLocalizationMode("menu.Localization Mode",false,true);
     pangolin::Var<bool> menuReset("menu.Reset",false,false);
     pangolin::Var<bool> menuPause("menu.Pause", false, true);
+    pangolin::Var<bool> menu_drawim("menu.Draw Image",true,true);
+    pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
     pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
+    pangolin::Var<string> menu_p1ID("menu.P1-ID");
+    pangolin::Var<string> menu_p2ID("menu.P2-ID");
+    pangolin::Var<bool> menu_insert_line("menu.Insert AR line",false,false);
+
+    // ViewerAR --> Modify/delete
+    pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);
+    pangolin::Var<bool> menu_clear("menu.Clear All",false,false);
+    pangolin::Var<bool> menu_drawcube("menu.Draw Cube",true,true);
+    pangolin::Var<float> menu_cubesize("menu. Cube Size",0.05,0.01,0.3);
+    pangolin::Var<bool> menu_drawgrid("menu.Draw Grid",true,true);
+    pangolin::Var<int> menu_ngrid("menu. Grid Elements",3,1,10);
+    pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Define Camera Render Object (for view / scene browsing)
     pangolin::OpenGlRenderState s_cam(
@@ -103,37 +132,62 @@ void Viewer::Run()
     bool bPause = false;
     bool bFollowCam, bLocMode;
 
+    // AR points
+    bool AR1 = false;
+    bool AR2 = false;
+    long unsigned int p1AR, p2AR; 
+
     while(1)
     {
         if (menuPause && bPause){
             menuFollowCamera = false;
             menuLocalizationMode = true;
 
+            //ManageARPoints();
 
-
-            pangolin::Var<string> menu_p1ID("menu.P1-ID");
-
-            if (is_number(menu_p1ID)){
-                
-                long unsigned int p1ID = stoul(menu_p1ID);
-
-                bool addPoint = mpMapDrawer->AddMapARPoint(p1ID);
-                if (addPoint)
-                    cout << "Added point: " << p1ID << endl;
-
-
-
-                // TODO: Verify point exist in Map and set as AR point
-
-
+            if (!AR1) {
+                // First point
+                if (is_number(menu_p1ID)){
+                    long unsigned int p1ID = stoul(menu_p1ID);
+                    bool addPoint = mpMapDrawer->AddMapARPoint(p1ID);
+                    if (addPoint) {
+                        AR1 = true;
+                        p1AR = p1ID;
+                        cout << "Added point: " << p1ID << endl;
+                    }
+                    else {
+                        // Point not exists
+                        menu_p1ID = "";  
+                    }
+                }
+                else {
+                    // Bad argument
+                    menu_p1ID = "";       
+                }
             }
-            else {
-                // Bad argument
-                menu_p1ID = "";       
+            if (AR1 && !AR2) {
+                // Point 2
+                if (is_number(menu_p2ID)){
+                    long unsigned int p2ID = stoul(menu_p2ID);
+                    bool addPoint = mpMapDrawer->AddMapARPoint(p2ID);
+                    if (addPoint) {
+                        AR2 = true;
+                        p2AR = p2ID;
+                        cout << "Added point 2: " << p2ID << endl;
+                    }
+                    else {
+                        // Point not exists
+                        menu_p2ID = "";  
+                    }
+                }
+                else {
+                    // Bad argument
+                    menu_p2ID = "";       
+                }
             }
 
-
-
+            // ///////////// TODO: Button clear AR -> eliminate AR and ARMapPoint
+                            // On reset clear ARMapPoint
 
 
 
@@ -214,6 +268,10 @@ void Viewer::Run()
             menuFollowCamera = true;
             mpSystem->Reset();
             menuReset = false;
+            AR1 = false;
+            AR2 = false;
+            menu_p1ID = "";
+            menu_p2ID = "";   
         }
 
         if(Stop())

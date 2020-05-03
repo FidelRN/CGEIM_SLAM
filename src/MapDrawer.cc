@@ -147,6 +147,8 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
         }
     }
 
+    DrawAR();
+
 }
 
 void MapDrawer::DrawKeyFrames(const bool bDrawKF, const bool bDrawGraph)
@@ -333,19 +335,6 @@ void MapDrawer::GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M)
 // Check if point exist and add it to map
 bool MapDrawer::AddMapARPoint(unsigned long int pointID)
 {
-
-
-    const vector<unsigned long int> ARPoints1 = mpMap->GetARPoints();
-
-
-    for(size_t i=0, iend=ARPoints1.size(); i<iend;i++)
-    {
-        cout << "Point["<<i<<"]: "<<ARPoints1[i] << endl;
-    }
-
-
-
-
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
 
     for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
@@ -368,4 +357,49 @@ bool MapDrawer::AddMapARPoint(unsigned long int pointID)
     return false;
 }
 
+void MapDrawer::ResetARPoint()
+{
+    vector<unsigned long int> ARPoints = mpMap->GetARPoints();
+    for(size_t i=0, iend=ARPoints.size(); i<iend;i++)
+    {
+        mpMap->EraseARPoint(ARPoints[i]);
+    }
+}
+
+void MapDrawer::DrawAR()
+{
+    const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
+    const vector<unsigned long int> ARPoints = mpMap->GetARPoints();
+    if(ARPoints.size() < 2)
+        return;
+
+    glBegin(GL_LINES);
+    glColor3f(0.0,1.0,1.0);
+    cv::Mat pos0;
+    cv::Mat pos1;
+    bool getPos0 = false;
+    bool getPos1 = false;
+
+    // Get position of AR points
+    for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+    {
+        if (vpMPs[i]->mnId == ARPoints[0]){
+            pos0 = vpMPs[i]->GetWorldPos();
+            getPos0 = true;
+            if (getPos1)
+                break;
+        }
+        if (vpMPs[i]->mnId == ARPoints[1]){
+            pos1 = vpMPs[i]->GetWorldPos();
+            getPos1 = true;
+            if (getPos0)
+                break;
+        }        
+    }
+    // Draw line
+    glVertex3f(pos0.at<float>(0),pos0.at<float>(1),pos0.at<float>(2));
+    glVertex3f(pos1.at<float>(0),pos1.at<float>(1),pos1.at<float>(2));
+    glEnd();
+
+}
 } //namespace ORB_SLAM

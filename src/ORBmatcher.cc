@@ -822,7 +822,7 @@ int ORBmatcher::SearchForTriangulation(KeyFrame *pKF1, KeyFrame *pKF2, cv::Mat F
     return nmatches;
 }
 
-int ORBmatcher::Fuse(KeyFrame *pKF, const vector<MapPoint *> &vpMapPoints, const float th)
+int ORBmatcher::Fuse(KeyFrame *pKF, const vector<MapPoint *> &vpMapPoints, vector<unsigned long int> ARPoints, const float th)
 {
     cv::Mat Rcw = pKF->GetRotation();
     cv::Mat tcw = pKF->GetTranslation();
@@ -955,13 +955,25 @@ int ORBmatcher::Fuse(KeyFrame *pKF, const vector<MapPoint *> &vpMapPoints, const
             if(pMPinKF)
             {
                 if(!pMPinKF->isBad())
-                {
-                    cout << "Replacing point: " << pMP->mnId << endl;
-                    ;
-                    if(pMPinKF->Observations()>pMP->Observations())
-                        pMP->Replace(pMPinKF);
-                    else
+                {   
+                    // Check if is AR point and not replace it
+                    if (count(ARPoints.begin(), ARPoints.end(), pMP->mnId)){
+                        cout << "Replacing point AR pMP: " << pMP->mnId << endl;
                         pMPinKF->Replace(pMP);
+                    } 
+                    else if (count(ARPoints.begin(), ARPoints.end(), pMPinKF->mnId)){
+                        cout << "Replacing point AR pMPinKF: " << pMPinKF->mnId << endl;
+                        pMP->Replace(pMPinKF);
+                    } 
+                    else {
+                        // Not AR point
+                       if(pMPinKF->Observations()>pMP->Observations()){
+                            pMP->Replace(pMPinKF);
+                        }
+                        else {
+                            pMPinKF->Replace(pMP);
+                        }
+                    } 
                 }
             }
             else

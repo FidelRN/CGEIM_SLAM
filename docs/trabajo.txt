@@ -96,17 +96,3 @@ pangolin::GlFont::I().Text("X").Draw(pos.at<float>(0),pos.at<float>(1),pos.at<fl
 En drawtext parece que al usar OpenGL luego pangolin lo debe de usar de alguna manera.
 Se puede mirar como poner texto con OpenGL aunque parece complejo (luego para usarlo seria sencillo, un parametro que indique a esa funcion DrawPoints si pintar texto o no)
 
-
-
-
-
-
-
-
-
-
-
-
-
-Va algo mejor, al intro un numero valido lo añade pero no funciona bien porque no detecta como insertado.
-Hay que revisar funciones de insert, erase de ARPoints
