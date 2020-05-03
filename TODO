@@ -1,0 +1,13 @@
+TODO:
+
+	-Mejorar panel menu Pangolin
+
+	-Depurar
+	-Memoria
+
+Opcional:
+
+	-Mostrar puntos ID en imagen (ademas de en mapa 3D): habria que dejar misma imagen y volver a mostrarlo con cada punto...
+	-Permitir varias figuras AR (del mismo tipo)
+	-Mejorar AR (por ejemplo una tetera o algo similar, .obj)
+	-Permitir varios tipos de figuras AR
