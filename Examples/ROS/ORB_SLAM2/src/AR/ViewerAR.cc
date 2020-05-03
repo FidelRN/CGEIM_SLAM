@@ -69,10 +69,14 @@ void ViewerAR::Run()
     int status;
     vector<cv::KeyPoint> vKeys;
     vector<MapPoint*> vMPs;
+    
+    vector<MapPoint*> allvMPs;
+    vector<unsigned long int> ARPoints;
+
 
     while(1)
     {
-        GetImagePose(im,Tcw,status,vKeys,vMPs);
+        GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, ARPoints);
         if(im.empty())
             cv::waitKey(mT);
         else
@@ -140,7 +144,7 @@ void ViewerAR::Run()
             glColor3f(1.0,1.0,1.0);
 
             // Get last image and its computed pose from SLAM
-            GetImagePose(im,Tcw,status,vKeys,vMPs);
+            GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, ARPoints);
 
             // Add text to image
             PrintStatus(status,bLocalizationMode,im);
@@ -166,6 +170,9 @@ void ViewerAR::Run()
             // Draw virtual things
             if(status==2)
             {
+                // Draw AR
+                DrawAR(allvMPs, ARPoints);
+                
                 if(menu_clear)
                 {
                     if(!vpPlane.empty())
@@ -246,7 +253,8 @@ void ViewerAR::Run()
 
 }
 
-void ViewerAR::SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &status, const vector<cv::KeyPoint> &vKeys, const vector<ORB_SLAM2::MapPoint*> &vMPs)
+void ViewerAR::SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &status, const vector<cv::KeyPoint> &vKeys, const vector<ORB_SLAM2::MapPoint*> &vMPs,
+                            const vector<ORB_SLAM2::MapPoint*> &allvMPs, const vector<unsigned long int> &ARPoints)
 {
     unique_lock<mutex> lock(mMutexPoseImage);
     mImage = im.clone();
@@ -254,9 +262,13 @@ void ViewerAR::SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &st
     mStatus = status;
     mvKeys = vKeys;
     mvMPs = vMPs;
+
+    mallvMPs = allvMPs;
+    mARPoints = ARPoints;
 }
 
-void ViewerAR::GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status, std::vector<cv::KeyPoint> &vKeys,  std::vector<MapPoint*> &vMPs)
+void ViewerAR::GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status, std::vector<cv::KeyPoint> &vKeys,  std::vector<MapPoint*> &vMPs,
+                            std::vector<MapPoint*> &allvMPs, std::vector<unsigned long int> &ARPoints)
 {
     unique_lock<mutex> lock(mMutexPoseImage);
     im = mImage.clone();
@@ -264,6 +276,9 @@ void ViewerAR::GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status, std::vector<
     status = mStatus;
     vKeys = mvKeys;
     vMPs = mvMPs;
+
+    allvMPs = mallvMPs;
+    ARPoints = mARPoints;
 }
 
 void ViewerAR::LoadCameraPose(const cv::Mat &Tcw)
@@ -649,5 +664,45 @@ Plane::Plane(const float &nx, const float &ny, const float &nz, const float &ox,
     glTpw.m[14] = Tpw.at<float>(2,3);
     glTpw.m[15]  = 1.0;
 }
+
+void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<unsigned long int> ARPoints)
+{
+   if(ARPoints.size() < 2)
+        return;
+
+    cv::Mat pos0;
+    cv::Mat pos1;
+    bool getPos0 = false;
+    bool getPos1 = false;
+
+    // Get position of AR points
+    for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
+    {
+        if (allvMPs[i]->mnId == ARPoints[0]){
+            pos0 = allvMPs[i]->GetWorldPos();
+            getPos0 = true;
+            if (getPos1)
+                break;
+        }
+        if (allvMPs[i]->mnId == ARPoints[1]){
+            pos1 = allvMPs[i]->GetWorldPos();
+            getPos1 = true;
+            if (getPos0)
+                break;
+        }        
+    }
+    if (!getPos0 || !getPos1)
+        return;
+
+    // Draw line
+    //pangolin::OpenGlMatrix M = pangolin::OpenGlMatrix::Translate(-x,-size-y,-z);
+    glPushMatrix();
+    //M.Multiply();
+    pangolin::glDrawLine(pos0.at<float>(0),pos0.at<float>(1),pos0.at<float>(2),
+                         pos1.at<float>(0),pos1.at<float>(1),pos1.at<float>(2));
+    glPopMatrix();
+}
+
+
 
 }

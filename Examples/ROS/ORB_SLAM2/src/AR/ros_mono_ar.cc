@@ -155,14 +155,17 @@ void ImageGrabber::GrabImage(const sensor_msgs::ImageConstPtr& msg)
     vector<ORB_SLAM2::MapPoint*> vMPs = mpSLAM->GetTrackedMapPoints();
     vector<cv::KeyPoint> vKeys = mpSLAM->GetTrackedKeyPointsUn();
 
+    vector<ORB_SLAM2::MapPoint*> allvMPs = mpSLAM->mpMap->GetAllMapPoints();
+    vector<unsigned long int> ARPoints = mpSLAM->mpMap->GetARPoints();
+
     cv::undistort(im,imu,K,DistCoef);
 
     if(bRGB)
-        viewerAR.SetImagePose(imu,Tcw,state,vKeys,vMPs);
+        viewerAR.SetImagePose(imu,Tcw,state,vKeys,vMPs, allvMPs, ARPoints);
     else
     {
         cv::cvtColor(imu,imu,CV_RGB2BGR);
-        viewerAR.SetImagePose(imu,Tcw,state,vKeys,vMPs);
+        viewerAR.SetImagePose(imu,Tcw,state,vKeys,vMPs, allvMPs, ARPoints);
     }    
 }
 

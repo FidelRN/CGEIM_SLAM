@@ -76,10 +76,13 @@ public:
     }
 
     void SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &status,
-                      const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint*> &vMPs);
+                      const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint*> &vMPs,
+                      const vector<ORB_SLAM2::MapPoint*> &allvMPs, const vector<unsigned long int> &ARPoints);
+
 
     void GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status,
-                      std::vector<cv::KeyPoint> &vKeys,  std::vector<MapPoint*> &vMPs);
+                      std::vector<cv::KeyPoint> &vKeys,  std::vector<MapPoint*> &vMPs,
+                      std::vector<MapPoint*> &allvMPs, std::vector<unsigned long int> &ARPoints);
 
 private:
 
@@ -97,6 +100,8 @@ private:
 
     Plane* DetectPlane(const cv::Mat Tcw, const std::vector<MapPoint*> &vMPs, const int iterations=50);
 
+    void DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<unsigned long int> ARPoints);
+
     // frame rate
     float mFPS, mT;
     float fx,fy,cx,cy;
@@ -108,6 +113,9 @@ private:
     int mStatus;
     std::vector<cv::KeyPoint> mvKeys;
     std::vector<MapPoint*> mvMPs;
+
+    std::vector<MapPoint*> mallvMPs;
+    std::vector<unsigned long int> mARPoints;
 
 };
 
