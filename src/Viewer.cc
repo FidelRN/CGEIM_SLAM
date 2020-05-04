@@ -272,6 +272,8 @@ void Viewer::Run()
             AR2 = false;
             menu_p1ID = "";
             menu_p2ID = "";   
+            // Clear AR points
+            mpMapDrawer->mpMap->ClearARPoint();
         }
 
         if(Stop())
