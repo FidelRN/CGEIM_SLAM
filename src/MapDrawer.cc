@@ -360,10 +360,7 @@ bool MapDrawer::AddMapARPoint(unsigned long int pointID)
 void MapDrawer::ResetARPoint()
 {
     vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-    for(size_t i=0, iend=ARPoints.size(); i<iend;i++)
-    {
-        mpMap->EraseARPoint(ARPoints[i]);
-    }
+    mpMap->ClearARPoint();
 }
 
 void MapDrawer::DrawAR()

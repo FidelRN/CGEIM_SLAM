@@ -26,6 +26,8 @@
 #include <thread>
 #include <cstdlib>
 
+#include <GL/glut.h>
+
 using namespace std;
 
 namespace ORB_SLAM2
@@ -105,6 +107,7 @@ void ViewerAR::Run()
     pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
     pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
 
+    pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
 
     pangolin::Var<bool> menu_LocalizationMode("menu.Localization Mode",false,true);
     bool bLocalizationMode = false;
@@ -150,7 +153,7 @@ void ViewerAR::Run()
             PrintStatus(status,bLocalizationMode,im);
 
             if(menu_drawpoints)
-                DrawTrackedPoints(vKeys,vMPs,im);
+                DrawTrackedPoints(vKeys,vMPs,im, menuShowPointsIDs);
 
             // Draw image
             if(menu_drawim)
@@ -401,7 +404,7 @@ void ViewerAR::DrawPlane(int ndivs, float ndivsize)
 
 }
 
-void ViewerAR::DrawTrackedPoints(const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint *> &vMPs, cv::Mat &im)
+void ViewerAR::DrawTrackedPoints(const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint *> &vMPs, cv::Mat &im, const bool showPointsIDs)
 {
     const int N = vKeys.size();
 
@@ -411,6 +414,10 @@ void ViewerAR::DrawTrackedPoints(const std::vector<cv::KeyPoint> &vKeys, const s
         if(vMPs[i])
         {
             cv::circle(im,vKeys[i].pt,1,cv::Scalar(0,255,0),-1);
+            if (showPointsIDs){
+                string s = to_string(vMPs[i]->mnId);
+                cv::putText(im,s,vKeys[i].pt,cv::FONT_HERSHEY_PLAIN,0.6,cv::Scalar(0,0,1),0.8,8);
+            }
         }
     }
 }
@@ -748,7 +755,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<un
 
 
 
-    
+
 }
 
 

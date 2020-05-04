@@ -132,17 +132,17 @@ void Map::clear()
 
 void Map::AddARPoint(unsigned long int pID)
 {
-    ARpoints.insert(pID);
+    ARpoints.push_back(pID);
 }
 
-void Map::EraseARPoint(unsigned long int pID)
+void Map::ClearARPoint()
 {
-    ARpoints.erase(pID);
+    ARpoints.clear();
 }
 
 vector<unsigned long int> Map::GetARPoints()
 {
-    return vector<unsigned long int>(ARpoints.begin(),ARpoints.end());
+    return ARpoints;
 }
 
 } //namespace ORB_SLAM

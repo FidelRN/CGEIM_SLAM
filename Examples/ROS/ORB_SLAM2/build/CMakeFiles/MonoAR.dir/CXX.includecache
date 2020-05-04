@@ -17,6 +17,8 @@ thread
 -
 cstdlib
 -
+GL/glut.h
+-
 
 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
 mutex

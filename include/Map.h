@@ -61,7 +61,7 @@ public:
 
 
     void AddARPoint(unsigned long int pID);
-    void EraseARPoint(unsigned long int pID);
+    void ClearARPoint();
     vector<unsigned long int> GetARPoints();
 
     vector<KeyFrame*> mvpKeyFrameOrigins;
@@ -73,8 +73,7 @@ public:
 
 protected:
     // Points ID of AR
-    std::set<unsigned long int> ARpoints;
-
+    std::vector<unsigned long int> ARpoints;
     std::set<MapPoint*> mspMapPoints;
     std::set<KeyFrame*> mspKeyFrames;
 

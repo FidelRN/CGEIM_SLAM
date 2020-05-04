@@ -96,7 +96,7 @@ private:
     void DrawCube(const float &size, const float x=0, const float y=0, const float z=0);
     void DrawPlane(int ndivs, float ndivsize);
     void DrawPlane(Plane* pPlane, int ndivs, float ndivsize);
-    void DrawTrackedPoints(const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint*> &vMPs, cv::Mat &im);
+    void DrawTrackedPoints(const std::vector<cv::KeyPoint> &vKeys, const std::vector<MapPoint*> &vMPs, cv::Mat &im, const bool showPoints);
 
     Plane* DetectPlane(const cv::Mat Tcw, const std::vector<MapPoint*> &vMPs, const int iterations=50);
 
