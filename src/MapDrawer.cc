@@ -373,8 +373,8 @@ void MapDrawer::DrawAR()
     if(ARPoints.size() < 2)
         return;
 
-    glBegin(GL_LINES);
-    glColor3f(0.0,1.0,1.0);
+ //   glBegin(GL_LINES);
+//    glColor3f(0.0,1.0,1.0);
     cv::Mat pos0;
     cv::Mat pos1;
     bool getPos0 = false;
@@ -396,10 +396,67 @@ void MapDrawer::DrawAR()
                 break;
         }        
     }
+/*
     // Draw line
     glVertex3f(pos0.at<float>(0),pos0.at<float>(1),pos0.at<float>(2));
     glVertex3f(pos1.at<float>(0),pos1.at<float>(1),pos1.at<float>(2));
     glEnd();
+*/
+
+
+
+
+    const GLfloat x0 = pos0.at<float>(0);
+    const GLfloat y0 = pos0.at<float>(1);
+    const GLfloat z0 = pos0.at<float>(2);
+/*
+    const GLfloat x1 = pos1.at<float>(0);
+    const GLfloat y1 = pos1.at<float>(1);
+    const GLfloat z1 = pos1.at<float>(2);
+*/
+    const float width = 0.2;
+    const GLfloat x1 = x0 + width;
+    const GLfloat y1 = y0 + width;
+    const GLfloat z1 = z0;
+
+
+    const GLfloat w = x1 - x0;
+    
+    const GLfloat verts[] = {
+        x0,y0,z0,    x1,y0,z0,    x0,y1,z0,    x1,y1,z1,    // FRONT
+        x0,y0,z0-w,  x0,y1,z0-w,  x1,y0,z0-w,  x1,y1,z1-w,  // BACK
+        x0,y0,z0,    x0,y1,z0,    x0,y0,z0-w,  x0,y1,z0-w,  // LEFT
+        x1,y0,z0-w,  x1,y1,z1-w,  x1,y0,z0,    x1,y1,z1,    // RIGHT
+        x0,y1,z0,    x1,y1,z1,    x1,y0,z0-w,  x1,y1,z1-w,  // TOP
+        x0,y0,z0,    x0,y0,z0-w,  x1,y0,z0,    x1,y0,z0-w   // BOTTOM
+    };
+    
+    glVertexPointer(3, GL_FLOAT, 0, verts);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    
+    glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glDrawArrays(GL_TRIANGLE_STRIP, 4, 4);
+    
+    glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
+    glDrawArrays(GL_TRIANGLE_STRIP, 8, 4);
+    glDrawArrays(GL_TRIANGLE_STRIP, 12, 4);
+    
+    glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
+    glDrawArrays(GL_TRIANGLE_STRIP, 16, 4);
+    glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
+    
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+
+
+
+
+
+
+
+
+
 
 }
 } //namespace ORB_SLAM
