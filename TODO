@@ -10,8 +10,3 @@ Opcional:
 	-Permitir varias figuras AR (del mismo tipo)
 	-Mejorar AR (por ejemplo una tetera o algo similar, .obj)
 	-Permitir varios tipos de figuras AR
-
-
-
-
-	COrregir fallo: al insertar punto -> reset -> volver a inserta punto .. Violación de segmento (`core' generado)
