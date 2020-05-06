@@ -26,6 +26,8 @@
 #include"KeyFrame.h"
 #include<pangolin/pangolin.h>
 
+#include"AR.h"
+
 #include<mutex>
 
 namespace ORB_SLAM2
@@ -45,8 +47,12 @@ public:
     void SetReferenceKeyFrame(KeyFrame *pKF);
     void GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M);
 
-    bool AddMapARPoint(const unsigned long int pointID);
-    void ResetARPoint();
+    bool PointExist(long unsigned int pID);
+    bool CreateAR(long unsigned int pID, bool isOrigin);
+    bool SetOriginARPoint(long unsigned int pID);
+    bool SetScaleARPoint(long unsigned int pID);
+    bool InsertAR();
+    void ResetAR();
     void DrawAR();
 
 private:

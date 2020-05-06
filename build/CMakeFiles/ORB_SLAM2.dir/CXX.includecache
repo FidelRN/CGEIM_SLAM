@@ -576,6 +576,8 @@ types_sba.h
 Eigen/Geometry
 -
 
+../include/AR.h
+
 ../include/Converter.h
 opencv2/core/core.hpp
 -
@@ -697,6 +699,8 @@ MapPoint.h
 ../include/MapPoint.h
 KeyFrame.h
 ../include/KeyFrame.h
+AR.h
+../include/AR.h
 set
 -
 mutex
@@ -711,6 +715,8 @@ KeyFrame.h
 ../include/KeyFrame.h
 pangolin/pangolin.h
 -
+AR.h
+../include/AR.h
 mutex
 -
 
@@ -855,6 +861,10 @@ System.h
 ../include/System.h
 mutex
 -
+
+/home/freviriego/CGEIM_SLAM/src/AR.cc
+AR.h
+/home/freviriego/CGEIM_SLAM/src/AR.h
 
 /home/freviriego/CGEIM_SLAM/src/Converter.cc
 Converter.h

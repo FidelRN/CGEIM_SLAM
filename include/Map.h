@@ -23,6 +23,7 @@
 
 #include "MapPoint.h"
 #include "KeyFrame.h"
+#include "AR.h"
 #include <set>
 
 #include <mutex>
@@ -60,9 +61,10 @@ public:
     void clear();
 
 
-    void AddARPoint(unsigned long int pID);
-    void ClearARPoint();
-    vector<unsigned long int> GetARPoints();
+    void CreateAR(unsigned long int pID, bool isOrigin);
+    void ClearAR();
+    vector<AR*> GetAR();
+    bool PointIsInAR(long unsigned int pID);
 
     vector<KeyFrame*> mvpKeyFrameOrigins;
 
@@ -72,8 +74,8 @@ public:
     std::mutex mMutexPointCreation;
 
 protected:
-    // Points ID of AR
-    std::vector<unsigned long int> ARpoints;
+    // AR
+    std::vector<AR*> elems_AR;
     std::set<MapPoint*> mspMapPoints;
     std::set<KeyFrame*> mspKeyFrames;
 

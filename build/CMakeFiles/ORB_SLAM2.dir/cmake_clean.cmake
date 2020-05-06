@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o"
+  "CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o"

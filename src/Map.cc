@@ -130,19 +130,30 @@ void Map::clear()
     mvpKeyFrameOrigins.clear();
 }
 
-void Map::AddARPoint(unsigned long int pID)
+void Map::CreateAR(unsigned long int pID, bool isOrigin)
 {
-    ARpoints.push_back(pID);
+    AR* elem = new AR(pID, isOrigin);
+    elems_AR.push_back(elem);
 }
 
-void Map::ClearARPoint()
+void Map::ClearAR()
 {
-    ARpoints.clear();
+    vector<AR*>().swap(elems_AR);
 }
 
-vector<unsigned long int> Map::GetARPoints()
+vector<AR*> Map::GetAR()
 {
-    return ARpoints;
+    return elems_AR;
+}
+
+// Check if point is any AR object
+bool Map::PointIsInAR(long unsigned int pID)
+{
+    for (int i=0; i<elems_AR.size(); i++){
+        if (pID == elems_AR[i]->originID || pID == elems_AR[i]->scaleID)
+            return true;
+    }
+    return false;
 }
 
 } //namespace ORB_SLAM

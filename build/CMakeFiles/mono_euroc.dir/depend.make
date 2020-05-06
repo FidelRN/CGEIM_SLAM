@@ -34,6 +34,7 @@ CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../Thirdparty/g2o/
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../Thirdparty/g2o/g2o/types/sim3.h
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../Thirdparty/g2o/g2o/types/types_sba.h
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
+CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../include/AR.h
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../include/Frame.h
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../include/FrameDrawer.h
 CMakeFiles/mono_euroc.dir/Examples/Monocular/mono_euroc.cc.o: ../include/Initializer.h

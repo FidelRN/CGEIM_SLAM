@@ -189,24 +189,11 @@ void LocalMapping::MapPointCulling()
         }
         else if(pMP->GetFoundRatio()<0.25f )
         {
-            vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-            if (count(ARPoints.begin(), ARPoints.end(), pMP->mnId)){
-                cout << "Setting bad flag in LOcal Map 1ºif: " << endl;
-            } 
-
             pMP->SetBadFlag();
             lit = mlpRecentAddedMapPoints.erase(lit);
         }
         else if(((int)nCurrentKFid-(int)pMP->mnFirstKFid)>=2 && pMP->Observations()<=cnThObs)
-        {
-            
-            vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-            if (count(ARPoints.begin(), ARPoints.end(), pMP->mnId)){
-                cout << "Setting bad flag in LOcal Map 2ºif: " << endl;
-            } 
-            
-
-
+        {          
             pMP->SetBadFlag();
             lit = mlpRecentAddedMapPoints.erase(lit);
         }
@@ -499,7 +486,7 @@ void LocalMapping::SearchInNeighbors()
     {
         KeyFrame* pKFi = *vit;
 
-        matcher.Fuse(pKFi,vpMapPointMatches, mpMap->GetARPoints());
+        matcher.Fuse(pKFi,vpMapPointMatches, mpMap);
     }
 
     // Search matches by projection from target KFs in current KF
@@ -524,7 +511,7 @@ void LocalMapping::SearchInNeighbors()
         }
     }
 
-    matcher.Fuse(mpCurrentKeyFrame,vpFuseCandidates, mpMap->GetARPoints());
+    matcher.Fuse(mpCurrentKeyFrame,vpFuseCandidates, mpMap);
 
 
     // Update points

@@ -73,12 +73,12 @@ void ViewerAR::Run()
     vector<MapPoint*> vMPs;
     
     vector<MapPoint*> allvMPs;
-    vector<unsigned long int> ARPoints;
+    vector<AR*> elems_AR;
 
 
     while(1)
     {
-        GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, ARPoints);
+        GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, elems_AR);
         if(im.empty())
             cv::waitKey(mT);
         else
@@ -147,7 +147,7 @@ void ViewerAR::Run()
             glColor3f(1.0,1.0,1.0);
 
             // Get last image and its computed pose from SLAM
-            GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, ARPoints);
+            GetImagePose(im,Tcw,status,vKeys,vMPs, allvMPs, elems_AR);
 
             // Add text to image
             PrintStatus(status,bLocalizationMode,im);
@@ -174,7 +174,7 @@ void ViewerAR::Run()
             if(status==2)
             {
                 // Draw AR
-                DrawAR(allvMPs, ARPoints);
+                DrawAR(allvMPs, elems_AR);
                 
                 if(menu_clear)
                 {
@@ -257,7 +257,7 @@ void ViewerAR::Run()
 }
 
 void ViewerAR::SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &status, const vector<cv::KeyPoint> &vKeys, const vector<ORB_SLAM2::MapPoint*> &vMPs,
-                            const vector<ORB_SLAM2::MapPoint*> &allvMPs, const vector<unsigned long int> &ARPoints)
+                            const vector<ORB_SLAM2::MapPoint*> &allvMPs, const vector<AR*> &elems_AR)
 {
     unique_lock<mutex> lock(mMutexPoseImage);
     mImage = im.clone();
@@ -267,11 +267,11 @@ void ViewerAR::SetImagePose(const cv::Mat &im, const cv::Mat &Tcw, const int &st
     mvMPs = vMPs;
 
     mallvMPs = allvMPs;
-    mARPoints = ARPoints;
+    melems_AR = elems_AR;
 }
 
 void ViewerAR::GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status, std::vector<cv::KeyPoint> &vKeys,  std::vector<MapPoint*> &vMPs,
-                            std::vector<MapPoint*> &allvMPs, std::vector<unsigned long int> &ARPoints)
+                            std::vector<MapPoint*> &allvMPs, std::vector<AR*> &elems_AR)
 {
     unique_lock<mutex> lock(mMutexPoseImage);
     im = mImage.clone();
@@ -281,7 +281,7 @@ void ViewerAR::GetImagePose(cv::Mat &im, cv::Mat &Tcw, int &status, std::vector<
     vMPs = mvMPs;
 
     allvMPs = mallvMPs;
-    ARPoints = mARPoints;
+    elems_AR = melems_AR;
 }
 
 void ViewerAR::LoadCameraPose(const cv::Mat &Tcw)
@@ -672,90 +672,108 @@ Plane::Plane(const float &nx, const float &ny, const float &nz, const float &ox,
     glTpw.m[15]  = 1.0;
 }
 
-void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<unsigned long int> ARPoints)
+float distance(float x1, float y1,  
+            float z1, float x2,  
+            float y2, float z2) 
+{ 
+    float d = sqrt(pow(x2 - x1, 2) +  
+                pow(y2 - y1, 2) +  
+                pow(z2 - z1, 2) * 1.0); 
+    return d; 
+} 
+
+void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR*> elems_AR)
 {
-   if(ARPoints.size() < 2)
+    if (elems_AR.size() == 0)
         return;
 
-    cv::Mat pos0;
-    cv::Mat pos1;
-    bool getPos0 = false;
-    bool getPos1 = false;
+    int num_elems = elems_AR.size();
+    bool lastValid = elems_AR[elems_AR.size()-1]->valid;
+    if (!lastValid)
+        num_elems -= 1;
 
-    // Get position of AR points
-    for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
+    for (size_t j=0; j<num_elems; j++)
     {
-        if (allvMPs[i]->mnId == ARPoints[0]){
-            pos0 = allvMPs[i]->GetWorldPos();
-            getPos0 = true;
-            if (getPos1)
-                break;
+        cv::Mat posOrig;
+        cv::Mat posScale;
+        bool getPosOrig = false;
+        bool getPosScale = false;
+        // Get points of each AR object
+        for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
+        {
+            // Get position of AR points
+            if (allvMPs[i]->mnId == elems_AR[j]->originID){
+                posOrig = allvMPs[i]->GetWorldPos();
+                getPosOrig = true;
+                if (getPosScale)
+                    break;
+            }
+            if (allvMPs[i]->mnId == elems_AR[j]->scaleID){
+                posScale = allvMPs[i]->GetWorldPos();
+                getPosScale = true;
+                if (getPosOrig)
+                    break;
+            }        
         }
-        if (allvMPs[i]->mnId == ARPoints[1]){
-            pos1 = allvMPs[i]->GetWorldPos();
-            getPos1 = true;
-            if (getPos0)
-                break;
-        }        
-    }
-    if (!getPos0 || !getPos1)
-        return;
+        // Draw AR object
 /*
-    // Draw line
-    //pangolin::OpenGlMatrix M = pangolin::OpenGlMatrix::Translate(-x,-size-y,-z);
-    glPushMatrix();
-    //M.Multiply();
-    pangolin::glDrawLine(pos0.at<float>(0),pos0.at<float>(1),pos0.at<float>(2),
-                         pos1.at<float>(0),pos1.at<float>(1),pos1.at<float>(2));
-    glPopMatrix();
-
-    */
-
-    const GLfloat x0 = pos0.at<float>(0);
-    const GLfloat y0 = pos0.at<float>(1);
-    const GLfloat z0 = pos0.at<float>(2);
-/*
-    const GLfloat x1 = pos1.at<float>(0);
-    const GLfloat y1 = pos1.at<float>(1);
-    const GLfloat z1 = pos1.at<float>(2);
+        // Draw line
+        //pangolin::OpenGlMatrix M = pangolin::OpenGlMatrix::Translate(-x,-size-y,-z);
+        glPushMatrix();
+        //M.Multiply();
+        pangolin::glDrawLine(posOrig.at<float>(0),posOrig.at<float>(1),posOrig.at<float>(2),
+                             posScale.at<float>(0),posScale.at<float>(1),posScale.at<float>(2));
+        glPopMatrix();
 */
-    const float width = 0.2;
-    const GLfloat x1 = x0 + width;
-    const GLfloat y1 = y0 + width;
-    const GLfloat z1 = z0;
+
+        // Draw cube
+        const GLfloat x0 = posOrig.at<float>(0);
+        const GLfloat y0 = posOrig.at<float>(1);
+        const GLfloat z0 = posOrig.at<float>(2); 
+
+        const GLfloat sx = posScale.at<float>(0);
+        const GLfloat sy = posScale.at<float>(1);
+        const GLfloat sz = posScale.at<float>(2); 
+
+        const float width = sqrt(pow(sx - x0, 2) +  
+                                 pow(sy - y0, 2) +  
+                                 pow(sz - z0, 2)); 
+
+        //const float width = 0.2;
+        const GLfloat x1 = x0 + width;
+        const GLfloat y1 = y0 + width;
+        const GLfloat z1 = z0;
 
 
-    const GLfloat w = x1 - x0;
-    
-    const GLfloat verts[] = {
-        x0,y0,z0,    x1,y0,z0,    x0,y1,z0,    x1,y1,z1,    // FRONT
-        x0,y0,z0-w,  x0,y1,z0-w,  x1,y0,z0-w,  x1,y1,z1-w,  // BACK
-        x0,y0,z0,    x0,y1,z0,    x0,y0,z0-w,  x0,y1,z0-w,  // LEFT
-        x1,y0,z0-w,  x1,y1,z1-w,  x1,y0,z0,    x1,y1,z1,    // RIGHT
-        x0,y1,z0,    x1,y1,z1,    x1,y0,z0-w,  x1,y1,z1-w,  // TOP
-        x0,y0,z0,    x0,y0,z0-w,  x1,y0,z0,    x1,y0,z0-w   // BOTTOM
-    };
-    
-    glVertexPointer(3, GL_FLOAT, 0, verts);
-    glEnableClientState(GL_VERTEX_ARRAY);
-    
-    glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-    glDrawArrays(GL_TRIANGLE_STRIP, 4, 4);
-    
-    glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
-    glDrawArrays(GL_TRIANGLE_STRIP, 8, 4);
-    glDrawArrays(GL_TRIANGLE_STRIP, 12, 4);
-    
-    glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-    glDrawArrays(GL_TRIANGLE_STRIP, 16, 4);
-    glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
-    
-    glDisableClientState(GL_VERTEX_ARRAY);
+        const GLfloat w = x1 - x0;
+        
+        const GLfloat verts[] = {
+            x0,y0,z0,    x1,y0,z0,    x0,y1,z0,    x1,y1,z1,    // FRONT
+            x0,y0,z0-w,  x0,y1,z0-w,  x1,y0,z0-w,  x1,y1,z1-w,  // BACK
+            x0,y0,z0,    x0,y1,z0,    x0,y0,z0-w,  x0,y1,z0-w,  // LEFT
+            x1,y0,z0-w,  x1,y1,z1-w,  x1,y0,z0,    x1,y1,z1,    // RIGHT
+            x0,y1,z0,    x1,y1,z1,    x1,y0,z0-w,  x1,y1,z1-w,  // TOP
+            x0,y0,z0,    x0,y0,z0-w,  x1,y0,z0,    x1,y0,z0-w   // BOTTOM
+        };
+        
+        glVertexPointer(3, GL_FLOAT, 0, verts);
+        glEnableClientState(GL_VERTEX_ARRAY);
+        
+        glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+        glDrawArrays(GL_TRIANGLE_STRIP, 4, 4);
+        
+        glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
+        glDrawArrays(GL_TRIANGLE_STRIP, 8, 4);
+        glDrawArrays(GL_TRIANGLE_STRIP, 12, 4);
+        
+        glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
+        glDrawArrays(GL_TRIANGLE_STRIP, 16, 4);
+        glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
+        
+        glDisableClientState(GL_VERTEX_ARRAY);
 
-
-
-
+    }
 }
 
 

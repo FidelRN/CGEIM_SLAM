@@ -35,6 +35,7 @@ CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o
  ../Thirdparty/g2o/g2o/types/sim3.h
  ../Thirdparty/g2o/g2o/types/types_sba.h
  ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
+ ../include/AR.h
  ../include/Frame.h
  ../include/FrameDrawer.h
  ../include/Initializer.h

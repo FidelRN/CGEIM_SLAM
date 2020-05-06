@@ -152,10 +152,9 @@ int MapPoint::Observations()
 void MapPoint::SetBadFlag()
 {
     // Set bad flag only if is not an AR point
-    vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-    if (count(ARPoints.begin(), ARPoints.end(), this->mnId)){
+    if (mpMap->PointIsInAR(this->mnId))
         return;
-    }  
+
     map<KeyFrame*,size_t> obs;
     {
         unique_lock<mutex> lock1(mMutexFeatures);
@@ -216,13 +215,6 @@ void MapPoint::Replace(MapPoint* pMP)
     pMP->IncreaseFound(nfound);
     pMP->IncreaseVisible(nvisible);
     pMP->ComputeDistinctiveDescriptors();
-
-
-    vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-    if (count(ARPoints.begin(), ARPoints.end(), this->mnId)){
-        cout << "Replacing point AR replace: " << this->mnId << endl;
-    } 
-
 
     mpMap->EraseMapPoint(this);
 }

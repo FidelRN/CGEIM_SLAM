@@ -83,9 +83,10 @@ void Viewer::Run()
     pangolin::Var<bool> menu_drawim("menu.Draw Image",true,true);
     pangolin::Var<bool> menu_drawpoints("menu.Draw Points",false,true);
     pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
-    pangolin::Var<string> menu_p1ID("menu.P1-ID");
-    pangolin::Var<string> menu_p2ID("menu.P2-ID");
-    pangolin::Var<bool> menu_insert_line("menu.Insert AR line",false,false);
+    pangolin::Var<string> menu_originID("menu.Origin-ID");
+    pangolin::Var<string> menu_scaleID("menu.Scale-ID");
+    pangolin::Var<bool> menu_insert_ar("menu.Insert AR",false,false);
+    pangolin::Var<bool> menu_clear_ar("menu.Clear AR",false,false);
 
     // ViewerAR --> Modify/delete
     pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);
@@ -96,20 +97,6 @@ void Viewer::Run()
     pangolin::Var<int> menu_ngrid("menu. Grid Elements",3,1,10);
     pangolin::Var<float> menu_sizegrid("menu. Element Size",0.05,0.01,0.3);
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // Define Camera Render Object (for view / scene browsing)
     pangolin::OpenGlRenderState s_cam(
@@ -133,9 +120,9 @@ void Viewer::Run()
     bool bFollowCam, bLocMode;
 
     // AR points
-    bool AR1 = false;
-    bool AR2 = false;
-    long unsigned int p1AR, p2AR; 
+    bool ARorig = false;
+    bool ARscale = false;
+    long unsigned int origAR, scaleAR;          // TODO: para permitir modificar los puntos antes de confirmar
 
     while(1)
     {
@@ -143,55 +130,117 @@ void Viewer::Run()
             menuFollowCamera = false;
             menuLocalizationMode = true;
 
-            //ManageARPoints();
 
-            if (!AR1) {
-                // First point
-                if (is_number(menu_p1ID)){
-                    long unsigned int p1ID = stoul(menu_p1ID);
-                    bool addPoint = mpMapDrawer->AddMapARPoint(p1ID);
+            if (!ARorig) {
+                // Origin point
+                if (is_number(menu_originID)){
+                    long unsigned int originID = stoul(menu_originID);
+                    bool addPoint;
+                    if (!ARscale)
+                        addPoint = mpMapDrawer->CreateAR(originID,true);
+                    else
+                        addPoint = mpMapDrawer->SetOriginARPoint(originID);
+
                     if (addPoint) {
-                        AR1 = true;
-                        p1AR = p1ID;
-                        cout << "Added point: " << p1ID << endl;
+                        ARorig = true;
+                        origAR = originID;
+                        cout << "Added orig point: " << originID << endl;
                     }
                     else {
                         // Point not exists
-                        menu_p1ID = "";  
+                        menu_originID = "";  
                     }
                 }
                 else {
                     // Bad argument
-                    menu_p1ID = "";       
+                    menu_originID = "";       
                 }
             }
-            if (AR1 && !AR2) {
+            if (!ARscale) {
                 // Point 2
-                if (is_number(menu_p2ID)){
-                    long unsigned int p2ID = stoul(menu_p2ID);
-                    bool addPoint = mpMapDrawer->AddMapARPoint(p2ID);
+                if (is_number(menu_scaleID)){
+                    long unsigned int scaleID = stoul(menu_scaleID);
+                    bool addPoint;
+                    if (!ARorig)
+                        addPoint = mpMapDrawer->CreateAR(scaleID,false);
+                    else
+                        addPoint = mpMapDrawer->SetScaleARPoint(scaleID);
+
                     if (addPoint) {
-                        AR2 = true;
-                        p2AR = p2ID;
-                        cout << "Added point 2: " << p2ID << endl;
+                        ARscale = true;
+                        scaleAR = scaleID;
+                        cout << "Added scale point: " << scaleID << endl;
                     }
                     else {
                         // Point not exists
-                        menu_p2ID = "";  
+                        menu_scaleID = "";  
                     }
                 }
                 else {
                     // Bad argument
-                    menu_p2ID = "";       
+                    menu_scaleID = "";       
                 }
             }
-
-            // ///////////// TODO: Button clear AR -> eliminate AR and ARMapPoint
-                            // On reset clear ARMapPoint
-
-
-
-
+            if (ARorig){
+                // Check if value has changed
+                // Origin point
+                if (is_number(menu_originID)){
+                    long unsigned int originID_aux = stoul(menu_originID);
+                    if (origAR != originID_aux){
+                        // Value has changed
+                        bool addPoint = mpMapDrawer->SetOriginARPoint(originID_aux);
+                        if (addPoint) {
+                            origAR = originID_aux;
+                            cout << "Added orig point (changed): " << originID_aux << endl;
+                        }
+                        else {
+                            // Point not exists, set last value
+                            menu_originID = to_string(origAR);    
+                        }
+                    }
+                }
+                else {
+                    // Bad argument, set last value
+                    menu_originID = to_string(origAR);   
+                }
+            }
+            if (ARscale){
+                // Check if value has changed
+                // Scale point
+                if (is_number(menu_scaleID)){
+                    long unsigned int scaleID_aux = stoul(menu_scaleID);
+                    if (scaleAR != scaleID_aux){
+                        // Value has changed
+                        bool addPoint = mpMapDrawer->SetScaleARPoint(scaleID_aux);
+                        if (addPoint) {
+                            scaleAR = scaleID_aux;
+                            cout << "Added scale point (changed): " << scaleID_aux << endl;
+                        }
+                        else {
+                            // Point not exists, set last value
+                            menu_scaleID = to_string(scaleAR); 
+                        }
+                    }
+                }
+                else {
+                    // Bad argument, set last value
+                    menu_scaleID = to_string(scaleAR);   
+                }
+            }
+            if (menu_insert_ar){
+                menu_insert_ar = false;
+                if (ARorig && ARscale){
+                    // Insert AR
+                    bool insertedAr = mpMapDrawer->InsertAR();
+                    if (insertedAr){
+                        cout << "Inserted AR" << endl;
+                        ARorig = false;
+                        ARscale = false;
+                        menu_originID = ""; 
+                        menu_scaleID = "";  
+                    }
+                }
+            }
         }
         else if(menuPause && !bPause){
             // Store menu options before pause
@@ -208,6 +257,16 @@ void Viewer::Run()
             menuFollowCamera = bFollowCam;
             menuLocalizationMode = bLocMode;
             bPause = false;
+        }
+
+        if (menu_clear_ar){
+            // Clear AR
+            menu_clear_ar = false;
+            ARorig = false;
+            ARscale = false;
+            menu_originID = "";
+            menu_scaleID = "";   
+            mpMapDrawer->ResetAR();
         }
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -268,12 +327,12 @@ void Viewer::Run()
             menuFollowCamera = true;
             mpSystem->Reset();
             menuReset = false;
-            AR1 = false;
-            AR2 = false;
-            menu_p1ID = "";
-            menu_p2ID = "";   
-            // Clear AR points
-            mpMapDrawer->mpMap->ClearARPoint();
+            ARorig = false;
+            ARscale = false;
+            menu_originID = "";
+            menu_scaleID = "";   
+            // Clear AR
+            mpMapDrawer->ResetAR();
         }
 
         if(Stop())

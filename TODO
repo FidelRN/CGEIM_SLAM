@@ -7,6 +7,13 @@ TODO:
 
 Opcional:
 
-	-Permitir varias figuras AR (del mismo tipo)
 	-Mejorar AR (por ejemplo una tetera o algo similar, .obj)
 	-Permitir varios tipos de figuras AR
+
+
+
+
+Usar scale para medir distancia con punto origen y calcular el tamaño
+
+Ahora no va muy alla, los puntos los ancla bien pero se mueve muchisimo, con scale tal vez mejore
+Pues no, a mi parecer va muchisimo mejor con lo que ya hay (cubos con planos), aunque tiene el problema de que no deja elegir donde anclarlo

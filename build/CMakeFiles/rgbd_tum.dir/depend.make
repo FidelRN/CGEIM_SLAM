@@ -34,6 +34,7 @@ CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../Thirdparty/g2o/g2o/type
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../Thirdparty/g2o/g2o/types/sim3.h
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../Thirdparty/g2o/g2o/types/types_sba.h
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
+CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../include/AR.h
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../include/Frame.h
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../include/FrameDrawer.h
 CMakeFiles/rgbd_tum.dir/Examples/RGB-D/rgbd_tum.cc.o: ../include/Initializer.h

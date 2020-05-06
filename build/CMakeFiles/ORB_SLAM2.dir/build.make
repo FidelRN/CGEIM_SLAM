@@ -297,9 +297,33 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o.provides: CMakeFiles/ORB_SLAM2.dir/sr
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o.provides.build: CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
 
 
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o: ../src/AR.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o -c /home/freviriego/CGEIM_SLAM/src/AR.cc
+
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM2.dir/src/AR.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/CGEIM_SLAM/src/AR.cc > CMakeFiles/ORB_SLAM2.dir/src/AR.cc.i
+
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM2.dir/src/AR.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/CGEIM_SLAM/src/AR.cc -o CMakeFiles/ORB_SLAM2.dir/src/AR.cc.s
+
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.requires:
+
+.PHONY : CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.requires
+
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.provides: CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.requires
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.provides.build
+.PHONY : CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.provides
+
+CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.provides.build: CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o
+
+
 CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o: ../src/Map.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o -c /home/freviriego/CGEIM_SLAM/src/Map.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Map.cc.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o.provides.build: CMakeFiles/ORB_SLAM2.dir/s
 
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o: ../src/MapDrawer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o -c /home/freviriego/CGEIM_SLAM/src/MapDrawer.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o.provides.build: CMakeFiles/ORB_SLAM2
 
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o: ../src/Optimizer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o -c /home/freviriego/CGEIM_SLAM/src/Optimizer.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o.provides.build: CMakeFiles/ORB_SLAM2
 
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o: ../src/PnPsolver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o -c /home/freviriego/CGEIM_SLAM/src/PnPsolver.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/ORB_SLAM2.dir/src/PnPsolver.cc.o.provides.build: CMakeFiles/ORB_SLAM2
 
 CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o: ../src/Frame.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o -c /home/freviriego/CGEIM_SLAM/src/Frame.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.i: cmake_force
@@ -419,7 +443,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Frame.cc.o.provides.build: CMakeFiles/ORB_SLAM2.dir
 
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o: ../src/KeyFrameDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o -c /home/freviriego/CGEIM_SLAM/src/KeyFrameDatabase.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/ORB_SLAM2.dir/src/KeyFrameDatabase.cc.o.provides.build: CMakeFiles/OR
 
 CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o: ../src/Sim3Solver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o -c /home/freviriego/CGEIM_SLAM/src/Sim3Solver.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.i: cmake_force
@@ -467,7 +491,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o.provides.build: CMakeFiles/ORB_SLAM
 
 CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o: ../src/Initializer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o -c /home/freviriego/CGEIM_SLAM/src/Initializer.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.i: cmake_force
@@ -491,7 +515,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o.provides.build: CMakeFiles/ORB_SLA
 
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: CMakeFiles/ORB_SLAM2.dir/flags.make
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../src/Viewer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o -c /home/freviriego/CGEIM_SLAM/src/Viewer.cc
 
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.i: cmake_force
@@ -525,6 +549,7 @@ ORB_SLAM2_OBJECTS = \
 "CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o" \
+"CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o" \
 "CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o" \
@@ -548,6 +573,7 @@ ORB_SLAM2_EXTERNAL_OBJECTS =
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o
+../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
@@ -605,7 +631,7 @@ ORB_SLAM2_EXTERNAL_OBJECTS =
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/libIlmImf.so
 ../lib/libORB_SLAM2.so: /usr/lib/x86_64-linux-gnu/liblz4.so
 ../lib/libORB_SLAM2.so: CMakeFiles/ORB_SLAM2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library ../lib/libORB_SLAM2.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/freviriego/CGEIM_SLAM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX shared library ../lib/libORB_SLAM2.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -623,6 +649,7 @@ CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/FrameDrawer.cc.o
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/Converter.cc.o.requires
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/MapPoint.cc.o.requires
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/KeyFrame.cc.o.requires
+CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o.requires
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/Map.cc.o.requires
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/MapDrawer.cc.o.requires
 CMakeFiles/ORB_SLAM2.dir/requires: CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o.requires

@@ -34,6 +34,7 @@ CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../Thirdparty/g2o
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../Thirdparty/g2o/g2o/types/sim3.h
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../Thirdparty/g2o/g2o/types/types_sba.h
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../Thirdparty/g2o/g2o/types/types_six_dof_expmap.h
+CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../include/AR.h
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../include/Frame.h
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../include/FrameDrawer.h
 CMakeFiles/stereo_euroc.dir/Examples/Stereo/stereo_euroc.cc.o: ../include/Initializer.h

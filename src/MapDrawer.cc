@@ -61,7 +61,16 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
     const vector<MapPoint*> &vpRefMPs = mpMap->GetReferenceMapPoints();
-    const vector<unsigned long int> ARPoints = mpMap->GetARPoints();
+    const vector<AR*> elems_AR = mpMap->GetAR();
+
+    // Check with AR object if the last is not valid yet
+    bool existAR = elems_AR.empty() == false;
+    AR* last_AR;
+    if (existAR){
+        last_AR = elems_AR.back();
+        existAR = last_AR->valid == false;
+    }
+
 
     set<MapPoint*> spRefMPs(vpRefMPs.begin(), vpRefMPs.end());
 
@@ -79,7 +88,7 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
         cv::Mat pos = vpMPs[i]->GetWorldPos();
 
         // AR point draw in other color and size
-        if (count(ARPoints.begin(), ARPoints.end(), vpMPs[i]->mnId)){
+        if (existAR && ((last_AR->originValid && last_AR->originID == vpMPs[i]->mnId) || (last_AR->scaleValid && last_AR->scaleID == vpMPs[i]->mnId))){
             // Change point size
             glEnd();
             glPointSize(mPointSize*2);
@@ -111,7 +120,7 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
         cv::Mat pos = (*sit)->GetWorldPos();
 
         // AR point draw in other color and size
-        if (count(ARPoints.begin(), ARPoints.end(), (*sit)->mnId)){
+        if (existAR && ((last_AR->originValid && last_AR->originID == (*sit)->mnId) || (last_AR->scaleValid && last_AR->scaleID == (*sit)->mnId))){
             // Change point size
             glEnd();
             glPointSize(mPointSize*2);
@@ -332,8 +341,8 @@ void MapDrawer::GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M)
         M.SetIdentity();
 }
 
-// Check if point exist and add it to map
-bool MapDrawer::AddMapARPoint(unsigned long int pointID)
+
+bool MapDrawer::PointExist(long unsigned int pID)
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
 
@@ -341,77 +350,150 @@ bool MapDrawer::AddMapARPoint(unsigned long int pointID)
     {
         if(vpMPs[i]->isBad())
             continue;
-        if (vpMPs[i]->mnId == pointID){
-            vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-            if (count(ARPoints.begin(), ARPoints.end(), pointID)){
-                // Point already added
-                return false;
-            } 
-            else {
-                // Add point to map
-                mpMap->AddARPoint(pointID);
-                return true;
-            }
+        if (vpMPs[i]->mnId == pID){
+            // Point exist in map
+            return true;
         }
     }
     return false;
 }
 
-void MapDrawer::ResetARPoint()
+//////////////// AR
+// Check if point exist and create AR object and add it to map
+bool MapDrawer::CreateAR(long unsigned int pID, bool isOrigin)
 {
-    vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-    mpMap->ClearARPoint();
+    bool existPoint = PointExist(pID);
+    if(!existPoint)
+        return false;
+
+    // Point exist in map
+    if (isOrigin){
+        // Check if the same point is already taken by other AR object
+        vector<AR*> elems_AR = mpMap->GetAR();
+        for (int i=0; i<elems_AR.size(); i++){
+            if(elems_AR[i]->valid && (elems_AR[i]->originID == pID))
+                return false;
+        }
+    }
+    // Point is valid -> create AR object
+    mpMap->CreateAR(pID,isOrigin);
+    return true;
+}
+
+// Set origin point of AR
+bool MapDrawer::SetOriginARPoint(long unsigned int pID)
+{
+    bool existPoint = PointExist(pID);
+    if(!existPoint)
+        return false;
+
+    // Get last AR object
+    vector<AR*> elems_AR = mpMap->GetAR();
+    AR* AR_elem = elems_AR[elems_AR.size()-1];
+
+    // Check if the same point is already taken by other AR object
+    for (int i=0; i<elems_AR.size()-1; i++){
+        if(elems_AR[i]->valid && (elems_AR[i]->originID == pID))
+            return false;
+    }
+    bool isSet = AR_elem->SetOriginID(pID);
+    return isSet;
+}
+
+// Set scale point of AR
+bool MapDrawer::SetScaleARPoint(long unsigned int pID)
+{
+    bool existPoint = PointExist(pID);
+    if(!existPoint)
+        return false;
+
+    // Get last AR object
+    vector<AR*> elems_AR = mpMap->GetAR();
+    AR* AR_elem = elems_AR[elems_AR.size()-1];
+
+    bool isSet = AR_elem->SetScaleID(pID);
+    return isSet;
+}
+
+// Insert AR to map
+bool MapDrawer::InsertAR()
+{
+    // Get last AR object
+    vector<AR*> elems_AR = mpMap->GetAR();
+    AR* AR_elem = elems_AR[elems_AR.size()-1];
+    return AR_elem->SetValid();
+}
+
+void MapDrawer::ResetAR()
+{
+    mpMap->ClearAR();
 }
 
 void MapDrawer::DrawAR()
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
-    const vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-    if(ARPoints.size() < 2)
+    const vector<AR*> elems_AR = mpMap->GetAR();
+
+    if (elems_AR.size() == 0)
         return;
 
- //   glBegin(GL_LINES);
-//    glColor3f(0.0,1.0,1.0);
-    cv::Mat pos0;
-    cv::Mat pos1;
-    bool getPos0 = false;
-    bool getPos1 = false;
+    int num_elems = elems_AR.size();
+    bool lastValid = elems_AR[elems_AR.size()-1]->valid;
+    if (!lastValid)
+        num_elems -= 1;
 
-    // Get position of AR points
-    for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+
+    glBegin(GL_LINES);
+    glColor3f(0.0,1.0,1.0);
+
+    for (size_t j=0; j<num_elems; j++)
     {
-        if (vpMPs[i]->mnId == ARPoints[0]){
-            pos0 = vpMPs[i]->GetWorldPos();
-            getPos0 = true;
-            if (getPos1)
-                break;
+        cv::Mat posOrig;
+        cv::Mat posScale;
+        bool getPosOrig = false;
+        bool getPosScale = false;
+        // Get points of each AR object
+        for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+        {
+            // Get position of AR points
+            if (vpMPs[i]->mnId == elems_AR[j]->originID){
+                posOrig = vpMPs[i]->GetWorldPos();
+                getPosOrig = true;
+                if (getPosScale)
+                    break;
+            }
+            if (vpMPs[i]->mnId == elems_AR[j]->scaleID){
+                posScale = vpMPs[i]->GetWorldPos();
+                getPosScale = true;
+                if (getPosOrig)
+                    break;
+            }        
         }
-        if (vpMPs[i]->mnId == ARPoints[1]){
-            pos1 = vpMPs[i]->GetWorldPos();
-            getPos1 = true;
-            if (getPos0)
-                break;
-        }        
+        // Draw AR object
+
+        // Draw line
+        glVertex3f(posOrig.at<float>(0),posOrig.at<float>(1),posOrig.at<float>(2));
+        glVertex3f(posScale.at<float>(0),posScale.at<float>(1),posScale.at<float>(2));
+        
     }
-/*
-    // Draw line
-    glVertex3f(pos0.at<float>(0),pos0.at<float>(1),pos0.at<float>(2));
-    glVertex3f(pos1.at<float>(0),pos1.at<float>(1),pos1.at<float>(2));
+
     glEnd();
-*/
 
 
 
+
+
+/*
 
     const GLfloat x0 = pos0.at<float>(0);
     const GLfloat y0 = pos0.at<float>(1);
-    const GLfloat z0 = pos0.at<float>(2);
-/*
+    const GLfloat z0 = pos0.at<float>(2);*/
+            /*
     const GLfloat x1 = pos1.at<float>(0);
     const GLfloat y1 = pos1.at<float>(1);
     const GLfloat z1 = pos1.at<float>(2);
-*/
-    const float width = 0.2;
+            */
+/*  const float width = 0.2;
     const GLfloat x1 = x0 + width;
     const GLfloat y1 = y0 + width;
     const GLfloat z1 = z0;
@@ -447,13 +529,6 @@ void MapDrawer::DrawAR()
 
 
 
-
-
-
-
-
-
-
-
+*/
 }
 } //namespace ORB_SLAM

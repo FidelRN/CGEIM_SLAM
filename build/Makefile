@@ -363,6 +363,33 @@ Examples/Stereo/stereo_kitti.cc.s:
 	$(MAKE) -f CMakeFiles/stereo_kitti.dir/build.make CMakeFiles/stereo_kitti.dir/Examples/Stereo/stereo_kitti.cc.s
 .PHONY : Examples/Stereo/stereo_kitti.cc.s
 
+src/AR.o: src/AR.cc.o
+
+.PHONY : src/AR.o
+
+# target to build an object file
+src/AR.cc.o:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/AR.cc.o
+.PHONY : src/AR.cc.o
+
+src/AR.i: src/AR.cc.i
+
+.PHONY : src/AR.i
+
+# target to preprocess a source file
+src/AR.cc.i:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/AR.cc.i
+.PHONY : src/AR.cc.i
+
+src/AR.s: src/AR.cc.s
+
+.PHONY : src/AR.s
+
+# target to generate assembly for a file
+src/AR.cc.s:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/AR.cc.s
+.PHONY : src/AR.cc.s
+
 src/Converter.o: src/Converter.cc.o
 
 .PHONY : src/Converter.o
@@ -909,6 +936,9 @@ help:
 	@echo "... Examples/Stereo/stereo_kitti.o"
 	@echo "... Examples/Stereo/stereo_kitti.i"
 	@echo "... Examples/Stereo/stereo_kitti.s"
+	@echo "... src/AR.o"
+	@echo "... src/AR.i"
+	@echo "... src/AR.s"
 	@echo "... src/Converter.o"
 	@echo "... src/Converter.i"
 	@echo "... src/Converter.s"

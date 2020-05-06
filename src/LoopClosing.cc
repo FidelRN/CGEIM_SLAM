@@ -525,13 +525,10 @@ void LoopClosing::CorrectLoop()
                 MapPoint* pCurMP = mpCurrentKF->GetMapPoint(i);
                 if(pCurMP) {
                     // Check if it is an AR point and not replaced it
-                    vector<unsigned long int> ARPoints = mpMap->GetARPoints();
-                    if (count(ARPoints.begin(), ARPoints.end(), pCurMP->mnId)){
+                    if (mpMap->PointIsInAR(pCurMP->mnId))
                         pLoopMP->Replace(pCurMP);
-                    }      
-                    else {
+                    else
                         pCurMP->Replace(pLoopMP);
-                    }
                 }
                 else
                 {

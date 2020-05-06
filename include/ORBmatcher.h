@@ -77,7 +77,7 @@ public:
     int SearchBySim3(KeyFrame* pKF1, KeyFrame* pKF2, std::vector<MapPoint *> &vpMatches12, const float &s12, const cv::Mat &R12, const cv::Mat &t12, const float th);
 
     // Project MapPoints into KeyFrame and search for duplicated MapPoints.
-    int Fuse(KeyFrame* pKF, const vector<MapPoint *> &vpMapPoints, vector<unsigned long int> ARPoints, const float th=3.0);
+    int Fuse(KeyFrame* pKF, const vector<MapPoint *> &vpMapPoints, Map* mpMap, const float th=3.0);
 
     // Project MapPoints into KeyFrame using a given Sim3 and search for duplicated MapPoints.
     int Fuse(KeyFrame* pKF, cv::Mat Scw, const std::vector<MapPoint*> &vpPoints, float th, vector<MapPoint *> &vpReplacePoint);
