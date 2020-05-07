@@ -17,3 +17,16 @@ Usar scale para medir distancia con punto origen y calcular el tamaño
 
 Ahora no va muy alla, los puntos los ancla bien pero se mueve muchisimo, con scale tal vez mejore
 Pues no, a mi parecer va muchisimo mejor con lo que ya hay (cubos con planos), aunque tiene el problema de que no deja elegir donde anclarlo
+SI eso mirar como lo hace él (con planos, mira puntos que tengan mas de 5 observaciones, es decir que sean validos y verificados, coge todos los puntos y creo que toma la posicion global y de ahi ya no se mueve, mientras que ahora esa posicion se modifica con los puntos).
+
+DUDA: SI pongo tablero o algo que sea facil ver puntos, si lo muevo se anclara la AR alli? -> Probarlo, si funciona sera la ostia
+	-> Si que se ancla, al ponerlo en teclado si se mueve teclado se mueve el AR con él (esta anclado) pero tambien se mueve si uso un cubo de AR original.
+
+Probar si AR se mueve solo en la imagen o tambien ocurre en el mapa 3D (desactivar seguir a la camara y observar si se mueve): tambien se mueve en el mapa
+
+
+NUEVO DATO: ahora se mueve bastante al mover camara (mapa cambia) pero antes con el cubo basico y el plano tambien se mueve.
+Asi que a diferencia antes ahora ya se puede especificar en que punto concreto se va a poner AR.
+
+Lo que se podria añadir es que al insertar cubo se mire la direccion normal ... que salga recto al igual que ocurre en el plano.
+	 y mejorarlo cargando objetos obj y que se muestren

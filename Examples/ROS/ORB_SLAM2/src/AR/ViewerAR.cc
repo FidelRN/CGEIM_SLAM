@@ -739,23 +739,21 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
                                  pow(sy - y0, 2) +  
                                  pow(sz - z0, 2)); 
 
-        //const float width = 0.2;
         const GLfloat x1 = x0 + width;
-        const GLfloat y1 = y0 + width;
-        const GLfloat z1 = z0;
+        const GLfloat y1 = y0 - width;
+        const GLfloat z1 = z0 + width;
 
-
-        const GLfloat w = x1 - x0;
         
         const GLfloat verts[] = {
-            x0,y0,z0,    x1,y0,z0,    x0,y1,z0,    x1,y1,z1,    // FRONT
-            x0,y0,z0-w,  x0,y1,z0-w,  x1,y0,z0-w,  x1,y1,z1-w,  // BACK
-            x0,y0,z0,    x0,y1,z0,    x0,y0,z0-w,  x0,y1,z0-w,  // LEFT
-            x1,y0,z0-w,  x1,y1,z1-w,  x1,y0,z0,    x1,y1,z1,    // RIGHT
-            x0,y1,z0,    x1,y1,z1,    x1,y0,z0-w,  x1,y1,z1-w,  // TOP
-            x0,y0,z0,    x0,y0,z0-w,  x1,y0,z0,    x1,y0,z0-w   // BOTTOM
+            x0,y0,z0,  x1,y0,z0,  x0,y1,z0,  x1,y1,z0,  // FRONT
+            x0,y0,z1,  x0,y1,z1,  x1,y0,z1,  x1,y1,z1,  // BACK
+            x0,y0,z0,  x0,y1,z0,  x0,y0,z1,  x0,y1,z1,  // LEFT
+            x1,y0,z1,  x1,y1,z1,  x1,y0,z0,  x1,y1,z0,  // RIGHT
+            x0,y1,z0,  x1,y1,z0,  x0,y1,z1,  x1,y1,z1,  // TOP
+            x0,y0,z0,  x0,y0,z1,  x1,y0,z0,  x1,y0,z1   // BOTTOM
         };
-        
+
+
         glVertexPointer(3, GL_FLOAT, 0, verts);
         glEnableClientState(GL_VERTEX_ARRAY);
         
@@ -769,6 +767,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         
         glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
         glDrawArrays(GL_TRIANGLE_STRIP, 16, 4);
+        glColor4f(0.0f, 1.0f, 1.0f, 1.0f);
         glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
         
         glDisableClientState(GL_VERTEX_ARRAY);
