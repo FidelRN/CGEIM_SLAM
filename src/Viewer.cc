@@ -87,6 +87,7 @@ void Viewer::Run()
     pangolin::Var<string> menu_scaleID("menu.Scale-ID");
     pangolin::Var<bool> menu_insert_ar("menu.Insert AR",false,false);
     pangolin::Var<bool> menu_clear_ar("menu.Clear AR",false,false);
+    pangolin::Var<bool> menu_draw_ar("menu.Draw AR",true,true);
 
     // ViewerAR --> Modify/delete
     pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);

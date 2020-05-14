@@ -486,10 +486,10 @@ void MapDrawer::DrawAR()
         const GLfloat sz = posScale.at<float>(2); 
 
         const float width = sqrt(pow(sx - x0, 2) +  
-                                 pow(sy - y0, 2) +  
-                                 pow(sz - z0, 2)); 
+                                 pow(sy - y0, 2)); // +  
+                                // pow(sz - z0, 2)); 
 
-        const GLfloat x1 = x0 + width;
+        const GLfloat x1 = x0 - width;
         const GLfloat y1 = y0 - width;
         const GLfloat z1 = z0 + width;
 

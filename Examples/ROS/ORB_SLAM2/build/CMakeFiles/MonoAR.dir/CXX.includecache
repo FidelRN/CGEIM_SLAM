@@ -19,6 +19,22 @@ cstdlib
 -
 GL/glut.h
 -
+stdio.h
+-
+stdlib.h
+-
+vector
+-
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+objloader.hpp
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.hpp
+texture.hpp
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.hpp
 
 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
 mutex
@@ -31,6 +47,28 @@ string
 -
 ../../../include/System.h
 /home/freviriego/CGEIM_SLAM/Examples/ROS/include/System.h
+
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp
+vector
+-
+stdio.h
+-
+string
+-
+cstring
+-
+glm/glm.hpp
+-
+objloader.hpp
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.hpp
+assimp/Importer.hpp
+-
+assimp/scene.h
+-
+assimp/postprocess.h
+-
+
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.hpp
 
 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
 iostream
@@ -53,6 +91,18 @@ opencv2/imgproc/imgproc.hpp
 /home/freviriego/CGEIM_SLAM/Examples/ROS/include/System.h
 ViewerAR.h
 /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
+
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+GL/glew.h
+-
+
+/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.hpp
 
 /home/freviriego/Pangolin/build/src/include/pangolin/config.h
 

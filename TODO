@@ -7,7 +7,16 @@ TODO:
 
 Opcional:
 
-	-Mejorar AR (por ejemplo una tetera o algo similar, .obj)
+	-Mejorar AR (por ejemplo una tetera o algo similar, .obj):
+		AHora se carga obj. Falta:
+									-Usar segundo punto (ARScale) para aplicar la escala al objeto y hacer que salga mas grande o pequeño (si el resultado empeora mucho se puede omitir ese punto)
+									-Aplicar textura
+									-Rotar objeto para que salga "de pie"
+									-Buscar una mejor figura (ahora es una pistola)
+
+	-Hacer que se calcule posicion del objeto para que salga orientado (ahora depende de la inicializacion, no mira si superficie es plana)
+
+Muy opcional:									
 	-Permitir varios tipos de figuras AR
 
 
@@ -30,3 +39,24 @@ Asi que a diferencia antes ahora ya se puede especificar en que punto concreto s
 
 Lo que se podria añadir es que al insertar cubo se mire la direccion normal ... que salga recto al igual que ocurre en el plano.
 	 y mejorarlo cargando objetos obj y que se muestren
+ En plano con cubo sale recto pero no siempre. Creo que mira puntos cerca para ver que orientacion tiene 
+
+
+
+
+
+
+... A una mala poner como trabajo futuro
+
+
+
+
+
+
+		Load OBJ:
+Tener modelo obj y textura
+Cargar modelo con objloader por ejemplo el del bloque 2. Aplicar textura 
+El objeto se debe poner en el punto especificado por AR de alguna manera  --> Se mueve world matriz (translate) hacia ese punto (y luego se recupera la anterior)
+-> Rotar objeto para que salga bien (ahora sale hacia abajo, en obj de clase del bloque 2 se hace)
+
+Con eso mas o menos ya se puede hacer la memoria y presentacion, y luego si hay tiempo algo mas (o no)

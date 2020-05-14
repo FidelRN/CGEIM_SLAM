@@ -30,6 +30,76 @@
 
 using namespace std;
 
+
+
+
+
+
+
+
+
+/// Include standard headers
+#include <stdio.h>
+#include <stdlib.h>
+#include <vector>
+
+// Include GLEW
+#include <GL/glew.h>
+
+// Include GLFW
+//#include <glfw3.h>
+//GLFWwindow* window;
+
+// Include GLM
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+using namespace glm;
+
+// Standard includes:
+//#include <gl/gl.h>
+//#include <gl/glu.h>
+
+#include "objloader.hpp"
+#include "texture.hpp"
+
+GLuint VertexArrayID;
+
+std::vector<glm::vec3> vertices;
+std::vector<glm::vec2> uvs;
+std::vector<glm::vec3> normals; // Won't be used at the moment.
+
+bool res;
+
+glm::vec3 a;
+glm::vec2 b;
+
+GLuint Texture;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace ORB_SLAM2
 {
 
@@ -109,6 +179,8 @@ void ViewerAR::Run()
 
     pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
 
+    pangolin::Var<bool> menu_draw_ar("menu.Draw AR",true,true);
+
     pangolin::Var<bool> menu_LocalizationMode("menu.Localization Mode",false,true);
     bool bLocalizationMode = false;
 
@@ -121,12 +193,35 @@ void ViewerAR::Run()
 
     vector<Plane*> vpPlane;
 
+
+
+
+
+
+
+
+
+    // Load .dds file as texture 
+    Texture=loadDDS("/home/freviriego/CGEIM_SLAM/model/texture.dds");
+    
+    // load(parse) .obj file
+    res = loadOBJ("/home/freviriego/CGEIM_SLAM/model/object.obj", vertices, uvs, normals);
+
+
+    scale3DModel(0.01f);
+
+
+
+
+
+
+
+
     while(1)
     {
         if (menu_pause) {
             // Add text to image
-            PrintStatus(status,bLocalizationMode,im);
-
+            AddTextToImage("PAUSE",im,0,0,255);
         }
         else {
             if(menu_LocalizationMode && !bLocalizationMode)
@@ -173,8 +268,10 @@ void ViewerAR::Run()
             // Draw virtual things
             if(status==2)
             {
-                // Draw AR
-                DrawAR(allvMPs, elems_AR);
+                if (menu_draw_ar) {
+                    // Draw AR
+                    DrawAR(allvMPs, elems_AR);
+                }
                 
                 if(menu_clear)
                 {
@@ -503,7 +600,7 @@ Plane* ViewerAR::DetectPlane(const cv::Mat Tcw, const std::vector<MapPoint*> &vM
         vector<float> vSorted = vDistances;
         sort(vSorted.begin(),vSorted.end());
 
-        int nth = max((int)(0.2*N),20);
+        int nth = std::max((int)(0.2*N),20);
         const float medianDist = vSorted[nth];
 
         if(medianDist<bestDist)
@@ -725,7 +822,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
                              posScale.at<float>(0),posScale.at<float>(1),posScale.at<float>(2));
         glPopMatrix();
 */
-
+/*
         // Draw cube
         const GLfloat x0 = posOrig.at<float>(0);
         const GLfloat y0 = posOrig.at<float>(1);
@@ -736,10 +833,10 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         const GLfloat sz = posScale.at<float>(2); 
 
         const float width = sqrt(pow(sx - x0, 2) +  
-                                 pow(sy - y0, 2) +  
-                                 pow(sz - z0, 2)); 
+                                 pow(sy - y0, 2)); // +  
+                                // pow(sz - z0, 2)); 
 
-        const GLfloat x1 = x0 + width;
+        const GLfloat x1 = x0 - width;
         const GLfloat y1 = y0 - width;
         const GLfloat z1 = z0 + width;
 
@@ -773,8 +870,62 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         glDisableClientState(GL_VERTEX_ARRAY);
 
     }
+    */
+
+
+
+        glPushMatrix();
+
+        glTranslatef(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2));
+
+        //glEnable(GL_TEXTURE_2D);    
+        //glBindTexture(GL_TEXTURE_2D, Texture);
+
+        //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLES);
+        glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
+        
+        for (int i = 0; i < vertices.size(); i += 1)
+        {
+            a = vertices[i];
+            b = uvs[i];
+            glNormal3f(a.x, a.y, a.z);
+            glTexCoord2d(b.x, b.y);
+            glVertex3f(a.x, a.y, a.z);      
+        }
+
+        glEnd();//end drawing of line loop
+        glDisable(GL_TEXTURE_2D);
+
+        glPopMatrix();
+    }
+
+
+
+
+
+
+
+
 }
 
+void ViewerAR::scale3DModel(float scaleFactor)
+{
+    for (int i = 0; i < vertices.size(); i += 1)
+    {
+        vertices[i] = vertices[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
+    }
+
+    for (int i = 0; i < normals.size(); i += 1)
+    {
+        normals[i] = normals[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
+    }
+
+    for (int i = 0; i < uvs.size(); i += 1)
+    {
+        uvs[i] = uvs[i] * vec2(scaleFactor * 1.0f, scaleFactor * 1.0f);
+    }
+}
 
 
 }

@@ -4,6 +4,8 @@
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o
  /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc
  /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
+ /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.hpp
+ /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.hpp
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -390,6 +392,9 @@ CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o
  /usr/local/include/opencv2/viz/viz3d.hpp
  /usr/local/include/opencv2/viz/vizcore.hpp
  /usr/local/include/opencv2/viz/widgets.hpp
+CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o
+ /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp
+ /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.hpp
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o
  /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.h
  /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc
@@ -842,3 +847,5 @@ CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o
  /usr/local/include/opencv2/viz/viz3d.hpp
  /usr/local/include/opencv2/viz/vizcore.hpp
  /usr/local/include/opencv2/viz/widgets.hpp
+CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o
+ /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp

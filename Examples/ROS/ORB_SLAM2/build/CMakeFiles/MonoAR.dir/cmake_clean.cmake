@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
   "CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
+  "CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o"
+  "CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o"
   "../MonoAR.pdb"
   "../MonoAR"
 )

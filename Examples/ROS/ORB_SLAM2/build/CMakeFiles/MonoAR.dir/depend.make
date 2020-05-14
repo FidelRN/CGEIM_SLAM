@@ -3,6 +3,8 @@
 
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: ../src/AR/ViewerAR.cc
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: ../src/AR/ViewerAR.h
+CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: ../src/AR/objloader.hpp
+CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: ../src/AR/texture.hpp
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /home/freviriego/Pangolin/build/src/include/pangolin/config.h
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -389,6 +391,9 @@ CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /usr/local/include/opencv2/viz/types
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /usr/local/include/opencv2/viz/viz3d.hpp
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /usr/local/include/opencv2/viz/vizcore.hpp
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o: /usr/local/include/opencv2/viz/widgets.hpp
+
+CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: ../src/AR/objloader.cpp
+CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: ../src/AR/objloader.hpp
 
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: ../src/AR/ViewerAR.h
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: ../src/AR/ros_mono_ar.cc
@@ -841,4 +846,6 @@ CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /usr/local/include/opencv2/viz/ty
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /usr/local/include/opencv2/viz/viz3d.hpp
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /usr/local/include/opencv2/viz/vizcore.hpp
 CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o: /usr/local/include/opencv2/viz/widgets.hpp
+
+CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: ../src/AR/texture.cpp
 

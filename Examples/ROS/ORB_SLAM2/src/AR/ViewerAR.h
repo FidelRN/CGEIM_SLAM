@@ -102,6 +102,8 @@ private:
 
     void DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR*> elems_AR);
 
+    void scale3DModel(float scaleFactor);
+
     // frame rate
     float mFPS, mT;
     float fx,fy,cx,cy;
