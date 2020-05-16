@@ -577,6 +577,14 @@ Eigen/Geometry
 -
 
 ../include/AR.h
+GL/glew.h
+-
+GL/glut.h
+-
+MapPoint.h
+../include/MapPoint.h
+glm/glm.hpp
+-
 
 ../include/Converter.h
 opencv2/core/core.hpp
@@ -862,6 +870,14 @@ System.h
 mutex
 -
 
+../include/obj.h
+glm/glm.hpp
+-
+vector
+-
+fstream
+-
+
 /home/freviriego/CGEIM_SLAM/src/AR.cc
 AR.h
 /home/freviriego/CGEIM_SLAM/src/AR.h
@@ -1107,7 +1123,37 @@ Viewer.h
 /home/freviriego/CGEIM_SLAM/src/Viewer.h
 pangolin/pangolin.h
 -
+obj.h
+/home/freviriego/CGEIM_SLAM/src/obj.h
+png.h
+/home/freviriego/CGEIM_SLAM/src/png.h
 mutex
+-
+GL/glew.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+glm/gtx/transform.hpp
+-
+glm/gtx/polar_coordinates.hpp
+-
+
+/home/freviriego/CGEIM_SLAM/src/obj.cc
+obj.h
+/home/freviriego/CGEIM_SLAM/src/obj.h
+sstream
+-
+iostream
+-
+algorithm
+-
+glm/gtx/transform.hpp
+-
+glm/gtx/normal.hpp
 -
 
 /home/freviriego/Pangolin/build/src/include/pangolin/config.h

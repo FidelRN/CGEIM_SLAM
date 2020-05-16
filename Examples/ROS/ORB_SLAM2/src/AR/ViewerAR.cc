@@ -153,11 +153,7 @@ void ViewerAR::Run()
     vector<Plane*> vpPlane;
 
 
-    // Load model (OBJ)
-    mat4 xf = rotate(radians(180.0f),vec3(1.0f,0.0f,0.0f));
-    obj.load("/home/freviriego/CGEIM_SLAM/model/object.obj", xf);
-    vertices = obj.faces();
-    uvs = obj.texcoord();
+
 
     // Load texture (image)
     tex_png.load("/home/freviriego/CGEIM_SLAM/model/texture.png");
@@ -826,24 +822,11 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         
         glDisableClientState(GL_VERTEX_ARRAY);
     }
-    */
-
-        const GLfloat x0 = posOrig.at<float>(0);
-        const GLfloat y0 = posOrig.at<float>(1);
-        const GLfloat z0 = posOrig.at<float>(2); 
-
-        const GLfloat sx = posScale.at<float>(0);
-        const GLfloat sy = posScale.at<float>(1);
-        const GLfloat sz = posScale.at<float>(2); 
-
-        const float width = sqrt(pow(sx - x0, 2) +  
-                                 pow(sy - y0, 2)); // +  
-                                // pow(sz - z0, 2)); 
-        
-        vertices = obj.faces();
-        uvs = obj.texcoord();
-        // Scale object. Factor 10 to reduce size
-        scale3DModel(width);
+    */       
+        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex, false); 
+        /*
+        vertices = elems_AR[j]->vertices;
+        uvs = elems_AR[j]->uvs;
 
         glPushMatrix();
 
@@ -866,22 +849,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         glEnd();//end drawing of line loop
         glDisable(GL_TEXTURE_2D);
 
-        glPopMatrix();
+        glPopMatrix(); */
     }
 }
-
-void ViewerAR::scale3DModel(float scaleFactor)
-{
-    for (size_t i = 0; i < vertices.size(); i += 1)
-    {
-        vertices[i] = vertices[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
-    }
-
-    for (size_t i = 0; i < uvs.size(); i += 1)
-    {
-        uvs[i] = uvs[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
-    }
-}
-
-
 }

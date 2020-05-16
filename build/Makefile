@@ -903,6 +903,33 @@ src/Viewer.cc.s:
 	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.s
 .PHONY : src/Viewer.cc.s
 
+src/obj.o: src/obj.cc.o
+
+.PHONY : src/obj.o
+
+# target to build an object file
+src/obj.cc.o:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o
+.PHONY : src/obj.cc.o
+
+src/obj.i: src/obj.cc.i
+
+.PHONY : src/obj.i
+
+# target to preprocess a source file
+src/obj.cc.i:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/obj.cc.i
+.PHONY : src/obj.cc.i
+
+src/obj.s: src/obj.cc.s
+
+.PHONY : src/obj.s
+
+# target to generate assembly for a file
+src/obj.cc.s:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/obj.cc.s
+.PHONY : src/obj.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -996,6 +1023,9 @@ help:
 	@echo "... src/Viewer.o"
 	@echo "... src/Viewer.i"
 	@echo "... src/Viewer.s"
+	@echo "... src/obj.o"
+	@echo "... src/obj.i"
+	@echo "... src/obj.s"
 .PHONY : help
 
 

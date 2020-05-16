@@ -2,7 +2,7 @@ TODO:
 
 	-Mejorar panel menu Pangolin
 
-	-Depurar
+	-Depurar   --> EL CODIGO YA PODRIA VALER, UNA VEZ PROBADO QUE FUNCIONE (FALTARIA PERMITIR QUE EL PUNTO SCALE SE PUEDA BORRAR, PORQUE YA NO SE USAN)
 	-Memoria
 
 Opcional:
@@ -10,8 +10,10 @@ Opcional:
 	-Mejorar AR (por ejemplo una tetera o algo similar, .obj):
 									-Usar segundo punto (ARScale) para aplicar la escala al objeto y hacer que salga mas grande o pequeño (si el resultado empeora mucho se puede omitir ese punto).
 									AL crear usar punto de escala para determinar tamaño pero una vez hecho no modificar tamaño más. Decir distancia es X en la estructura de AR y que no se modifique (escalar vertices siempre con ese valor -> mas adelante para optimizar se puede guardar los vertices ya escalados en la propia estructura) VER COMO HACERLO
-									-Añadir objetos al plano 3D
-									
+
+
+
+
 -Imagen sale pequeña: era por distorsion que se aplica por camara (yaml). Lo he quitado, espero que no provoque otros fallos/que no se vean bien algunas cosas. 
 
 	

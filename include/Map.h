@@ -35,6 +35,7 @@ namespace ORB_SLAM2
 
 class MapPoint;
 class KeyFrame;
+class AR;
 
 class Map
 {

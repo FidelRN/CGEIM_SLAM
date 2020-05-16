@@ -21,7 +21,22 @@
 #include "Viewer.h"
 #include <pangolin/pangolin.h>
 
+#include "obj.h"
+#include "png.h"
+
 #include <mutex>
+
+// Include GLEW
+#include <GL/glew.h>
+
+// Include GLM
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/gtx/polar_coordinates.hpp>
+using namespace glm;
 
 namespace ORB_SLAM2
 {
@@ -125,7 +140,13 @@ void Viewer::Run()
     // AR points
     bool ARorig = false;
     bool ARscale = false;
-    long unsigned int origAR, scaleAR;          // TODO: para permitir modificar los puntos antes de confirmar
+    long unsigned int origAR, scaleAR; 
+
+
+    // Load model (OBJ)
+    OBJ obj;
+    mat4 xf = rotate(radians(180.0f),vec3(1.0f,0.0f,0.0f));
+    obj.load("/home/freviriego/CGEIM_SLAM/model/object.obj", xf);
 
     while(1)
     {
@@ -234,7 +255,7 @@ void Viewer::Run()
                 menu_insert_ar = false;
                 if (ARorig && ARscale){
                     // Insert AR
-                    bool insertedAr = mpMapDrawer->InsertAR();
+                    bool insertedAr = mpMapDrawer->InsertAR(obj.faces(), obj.texcoord());
                     if (insertedAr){
                         cout << "Inserted AR" << endl;
                         ARorig = false;
@@ -317,6 +338,8 @@ void Viewer::Run()
             mpMapDrawer->DrawKeyFrames(menuShowKeyFrames,menuShowGraph);
         if(menuShowPoints)
             mpMapDrawer->DrawMapPoints(menuShowPointsIDs);
+        if(menu_draw_ar)
+            mpMapDrawer->DrawAR();
 
         pangolin::FinishFrame();
 /*

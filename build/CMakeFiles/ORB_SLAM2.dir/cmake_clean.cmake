@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ORB_SLAM2.dir/src/Sim3Solver.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Initializer.cc.o"
   "CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o"
+  "CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o"
   "../lib/libORB_SLAM2.pdb"
   "../lib/libORB_SLAM2.so"
 )

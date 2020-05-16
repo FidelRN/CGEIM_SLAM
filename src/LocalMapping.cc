@@ -313,7 +313,7 @@ void LocalMapping::CreateNewMapPoints()
             else if(bStereo2)
                 cosParallaxStereo2 = cos(2*atan2(pKF2->mb/2,pKF2->mvDepth[idx2]));
 
-            cosParallaxStereo = min(cosParallaxStereo1,cosParallaxStereo2);
+            cosParallaxStereo = std::min(cosParallaxStereo1,cosParallaxStereo2);
 
             cv::Mat x3D;
             if(cosParallaxRays<cosParallaxStereo && cosParallaxRays>0 && (bStereo1 || bStereo2 || cosParallaxRays<0.9998))

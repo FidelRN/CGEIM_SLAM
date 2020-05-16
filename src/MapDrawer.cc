@@ -155,9 +155,6 @@ void MapDrawer::DrawMapPoints(const bool drawTextPoints)
             displayText(pos.at<float>(0), pos.at<float>(1), pos.at<float>(2), 0,0,1, val);
         }
     }
-
-    DrawAR();
-
 }
 
 void MapDrawer::DrawKeyFrames(const bool bDrawKF, const bool bDrawGraph)
@@ -416,12 +413,12 @@ bool MapDrawer::SetScaleARPoint(long unsigned int pID)
 }
 
 // Insert AR to map
-bool MapDrawer::InsertAR()
+bool MapDrawer::InsertAR(std::vector<glm::vec3> vert, std::vector<glm::vec3> uv)
 {
     // Get last AR object
     vector<AR*> elems_AR = mpMap->GetAR();
     AR* AR_elem = elems_AR[elems_AR.size()-1];
-    return AR_elem->SetValid();
+    return AR_elem->SetValid(mpMap->GetAllMapPoints(), vert, uv);
 }
 
 void MapDrawer::ClearLastAR()
@@ -448,9 +445,6 @@ void MapDrawer::DrawAR()
         num_elems -= 1;
 
 
-    //glBegin(GL_LINES);
-    //glColor3f(0.0,1.0,1.0);
-
     for (size_t j=0; j<num_elems; j++)
     {
         cv::Mat posOrig;
@@ -475,6 +469,10 @@ void MapDrawer::DrawAR()
             }        
         }
         // Draw AR object
+        GLuint tex;
+        glColor4f(1.0f, 0.5f, 0.0f, 1.0f);
+        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex, true); 
+/*
 
         // Draw line
         //glVertex3f(posOrig.at<float>(0),posOrig.at<float>(1),posOrig.at<float>(2));
@@ -507,15 +505,7 @@ void MapDrawer::DrawAR()
             x0,y1,z0,  x1,y1,z0,  x0,y1,z1,  x1,y1,z1,  // TOP
             x0,y0,z0,  x0,y0,z1,  x1,y0,z0,  x1,y0,z1   // BOTTOM
         };
-        /*
-        const GLfloat verts[] = {
-            x0,y0,z0,    x1,y0,z0,    x0,y1,z0,    x1,y1,z1,    // FRONT
-            x0,y0,z0-w,  x0,y1,z0-w,  x1,y0,z0-w,  x1,y1,z1-w,  // BACK
-            x0,y0,z0,    x0,y1,z0,    x0,y0,z0-w,  x0,y1,z0-w,  // LEFT
-            x1,y0,z0-w,  x1,y1,z1-w,  x1,y0,z0,    x1,y1,z1,    // RIGHT
-            x0,y1,z0,    x1,y1,z1,    x1,y0,z0-w,  x1,y1,z1-w,  // TOP
-            x0,y0,z0,    x0,y0,z0-w,  x1,y0,z0,    x1,y0,z0-w   // BOTTOM
-        };*/
+
         
         glVertexPointer(3, GL_FLOAT, 0, verts);
         glEnableClientState(GL_VERTEX_ARRAY);
@@ -534,7 +524,7 @@ void MapDrawer::DrawAR()
         glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
         
         glDisableClientState(GL_VERTEX_ARRAY);
-
+*/
     }
 
     //glEnd();

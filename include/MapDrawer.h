@@ -51,7 +51,7 @@ public:
     bool CreateAR(long unsigned int pID, bool isOrigin);
     bool SetOriginARPoint(long unsigned int pID);
     bool SetScaleARPoint(long unsigned int pID);
-    bool InsertAR();
+    bool InsertAR(std::vector<glm::vec3> vert, std::vector<glm::vec3> uv);
     void ClearLastAR();
     void ResetAR();
     void DrawAR();

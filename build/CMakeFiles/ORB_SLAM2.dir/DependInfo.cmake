@@ -24,6 +24,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/freviriego/CGEIM_SLAM/src/System.cc" "/home/freviriego/CGEIM_SLAM/build/CMakeFiles/ORB_SLAM2.dir/src/System.cc.o"
   "/home/freviriego/CGEIM_SLAM/src/Tracking.cc" "/home/freviriego/CGEIM_SLAM/build/CMakeFiles/ORB_SLAM2.dir/src/Tracking.cc.o"
   "/home/freviriego/CGEIM_SLAM/src/Viewer.cc" "/home/freviriego/CGEIM_SLAM/build/CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o"
+  "/home/freviriego/CGEIM_SLAM/src/obj.cc" "/home/freviriego/CGEIM_SLAM/build/CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

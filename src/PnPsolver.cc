@@ -149,7 +149,7 @@ void PnPsolver::SetRansacParameters(double probability, int minInliers, int maxI
     else
         nIterations = ceil(log(1-mRansacProb)/log(1-pow(mRansacEpsilon,3)));
 
-    mRansacMaxIts = max(1,min(nIterations,mRansacMaxIts));
+    mRansacMaxIts = std::max(1,std::min(nIterations,mRansacMaxIts));
 
     mvMaxError.resize(mvSigma2.size());
     for(size_t i=0; i<mvSigma2.size(); i++)
@@ -972,7 +972,7 @@ void PnPsolver::relative_error(double & rot_err, double & transl_err,
 			 (qtrue[3] + qest[3]) * (qtrue[3] + qest[3]) ) /
     sqrt(qtrue[0] * qtrue[0] + qtrue[1] * qtrue[1] + qtrue[2] * qtrue[2] + qtrue[3] * qtrue[3]);
 
-  rot_err = min(rot_err1, rot_err2);
+  rot_err = std::min(rot_err1, rot_err2);
 
   transl_err =
     sqrt((ttrue[0] - test[0]) * (ttrue[0] - test[0]) +

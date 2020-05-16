@@ -325,6 +325,14 @@ Eigen/Geometry
 -
 
 ../include/AR.h
+GL/glew.h
+-
+GL/glut.h
+-
+MapPoint.h
+../include/MapPoint.h
+glm/glm.hpp
+-
 
 ../include/Frame.h
 vector
