@@ -521,32 +521,59 @@ src/AR/ViewerAR.cc.s:
 	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.s
 .PHONY : src/AR/ViewerAR.cc.s
 
-src/AR/objloader.o: src/AR/objloader.cpp.o
+src/AR/obj.o: src/AR/obj.cc.o
 
-.PHONY : src/AR/objloader.o
+.PHONY : src/AR/obj.o
 
 # target to build an object file
-src/AR/objloader.cpp.o:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o
-.PHONY : src/AR/objloader.cpp.o
+src/AR/obj.cc.o:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/obj.cc.o
+.PHONY : src/AR/obj.cc.o
 
-src/AR/objloader.i: src/AR/objloader.cpp.i
+src/AR/obj.i: src/AR/obj.cc.i
 
-.PHONY : src/AR/objloader.i
+.PHONY : src/AR/obj.i
 
 # target to preprocess a source file
-src/AR/objloader.cpp.i:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.i
-.PHONY : src/AR/objloader.cpp.i
+src/AR/obj.cc.i:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/obj.cc.i
+.PHONY : src/AR/obj.cc.i
 
-src/AR/objloader.s: src/AR/objloader.cpp.s
+src/AR/obj.s: src/AR/obj.cc.s
 
-.PHONY : src/AR/objloader.s
+.PHONY : src/AR/obj.s
 
 # target to generate assembly for a file
-src/AR/objloader.cpp.s:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.s
-.PHONY : src/AR/objloader.cpp.s
+src/AR/obj.cc.s:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/obj.cc.s
+.PHONY : src/AR/obj.cc.s
+
+src/AR/png.o: src/AR/png.cc.o
+
+.PHONY : src/AR/png.o
+
+# target to build an object file
+src/AR/png.cc.o:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/png.cc.o
+.PHONY : src/AR/png.cc.o
+
+src/AR/png.i: src/AR/png.cc.i
+
+.PHONY : src/AR/png.i
+
+# target to preprocess a source file
+src/AR/png.cc.i:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/png.cc.i
+.PHONY : src/AR/png.cc.i
+
+src/AR/png.s: src/AR/png.cc.s
+
+.PHONY : src/AR/png.s
+
+# target to generate assembly for a file
+src/AR/png.cc.s:
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/png.cc.s
+.PHONY : src/AR/png.cc.s
 
 src/AR/ros_mono_ar.o: src/AR/ros_mono_ar.cc.o
 
@@ -574,33 +601,6 @@ src/AR/ros_mono_ar.s: src/AR/ros_mono_ar.cc.s
 src/AR/ros_mono_ar.cc.s:
 	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.s
 .PHONY : src/AR/ros_mono_ar.cc.s
-
-src/AR/texture.o: src/AR/texture.cpp.o
-
-.PHONY : src/AR/texture.o
-
-# target to build an object file
-src/AR/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o
-.PHONY : src/AR/texture.cpp.o
-
-src/AR/texture.i: src/AR/texture.cpp.i
-
-.PHONY : src/AR/texture.i
-
-# target to preprocess a source file
-src/AR/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/texture.cpp.i
-.PHONY : src/AR/texture.cpp.i
-
-src/AR/texture.s: src/AR/texture.cpp.s
-
-.PHONY : src/AR/texture.s
-
-# target to generate assembly for a file
-src/AR/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/texture.cpp.s
-.PHONY : src/AR/texture.cpp.s
 
 src/ros_mono.o: src/ros_mono.cc.o
 
@@ -670,15 +670,15 @@ help:
 	@echo "... src/AR/ViewerAR.o"
 	@echo "... src/AR/ViewerAR.i"
 	@echo "... src/AR/ViewerAR.s"
-	@echo "... src/AR/objloader.o"
-	@echo "... src/AR/objloader.i"
-	@echo "... src/AR/objloader.s"
+	@echo "... src/AR/obj.o"
+	@echo "... src/AR/obj.i"
+	@echo "... src/AR/obj.s"
+	@echo "... src/AR/png.o"
+	@echo "... src/AR/png.i"
+	@echo "... src/AR/png.s"
 	@echo "... src/AR/ros_mono_ar.o"
 	@echo "... src/AR/ros_mono_ar.i"
 	@echo "... src/AR/ros_mono_ar.s"
-	@echo "... src/AR/texture.o"
-	@echo "... src/AR/texture.i"
-	@echo "... src/AR/texture.s"
 	@echo "... src/ros_mono.o"
 	@echo "... src/ros_mono.i"
 	@echo "... src/ros_mono.s"

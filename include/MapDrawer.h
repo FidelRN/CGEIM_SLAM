@@ -52,6 +52,7 @@ public:
     bool SetOriginARPoint(long unsigned int pID);
     bool SetScaleARPoint(long unsigned int pID);
     bool InsertAR();
+    void ClearLastAR();
     void ResetAR();
     void DrawAR();
 

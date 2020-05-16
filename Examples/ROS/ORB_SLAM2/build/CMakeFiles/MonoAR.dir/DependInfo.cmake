@@ -5,9 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ViewerAR.cc" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o"
-  "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o"
+  "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/obj.cc" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/obj.cc.o"
+  "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/png.cc" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/png.cc.o"
   "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/ros_mono_ar.cc" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o"
-  "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp" "/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

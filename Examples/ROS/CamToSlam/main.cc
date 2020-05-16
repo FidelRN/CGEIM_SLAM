@@ -47,7 +47,8 @@ int main(int argc, char **argv)
             break;
 
         vcap.read(image);
-        resize(image, image, Size(640, 360), 0, 0, INTER_CUBIC);
+        // Size: https://www.ezs3.com/public/196.cfm
+        resize(image, image, Size(768, 432), 0, 0, INTER_CUBIC);
         
         cv_bridge::CvImage cvImage;
         cvImage.image = image;

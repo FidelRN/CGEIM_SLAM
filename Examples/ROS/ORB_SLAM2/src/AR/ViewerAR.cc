@@ -30,14 +30,6 @@
 
 using namespace std;
 
-
-
-
-
-
-
-
-
 /// Include standard headers
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,59 +38,26 @@ using namespace std;
 // Include GLEW
 #include <GL/glew.h>
 
-// Include GLFW
-//#include <glfw3.h>
-//GLFWwindow* window;
-
 // Include GLM
+#define GLM_ENABLE_EXPERIMENTAL
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/gtx/polar_coordinates.hpp>
 using namespace glm;
 
-// Standard includes:
-//#include <gl/gl.h>
-//#include <gl/glu.h>
-
-#include "objloader.hpp"
-#include "texture.hpp"
-
-GLuint VertexArrayID;
+#include "obj.h"
+#include "png.h"
 
 std::vector<glm::vec3> vertices;
-std::vector<glm::vec2> uvs;
-std::vector<glm::vec3> normals; // Won't be used at the moment.
-
-bool res;
-
+std::vector<glm::vec3> uvs;
 glm::vec3 a;
 glm::vec2 b;
 
-GLuint Texture;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+GLuint tex;
+PNG tex_png;
+OBJ obj;
 
 namespace ORB_SLAM2
 {
@@ -194,28 +153,32 @@ void ViewerAR::Run()
     vector<Plane*> vpPlane;
 
 
+    // Load model (OBJ)
+    mat4 xf = rotate(radians(180.0f),vec3(1.0f,0.0f,0.0f));
+    obj.load("/home/freviriego/CGEIM_SLAM/model/object.obj", xf);
+    vertices = obj.faces();
+    uvs = obj.texcoord();
 
-
-
-
-
-
-
-    // Load .dds file as texture 
-    Texture=loadDDS("/home/freviriego/CGEIM_SLAM/model/texture.dds");
-    
-    // load(parse) .obj file
-    res = loadOBJ("/home/freviriego/CGEIM_SLAM/model/object.obj", vertices, uvs, normals);
-
-
-    scale3DModel(0.01f);
-
-
-
-
-
-
-
+    // Load texture (image)
+    tex_png.load("/home/freviriego/CGEIM_SLAM/model/texture.png");
+    glGenTextures(1,&tex);
+    glBindTexture(GL_TEXTURE_2D,tex);
+    glTexStorage2D(GL_TEXTURE_2D,
+                    8,
+                    GL_RGB32F,
+                    tex_png.width(),tex_png.height());
+    glTexSubImage2D(GL_TEXTURE_2D,
+                    0,
+                    0,0,
+                    tex_png.width(),tex_png.height(),
+                    GL_RGB,
+                    GL_FLOAT,
+                    tex_png.pixels().data());
+    glGenerateMipmap(GL_TEXTURE_2D);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_S,GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_LINEAR);
 
     while(1)
     {
@@ -784,7 +747,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
     if (elems_AR.size() == 0)
         return;
 
-    int num_elems = elems_AR.size();
+    size_t num_elems = elems_AR.size();
     bool lastValid = elems_AR[elems_AR.size()-1]->valid;
     if (!lastValid)
         num_elems -= 1;
@@ -827,19 +790,15 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         const GLfloat x0 = posOrig.at<float>(0);
         const GLfloat y0 = posOrig.at<float>(1);
         const GLfloat z0 = posOrig.at<float>(2); 
-
         const GLfloat sx = posScale.at<float>(0);
         const GLfloat sy = posScale.at<float>(1);
         const GLfloat sz = posScale.at<float>(2); 
-
         const float width = sqrt(pow(sx - x0, 2) +  
                                  pow(sy - y0, 2)); // +  
                                 // pow(sz - z0, 2)); 
-
         const GLfloat x1 = x0 - width;
         const GLfloat y1 = y0 - width;
         const GLfloat z1 = z0 + width;
-
         
         const GLfloat verts[] = {
             x0,y0,z0,  x1,y0,z0,  x0,y1,z0,  x1,y1,z0,  // FRONT
@@ -849,8 +808,6 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
             x0,y1,z0,  x1,y1,z0,  x0,y1,z1,  x1,y1,z1,  // TOP
             x0,y0,z0,  x0,y0,z1,  x1,y0,z0,  x1,y0,z1   // BOTTOM
         };
-
-
         glVertexPointer(3, GL_FLOAT, 0, verts);
         glEnableClientState(GL_VERTEX_ARRAY);
         
@@ -868,24 +825,36 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
         
         glDisableClientState(GL_VERTEX_ARRAY);
-
     }
     */
 
+        const GLfloat x0 = posOrig.at<float>(0);
+        const GLfloat y0 = posOrig.at<float>(1);
+        const GLfloat z0 = posOrig.at<float>(2); 
 
+        const GLfloat sx = posScale.at<float>(0);
+        const GLfloat sy = posScale.at<float>(1);
+        const GLfloat sz = posScale.at<float>(2); 
+
+        const float width = sqrt(pow(sx - x0, 2) +  
+                                 pow(sy - y0, 2)); // +  
+                                // pow(sz - z0, 2)); 
+        
+        vertices = obj.faces();
+        uvs = obj.texcoord();
+        // Scale object. Factor 10 to reduce size
+        scale3DModel(width);
 
         glPushMatrix();
 
         glTranslatef(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2));
 
-        //glEnable(GL_TEXTURE_2D);    
-        //glBindTexture(GL_TEXTURE_2D, Texture);
+        glEnable(GL_TEXTURE_2D);    
+        glBindTexture(GL_TEXTURE_2D, tex);
 
-        //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         glBegin(GL_TRIANGLES);
-        glColor4f(0.0f, 0.0f, 0.0f, 1.0f);
-        
-        for (int i = 0; i < vertices.size(); i += 1)
+
+        for (size_t i = 0; i < vertices.size(); i += 1)
         {
             a = vertices[i];
             b = uvs[i];
@@ -899,31 +868,18 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
 
         glPopMatrix();
     }
-
-
-
-
-
-
-
-
 }
 
 void ViewerAR::scale3DModel(float scaleFactor)
 {
-    for (int i = 0; i < vertices.size(); i += 1)
+    for (size_t i = 0; i < vertices.size(); i += 1)
     {
         vertices[i] = vertices[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
     }
 
-    for (int i = 0; i < normals.size(); i += 1)
+    for (size_t i = 0; i < uvs.size(); i += 1)
     {
-        normals[i] = normals[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
-    }
-
-    for (int i = 0; i < uvs.size(); i += 1)
-    {
-        uvs[i] = uvs[i] * vec2(scaleFactor * 1.0f, scaleFactor * 1.0f);
+        uvs[i] = uvs[i] * vec3(scaleFactor * 1.0f, scaleFactor * 1.0f, scaleFactor * 1.0f);
     }
 }
 

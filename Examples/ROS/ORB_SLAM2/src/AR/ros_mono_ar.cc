@@ -158,8 +158,9 @@ void ImageGrabber::GrabImage(const sensor_msgs::ImageConstPtr& msg)
     vector<ORB_SLAM2::MapPoint*> allvMPs = mpSLAM->mpMap->GetAllMapPoints();
     vector<ORB_SLAM2::AR*> elems_AR = mpSLAM->mpMap->GetAR();
 
-    cv::undistort(im,imu,K,DistCoef);
 
+    //cv::undistort(im,imu,K,DistCoef);
+    imu = im;
     if(bRGB)
         viewerAR.SetImagePose(imu,Tcw,state,vKeys,vMPs, allvMPs, elems_AR);
     else

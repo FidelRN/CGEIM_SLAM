@@ -71,10 +71,10 @@ rosbuild_add_executable(MonoAR
 src/AR/ros_mono_ar.cc
 src/AR/ViewerAR.h
 src/AR/ViewerAR.cc
-src/AR/objloader.hpp
-src/AR/objloader.cpp
-src/AR/texture.hpp
-src/AR/texture.cpp
+src/AR/png.h
+src/AR/png.cc
+src/AR/obj.h
+src/AR/obj.cc
 )
 
 target_link_libraries(MonoAR

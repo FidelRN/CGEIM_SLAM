@@ -424,6 +424,11 @@ bool MapDrawer::InsertAR()
     return AR_elem->SetValid();
 }
 
+void MapDrawer::ClearLastAR()
+{
+    mpMap->ClearLastAR();
+}
+
 void MapDrawer::ResetAR()
 {
     mpMap->ClearAR();

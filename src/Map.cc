@@ -136,6 +136,16 @@ void Map::CreateAR(unsigned long int pID, bool isOrigin)
     elems_AR.push_back(elem);
 }
 
+void Map::ClearLastAR()
+{   
+    if (!elems_AR.empty()){
+        // Free memory
+        delete elems_AR[elems_AR.size()-1];
+        // Delete from vector
+        elems_AR.pop_back();
+    }
+}
+
 void Map::ClearAR()
 {
     vector<AR*>().swap(elems_AR);
@@ -149,7 +159,7 @@ vector<AR*> Map::GetAR()
 // Check if point is any AR object
 bool Map::PointIsInAR(long unsigned int pID)
 {
-    for (int i=0; i<elems_AR.size(); i++){
+    for (unsigned int i=0; i<elems_AR.size(); i++){
         if (pID == elems_AR[i]->originID || pID == elems_AR[i]->scaleID)
             return true;
     }

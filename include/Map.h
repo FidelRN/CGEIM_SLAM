@@ -62,6 +62,7 @@ public:
 
 
     void CreateAR(unsigned long int pID, bool isOrigin);
+    void ClearLastAR();
     void ClearAR();
     vector<AR*> GetAR();
     bool PointIsInAR(long unsigned int pID);

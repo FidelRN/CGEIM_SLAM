@@ -301,7 +301,7 @@ UBUNTU_BIONIC:BOOL=TRUE
 USERCONFIG:FILEPATH=USERCONFIG-NOTFOUND
 
 //Path to a file.
-_file_name:FILEPATH=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp
+_file_name:FILEPATH=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/obj.cc
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h

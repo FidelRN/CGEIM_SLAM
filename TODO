@@ -8,16 +8,17 @@ TODO:
 Opcional:
 
 	-Mejorar AR (por ejemplo una tetera o algo similar, .obj):
-		AHora se carga obj. Falta:
-									-Usar segundo punto (ARScale) para aplicar la escala al objeto y hacer que salga mas grande o pequeño (si el resultado empeora mucho se puede omitir ese punto)
-									-Aplicar textura
-									-Rotar objeto para que salga "de pie"
-									-Buscar una mejor figura (ahora es una pistola)
+									-Usar segundo punto (ARScale) para aplicar la escala al objeto y hacer que salga mas grande o pequeño (si el resultado empeora mucho se puede omitir ese punto).
+									AL crear usar punto de escala para determinar tamaño pero una vez hecho no modificar tamaño más. Decir distancia es X en la estructura de AR y que no se modifique (escalar vertices siempre con ese valor -> mas adelante para optimizar se puede guardar los vertices ya escalados en la propia estructura) VER COMO HACERLO
+									-Añadir objetos al plano 3D
+									
+-Imagen sale pequeña: era por distorsion que se aplica por camara (yaml). Lo he quitado, espero que no provoque otros fallos/que no se vean bien algunas cosas. 
 
-	-Hacer que se calcule posicion del objeto para que salga orientado (ahora depende de la inicializacion, no mira si superficie es plana)
+	
 
-Muy opcional:									
+Muy opcional (trabajo futuro):									
 	-Permitir varios tipos de figuras AR
+	-Hacer que se calcule posicion del objeto para que salga orientado (ahora depende de la inicializacion, no mira si superficie es plana)
 
 
 
@@ -60,3 +61,6 @@ El objeto se debe poner en el punto especificado por AR de alguna manera  --> Se
 -> Rotar objeto para que salga bien (ahora sale hacia abajo, en obj de clase del bloque 2 se hace)
 
 Con eso mas o menos ya se puede hacer la memoria y presentacion, y luego si hay tiempo algo mas (o no)
+
+
+Se carga objeto de una carpeta y tambien una imagen PNG para la textura. Esto se realiza con el codigo de las practicas de la asignatura de otros bloques.

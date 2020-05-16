@@ -217,180 +217,180 @@ CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o.provides: CMakeFiles/MonoAR.dir/src/A
 CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o.provides.build: CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o
 
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: CMakeFiles/MonoAR.dir/flags.make
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: ../src/AR/objloader.cpp
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: ../manifest.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/cpp_common/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rostime/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roscpp_traits/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roscpp_serialization/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/catkin/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/genmsg/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/genpy/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/message_runtime/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/gencpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/geneus/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/gennodejs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/genlisp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/message_generation/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosbuild/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosconsole/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/std_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosgraph_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/xmlrpcpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roscpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/geometry_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/message_filters/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosgraph/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosclean/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/ros_environment/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rospack/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roslib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosmaster/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosout/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosparam/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosunit/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roslaunch/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rospy/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/topic_tools/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/class_loader/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/pluginlib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roslz4/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosbag_storage/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/std_srvs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosbag/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rostopic/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosnode/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosmsg/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rosservice/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/roswtf/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/sensor_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/actionlib_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/rostest/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/actionlib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/tf2_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/tf2/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/tf2_py/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/tf2_ros/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/tf/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/image_transport/package.xml
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o: /opt/ros/melodic/share/cv_bridge/package.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o -c /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: CMakeFiles/MonoAR.dir/flags.make
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: ../src/AR/png.cc
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: ../manifest.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/cpp_common/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rostime/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roscpp_traits/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roscpp_serialization/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/catkin/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/genmsg/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/genpy/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/message_runtime/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/gencpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/geneus/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/gennodejs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/genlisp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/message_generation/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosbuild/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosconsole/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/std_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosgraph_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/xmlrpcpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roscpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/geometry_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/message_filters/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosgraph/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosclean/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/ros_environment/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rospack/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roslib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosmaster/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosout/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosparam/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosunit/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roslaunch/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rospy/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/topic_tools/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/class_loader/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/pluginlib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roslz4/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosbag_storage/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/std_srvs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosbag/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rostopic/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosnode/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosmsg/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rosservice/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/roswtf/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/sensor_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/actionlib_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/rostest/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/actionlib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/tf2_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/tf2/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/tf2_py/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/tf2_ros/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/tf/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/image_transport/package.xml
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o: /opt/ros/melodic/share/cv_bridge/package.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/png.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/png.cc.o -c /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/png.cc
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp > CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.i
+CMakeFiles/MonoAR.dir/src/AR/png.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/png.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/png.cc > CMakeFiles/MonoAR.dir/src/AR/png.cc.i
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/objloader.cpp -o CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.s
+CMakeFiles/MonoAR.dir/src/AR/png.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/png.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/png.cc -o CMakeFiles/MonoAR.dir/src/AR/png.cc.s
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.requires:
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o.requires:
 
-.PHONY : CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.requires
+.PHONY : CMakeFiles/MonoAR.dir/src/AR/png.cc.o.requires
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.provides: CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.requires
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.provides.build
-.PHONY : CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.provides
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o.provides: CMakeFiles/MonoAR.dir/src/AR/png.cc.o.requires
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/png.cc.o.provides.build
+.PHONY : CMakeFiles/MonoAR.dir/src/AR/png.cc.o.provides
 
-CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.provides.build: CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o
+CMakeFiles/MonoAR.dir/src/AR/png.cc.o.provides.build: CMakeFiles/MonoAR.dir/src/AR/png.cc.o
 
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: CMakeFiles/MonoAR.dir/flags.make
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: ../src/AR/texture.cpp
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: ../manifest.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/cpp_common/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rostime/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roscpp_traits/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roscpp_serialization/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/catkin/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/genmsg/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/genpy/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/message_runtime/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/gencpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/geneus/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/gennodejs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/genlisp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/message_generation/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosbuild/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosconsole/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/std_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosgraph_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/xmlrpcpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roscpp/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/geometry_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/message_filters/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosgraph/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosclean/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/ros_environment/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rospack/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roslib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosmaster/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosout/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosparam/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosunit/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roslaunch/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rospy/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/topic_tools/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/class_loader/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/pluginlib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roslz4/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosbag_storage/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/std_srvs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosbag/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rostopic/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosnode/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosmsg/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rosservice/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/roswtf/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/sensor_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/actionlib_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/rostest/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/actionlib/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/tf2_msgs/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/tf2/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/tf2_py/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/tf2_ros/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/tf/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/image_transport/package.xml
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o: /opt/ros/melodic/share/cv_bridge/package.xml
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o -c /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: CMakeFiles/MonoAR.dir/flags.make
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: ../src/AR/obj.cc
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: ../manifest.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/cpp_common/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rostime/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roscpp_traits/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roscpp_serialization/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/catkin/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/genmsg/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/genpy/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/message_runtime/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/gencpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/geneus/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/gennodejs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/genlisp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/message_generation/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosbuild/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosconsole/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/std_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosgraph_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/xmlrpcpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roscpp/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/geometry_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/message_filters/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosgraph/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosclean/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/ros_environment/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rospack/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roslib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosmaster/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosout/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosparam/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosunit/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roslaunch/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rospy/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/topic_tools/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/class_loader/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/pluginlib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roslz4/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosbag_storage/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/std_srvs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosbag/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rostopic/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosnode/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosmsg/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rosservice/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/roswtf/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/sensor_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/actionlib_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/rostest/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/actionlib/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/tf2_msgs/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/tf2/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/tf2_py/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/tf2_ros/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/tf/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/image_transport/package.xml
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o: /opt/ros/melodic/share/cv_bridge/package.xml
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MonoAR.dir/src/AR/obj.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MonoAR.dir/src/AR/obj.cc.o -c /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/obj.cc
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/texture.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp > CMakeFiles/MonoAR.dir/src/AR/texture.cpp.i
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MonoAR.dir/src/AR/obj.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/obj.cc > CMakeFiles/MonoAR.dir/src/AR/obj.cc.i
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/texture.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/texture.cpp -o CMakeFiles/MonoAR.dir/src/AR/texture.cpp.s
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MonoAR.dir/src/AR/obj.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/freviriego/CGEIM_SLAM/Examples/ROS/ORB_SLAM2/src/AR/obj.cc -o CMakeFiles/MonoAR.dir/src/AR/obj.cc.s
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.requires:
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.requires:
 
-.PHONY : CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.requires
+.PHONY : CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.requires
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.provides: CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.requires
-	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.provides.build
-.PHONY : CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.provides
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.provides: CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.requires
+	$(MAKE) -f CMakeFiles/MonoAR.dir/build.make CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.provides.build
+.PHONY : CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.provides
 
-CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.provides.build: CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o
+CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.provides.build: CMakeFiles/MonoAR.dir/src/AR/obj.cc.o
 
 
 # Object files for target MonoAR
 MonoAR_OBJECTS = \
 "CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o" \
 "CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o" \
-"CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o" \
-"CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o"
+"CMakeFiles/MonoAR.dir/src/AR/png.cc.o" \
+"CMakeFiles/MonoAR.dir/src/AR/obj.cc.o"
 
 # External object files for target MonoAR
 MonoAR_EXTERNAL_OBJECTS =
 
 ../MonoAR: CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o
 ../MonoAR: CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o
-../MonoAR: CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o
-../MonoAR: CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o
+../MonoAR: CMakeFiles/MonoAR.dir/src/AR/png.cc.o
+../MonoAR: CMakeFiles/MonoAR.dir/src/AR/obj.cc.o
 ../MonoAR: CMakeFiles/MonoAR.dir/build.make
 ../MonoAR: /usr/local/lib/libopencv_shape.so.3.2.0
 ../MonoAR: /usr/local/lib/libopencv_stitching.so.3.2.0
@@ -450,8 +450,8 @@ CMakeFiles/MonoAR.dir/build: ../MonoAR
 
 CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/ros_mono_ar.cc.o.requires
 CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/ViewerAR.cc.o.requires
-CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/objloader.cpp.o.requires
-CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/texture.cpp.o.requires
+CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/png.cc.o.requires
+CMakeFiles/MonoAR.dir/requires: CMakeFiles/MonoAR.dir/src/AR/obj.cc.o.requires
 
 .PHONY : CMakeFiles/MonoAR.dir/requires
 

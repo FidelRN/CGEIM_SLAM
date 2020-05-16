@@ -86,10 +86,12 @@ void Viewer::Run()
     pangolin::Var<string> menu_originID("menu.Origin-ID");
     pangolin::Var<string> menu_scaleID("menu.Scale-ID");
     pangolin::Var<bool> menu_insert_ar("menu.Insert AR",false,false);
-    pangolin::Var<bool> menu_clear_ar("menu.Clear AR",false,false);
+    pangolin::Var<bool> menu_clear_last_ar("menu.Clear last AR",false,false);
+    pangolin::Var<bool> menu_clear_ar("menu.Clear all AR",false,false);
     pangolin::Var<bool> menu_draw_ar("menu.Draw AR",true,true);
 
     // ViewerAR --> Modify/delete
+    pangolin::Var<string> menu_separator("menu. ORIGINAL AR (CUBE)");
     pangolin::Var<bool> menu_detectplane("menu.Insert Cube",false,false);
     pangolin::Var<bool> menu_clear("menu.Clear All",false,false);
     pangolin::Var<bool> menu_drawcube("menu.Draw Cube",true,true);
@@ -258,6 +260,13 @@ void Viewer::Run()
             menuFollowCamera = bFollowCam;
             menuLocalizationMode = bLocMode;
             bPause = false;
+        }
+
+
+        if (menu_clear_last_ar){
+            // Clear last AR
+            menu_clear_last_ar = false;
+            mpMapDrawer->ClearLastAR();
         }
 
         if (menu_clear_ar){
