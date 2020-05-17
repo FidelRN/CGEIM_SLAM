@@ -54,7 +54,7 @@ public:
     bool InsertAR(std::vector<glm::vec3> vert, std::vector<glm::vec3> uv);
     void ClearLastAR();
     void ResetAR();
-    void DrawAR();
+    void DrawAR(GLuint tex);
 
 private:
 

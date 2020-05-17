@@ -160,7 +160,8 @@ vector<AR*> Map::GetAR()
 bool Map::PointIsInAR(long unsigned int pID)
 {
     for (unsigned int i=0; i<elems_AR.size(); i++){
-        if (pID == elems_AR[i]->originID || pID == elems_AR[i]->scaleID)
+        // Only if is origin
+        if (pID == elems_AR[i]->originID) // || pID == elems_AR[i]->scaleID)
             return true;
     }
     return false;

@@ -27,7 +27,7 @@ public:
     float distance(const std::vector<MapPoint*> allvMPs);
     void scale3DModel(float scaleFactor);
 
-    void Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex, bool is3d); 
+    void Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex); 
 
     long unsigned int originID, scaleID;
 

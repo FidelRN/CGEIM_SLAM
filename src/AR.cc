@@ -115,15 +115,13 @@ void AR::scale3DModel(float scaleFactor)
     }
 }
 
-void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex, bool is3d)
+void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex)
 {
     glPushMatrix();
 
     glTranslatef(x, y, z);
-    if (!is3d){
-        glEnable(GL_TEXTURE_2D);    
-        glBindTexture(GL_TEXTURE_2D, tex);
-    }
+    glEnable(GL_TEXTURE_2D);    
+    glBindTexture(GL_TEXTURE_2D, tex);
 
     glBegin(GL_TRIANGLES);
 
@@ -135,15 +133,13 @@ void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex, bool is3d)
         a = vertices[i];
         b = uvs[i];
         glNormal3f(a.x, a.y, a.z);
-        if (!is3d)
-            glTexCoord2d(b.x, b.y);
+        glTexCoord2d(b.x, b.y);
             
         glVertex3f(a.x, a.y, a.z);      
     }
 
     glEnd();//end drawing of line loop
-    if (!is3d)
-        glDisable(GL_TEXTURE_2D);
+    glDisable(GL_TEXTURE_2D);
 
     glPopMatrix();
 }

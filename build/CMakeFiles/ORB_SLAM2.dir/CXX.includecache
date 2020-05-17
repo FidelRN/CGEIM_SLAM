@@ -1141,6 +1141,8 @@ glm/gtx/transform.hpp
 -
 glm/gtx/polar_coordinates.hpp
 -
+png.h
+/home/freviriego/CGEIM_SLAM/src/png.h
 
 /home/freviriego/CGEIM_SLAM/src/obj.cc
 obj.h
@@ -1154,6 +1156,22 @@ algorithm
 glm/gtx/transform.hpp
 -
 glm/gtx/normal.hpp
+-
+
+/home/freviriego/CGEIM_SLAM/src/png.cc
+png.h
+/home/freviriego/CGEIM_SLAM/src/png.h
+iostream
+-
+cstdio
+-
+png.h
+-
+
+/home/freviriego/CGEIM_SLAM/src/png.h
+vector
+-
+string
 -
 
 /home/freviriego/Pangolin/build/src/include/pangolin/config.h

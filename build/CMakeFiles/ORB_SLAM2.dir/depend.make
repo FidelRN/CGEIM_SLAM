@@ -5891,6 +5891,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../include/Tracking.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../include/Viewer.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../include/obj.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../src/Viewer.cc
+CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: ../src/png.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: /home/freviriego/Pangolin/build/src/include/pangolin/config.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
 CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -6285,4 +6286,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o: /usr/local/include/opencv2/viz/widgets
 
 CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o: ../include/obj.h
 CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o: ../src/obj.cc
+
+CMakeFiles/ORB_SLAM2.dir/src/png.cc.o: ../src/png.cc
+CMakeFiles/ORB_SLAM2.dir/src/png.cc.o: ../src/png.h
 

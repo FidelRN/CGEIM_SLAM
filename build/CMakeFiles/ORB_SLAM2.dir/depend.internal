@@ -5892,6 +5892,7 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
  ../include/Viewer.h
  ../include/obj.h
  /home/freviriego/CGEIM_SLAM/src/Viewer.cc
+ /home/freviriego/CGEIM_SLAM/src/png.h
  /home/freviriego/Pangolin/build/src/include/pangolin/config.h
  /home/freviriego/Pangolin/include/pangolin/compat/type_traits.h
  /home/freviriego/Pangolin/include/pangolin/display/attach.h
@@ -6286,3 +6287,6 @@ CMakeFiles/ORB_SLAM2.dir/src/Viewer.cc.o
 CMakeFiles/ORB_SLAM2.dir/src/obj.cc.o
  ../include/obj.h
  /home/freviriego/CGEIM_SLAM/src/obj.cc
+CMakeFiles/ORB_SLAM2.dir/src/png.cc.o
+ /home/freviriego/CGEIM_SLAM/src/png.cc
+ /home/freviriego/CGEIM_SLAM/src/png.h

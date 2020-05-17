@@ -773,15 +773,6 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         }
         // Draw AR object
 /*
-        // Draw line
-        //pangolin::OpenGlMatrix M = pangolin::OpenGlMatrix::Translate(-x,-size-y,-z);
-        glPushMatrix();
-        //M.Multiply();
-        pangolin::glDrawLine(posOrig.at<float>(0),posOrig.at<float>(1),posOrig.at<float>(2),
-                             posScale.at<float>(0),posScale.at<float>(1),posScale.at<float>(2));
-        glPopMatrix();
-*/
-/*
         // Draw cube
         const GLfloat x0 = posOrig.at<float>(0);
         const GLfloat y0 = posOrig.at<float>(1);
@@ -823,33 +814,7 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
         glDisableClientState(GL_VERTEX_ARRAY);
     }
     */       
-        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex, false); 
-        /*
-        vertices = elems_AR[j]->vertices;
-        uvs = elems_AR[j]->uvs;
-
-        glPushMatrix();
-
-        glTranslatef(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2));
-
-        glEnable(GL_TEXTURE_2D);    
-        glBindTexture(GL_TEXTURE_2D, tex);
-
-        glBegin(GL_TRIANGLES);
-
-        for (size_t i = 0; i < vertices.size(); i += 1)
-        {
-            a = vertices[i];
-            b = uvs[i];
-            glNormal3f(a.x, a.y, a.z);
-            glTexCoord2d(b.x, b.y);
-            glVertex3f(a.x, a.y, a.z);      
-        }
-
-        glEnd();//end drawing of line loop
-        glDisable(GL_TEXTURE_2D);
-
-        glPopMatrix(); */
+        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex); 
     }
 }
 }

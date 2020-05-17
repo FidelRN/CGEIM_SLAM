@@ -431,7 +431,7 @@ void MapDrawer::ResetAR()
     mpMap->ClearAR();
 }
 
-void MapDrawer::DrawAR()
+void MapDrawer::DrawAR(GLuint tex)
 {
     const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
     const vector<AR*> elems_AR = mpMap->GetAR();
@@ -469,64 +469,8 @@ void MapDrawer::DrawAR()
             }        
         }
         // Draw AR object
-        GLuint tex;
-        glColor4f(1.0f, 0.5f, 0.0f, 1.0f);
-        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex, true); 
-/*
-
-        // Draw line
-        //glVertex3f(posOrig.at<float>(0),posOrig.at<float>(1),posOrig.at<float>(2));
-        //glVertex3f(posScale.at<float>(0),posScale.at<float>(1),posScale.at<float>(2));
-        
-
-        // Draw cube
-        const GLfloat x0 = posOrig.at<float>(0);
-        const GLfloat y0 = posOrig.at<float>(1);
-        const GLfloat z0 = posOrig.at<float>(2); 
-
-        const GLfloat sx = posScale.at<float>(0);
-        const GLfloat sy = posScale.at<float>(1);
-        const GLfloat sz = posScale.at<float>(2); 
-
-        const float width = sqrt(pow(sx - x0, 2) +  
-                                 pow(sy - y0, 2)); // +  
-                                // pow(sz - z0, 2)); 
-
-        const GLfloat x1 = x0 - width;
-        const GLfloat y1 = y0 - width;
-        const GLfloat z1 = z0 + width;
-
-        
-        const GLfloat verts[] = {
-            x0,y0,z0,  x1,y0,z0,  x0,y1,z0,  x1,y1,z0,  // FRONT
-            x0,y0,z1,  x0,y1,z1,  x1,y0,z1,  x1,y1,z1,  // BACK
-            x0,y0,z0,  x0,y1,z0,  x0,y0,z1,  x0,y1,z1,  // LEFT
-            x1,y0,z1,  x1,y1,z1,  x1,y0,z0,  x1,y1,z0,  // RIGHT
-            x0,y1,z0,  x1,y1,z0,  x0,y1,z1,  x1,y1,z1,  // TOP
-            x0,y0,z0,  x0,y0,z1,  x1,y0,z0,  x1,y0,z1   // BOTTOM
-        };
-
-        
-        glVertexPointer(3, GL_FLOAT, 0, verts);
-        glEnableClientState(GL_VERTEX_ARRAY);
-        
-        glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-        glDrawArrays(GL_TRIANGLE_STRIP, 4, 4);
-        
-        glColor4f(0.0f, 1.0f, 0.0f, 1.0f);
-        glDrawArrays(GL_TRIANGLE_STRIP, 8, 4);
-        glDrawArrays(GL_TRIANGLE_STRIP, 12, 4);
-        
-        glColor4f(0.0f, 0.0f, 1.0f, 1.0f);
-        glDrawArrays(GL_TRIANGLE_STRIP, 16, 4);
-        glColor4f(0.0f, 1.0f, 1.0f, 1.0f);
-        glDrawArrays(GL_TRIANGLE_STRIP, 20, 4);
-        
-        glDisableClientState(GL_VERTEX_ARRAY);
-*/
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex); 
     }
-
-    //glEnd();
 }
 } //namespace ORB_SLAM

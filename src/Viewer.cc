@@ -38,6 +38,10 @@
 #include <glm/gtx/polar_coordinates.hpp>
 using namespace glm;
 
+#include "png.h"
+GLuint tex;
+PNG tex_png;
+
 namespace ORB_SLAM2
 {
 
@@ -147,6 +151,28 @@ void Viewer::Run()
     OBJ obj;
     mat4 xf = rotate(radians(180.0f),vec3(1.0f,0.0f,0.0f));
     obj.load("/home/freviriego/CGEIM_SLAM/model/object.obj", xf);
+
+
+    // Load texture (image)
+    tex_png.load("/home/freviriego/CGEIM_SLAM/model/texture.png");
+    glGenTextures(1,&tex);
+    glBindTexture(GL_TEXTURE_2D,tex);
+    glTexStorage2D(GL_TEXTURE_2D,
+                    8,
+                    GL_RGB32F,
+                    tex_png.width(),tex_png.height());
+    glTexSubImage2D(GL_TEXTURE_2D,
+                    0,
+                    0,0,
+                    tex_png.width(),tex_png.height(),
+                    GL_RGB,
+                    GL_FLOAT,
+                    tex_png.pixels().data());
+    glGenerateMipmap(GL_TEXTURE_2D);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_S,GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_LINEAR);
 
     while(1)
     {
@@ -339,14 +365,10 @@ void Viewer::Run()
         if(menuShowPoints)
             mpMapDrawer->DrawMapPoints(menuShowPointsIDs);
         if(menu_draw_ar)
-            mpMapDrawer->DrawAR();
+            mpMapDrawer->DrawAR(tex);
 
         pangolin::FinishFrame();
-/*
-        cv::Mat im = mpFrameDrawer->DrawFrame();
-        cv::imshow("ORB-SLAM2: Current Frame",im);
-        cv::waitKey(mT);
-*/
+
         if(menuReset)
         {
             menuShowGraph = true;

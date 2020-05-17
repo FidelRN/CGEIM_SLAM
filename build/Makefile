@@ -930,6 +930,33 @@ src/obj.cc.s:
 	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/obj.cc.s
 .PHONY : src/obj.cc.s
 
+src/png.o: src/png.cc.o
+
+.PHONY : src/png.o
+
+# target to build an object file
+src/png.cc.o:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/png.cc.o
+.PHONY : src/png.cc.o
+
+src/png.i: src/png.cc.i
+
+.PHONY : src/png.i
+
+# target to preprocess a source file
+src/png.cc.i:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/png.cc.i
+.PHONY : src/png.cc.i
+
+src/png.s: src/png.cc.s
+
+.PHONY : src/png.s
+
+# target to generate assembly for a file
+src/png.cc.s:
+	$(MAKE) -f CMakeFiles/ORB_SLAM2.dir/build.make CMakeFiles/ORB_SLAM2.dir/src/png.cc.s
+.PHONY : src/png.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1026,6 +1053,9 @@ help:
 	@echo "... src/obj.o"
 	@echo "... src/obj.i"
 	@echo "... src/obj.s"
+	@echo "... src/png.o"
+	@echo "... src/png.i"
+	@echo "... src/png.s"
 .PHONY : help
 
 
