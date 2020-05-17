@@ -751,25 +751,14 @@ void ViewerAR::DrawAR(const std::vector<MapPoint*> allvMPs, const std::vector<AR
     for (size_t j=0; j<num_elems; j++)
     {
         cv::Mat posOrig;
-        cv::Mat posScale;
-        bool getPosOrig = false;
-        bool getPosScale = false;
         // Get points of each AR object
         for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
         {
-            // Get position of AR points
+            // Get position of AR point
             if (allvMPs[i]->mnId == elems_AR[j]->originID){
                 posOrig = allvMPs[i]->GetWorldPos();
-                getPosOrig = true;
-                if (getPosScale)
-                    break;
+                break;
             }
-            if (allvMPs[i]->mnId == elems_AR[j]->scaleID){
-                posScale = allvMPs[i]->GetWorldPos();
-                getPosScale = true;
-                if (getPosOrig)
-                    break;
-            }        
         }
         // Draw AR object
 /*

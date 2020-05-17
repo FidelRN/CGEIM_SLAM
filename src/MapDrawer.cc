@@ -367,7 +367,7 @@ bool MapDrawer::CreateAR(long unsigned int pID, bool isOrigin)
     if (isOrigin){
         // Check if the same point is already taken by other AR object
         vector<AR*> elems_AR = mpMap->GetAR();
-        for (int i=0; i<elems_AR.size(); i++){
+        for (size_t i=0; i<elems_AR.size(); i++){
             if(elems_AR[i]->valid && (elems_AR[i]->originID == pID))
                 return false;
         }
@@ -389,7 +389,7 @@ bool MapDrawer::SetOriginARPoint(long unsigned int pID)
     AR* AR_elem = elems_AR[elems_AR.size()-1];
 
     // Check if the same point is already taken by other AR object
-    for (int i=0; i<elems_AR.size()-1; i++){
+    for (size_t i=0; i<elems_AR.size()-1; i++){
         if(elems_AR[i]->valid && (elems_AR[i]->originID == pID))
             return false;
     }
@@ -433,13 +433,13 @@ void MapDrawer::ResetAR()
 
 void MapDrawer::DrawAR(GLuint tex)
 {
-    const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
+    const vector<MapPoint*> &allvMPs = mpMap->GetAllMapPoints();
     const vector<AR*> elems_AR = mpMap->GetAR();
 
     if (elems_AR.size() == 0)
         return;
 
-    int num_elems = elems_AR.size();
+    size_t num_elems = elems_AR.size();
     bool lastValid = elems_AR[elems_AR.size()-1]->valid;
     if (!lastValid)
         num_elems -= 1;
@@ -448,25 +448,14 @@ void MapDrawer::DrawAR(GLuint tex)
     for (size_t j=0; j<num_elems; j++)
     {
         cv::Mat posOrig;
-        cv::Mat posScale;
-        bool getPosOrig = false;
-        bool getPosScale = false;
         // Get points of each AR object
-        for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+        for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
         {
-            // Get position of AR points
-            if (vpMPs[i]->mnId == elems_AR[j]->originID){
-                posOrig = vpMPs[i]->GetWorldPos();
-                getPosOrig = true;
-                if (getPosScale)
-                    break;
+            // Get position of AR point
+            if (allvMPs[i]->mnId == elems_AR[j]->originID){
+                posOrig = allvMPs[i]->GetWorldPos();
+                break;
             }
-            if (vpMPs[i]->mnId == elems_AR[j]->scaleID){
-                posScale = vpMPs[i]->GetWorldPos();
-                getPosScale = true;
-                if (getPosOrig)
-                    break;
-            }        
         }
         // Draw AR object
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);

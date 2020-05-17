@@ -3,7 +3,7 @@ TODO:
 	-Mejorar panel menu Pangolin
 
 	-Depurar   --> EL CODIGO YA PODRIA VALER, UNA VEZ PROBADO QUE FUNCIONE
-	-Memoria
+	-Memoria   --> Entre otras cosas explicar formula transformar 3D a 2D con intrinsecos, extrinsecos ... (algunos/todos son parametros de la camara, obtenidos con opencv al calibrar)
 
 Opcional:
 

@@ -120,6 +120,7 @@ void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex)
     glPushMatrix();
 
     glTranslatef(x, y, z);
+
     glEnable(GL_TEXTURE_2D);    
     glBindTexture(GL_TEXTURE_2D, tex);
 
