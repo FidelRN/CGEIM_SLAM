@@ -4,8 +4,9 @@
 Inserción de anotaciones de realidad aumentada a frecuencia de video con ORB-SLAM2.
 Trabajo de la asignatura computación gráfica-entornos inmersivos-multimedia del máster de Ingeniería Informática de la Universidad de Zaragoza. Curso 2019-2020
 
-Demo:
 <a href="https://youtu.be/MGqoXD6pfA8" target="_blank"><img src="http://img.youtube.com/vi/MGqoXD6pfA8/0.jpg" 
+alt="ORB-SLAM2" width="240" height="180" border="10" /></a>
+<a href="https://youtu.be/H_0SbKq4mr8" target="_blank"><img src="http://img.youtube.com/vi/H_0SbKq4mr8/0.jpg" 
 alt="ORB-SLAM2" width="240" height="180" border="10" /></a>
 
 # ORB-SLAM2
