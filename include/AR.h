@@ -36,8 +36,6 @@ public:
 
     vector<vec3> vertices;
 	vector<vec3> uvs;
-
-    // TODO: Algo para guardar la estructura de AR (tipo obj)
     
     // origin, valid, scale, vert, vt
     // Cuando se inserte se usa origin y scale para ver distancia (luego origin no se puede borrar pero scale si)

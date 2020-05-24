@@ -958,10 +958,10 @@ int ORBmatcher::Fuse(KeyFrame *pKF, const vector<MapPoint *> &vpMapPoints, Map* 
                 {   
                     // Check if is AR point and not replace it
                     if (mpMap->PointIsInAR(pMP->mnId)){
-                        pMPinKF->Replace(pMP);
+                        //pMPinKF->Replace(pMP);
                     }
                     else if (mpMap->PointIsInAR(pMPinKF->mnId)){
-                        pMP->Replace(pMPinKF);
+                        //pMP->Replace(pMPinKF);
                     }
                     else {
                         // Not AR point

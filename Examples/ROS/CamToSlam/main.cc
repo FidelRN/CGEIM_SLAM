@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     }
 
     ros::NodeHandle n;
-    ros::Publisher pub = n.advertise<sensor_msgs::Image>("/camera/image_raw", 1000);
+    ros::Publisher pub = n.advertise<sensor_msgs::Image>("/camera/image_raw", 1);
 
     for(;;)
     {
