@@ -62,7 +62,7 @@ public:
     void clear();
 
 
-    void CreateAR(unsigned long int pID, bool isOrigin);
+    void CreateAR(unsigned long int pID, int type);
     void ClearLastAR();
     void ClearAR();
     vector<AR*> GetAR();

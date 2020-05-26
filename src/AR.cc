@@ -3,17 +3,25 @@
 namespace ORB_SLAM2
 {
 
-AR::AR(long unsigned int pID, bool isOrigin)
+AR::AR(long unsigned int pID, int type)
 {
-    if (isOrigin){
+    if (type == 0){
         this->originID = pID;
         this->originValid = true;
         this->scaleValid = false;
+        this->scale2Valid = false;
     }
-    else {
+    else if (type == 1){
         this->scaleID = pID;
         this->scaleValid = true;
         this->originValid = false;    
+        this->scale2Valid = false;
+    }
+    else{
+        this->scaleID2 = pID;
+        this->scale2Valid = true;
+        this->originValid = false; 
+        this->scaleValid = false;   
     }
     
     this->valid = false;
@@ -44,6 +52,20 @@ bool AR::SetScaleID(long unsigned int pID)
 
     this->scaleID = pID;
     this->scaleValid = true;
+    return true;
+}
+
+bool AR::SetScaleID2(long unsigned int pID)
+{
+    // No changes available if it is valid
+    if (this->valid)
+        return false;
+    // No change if it is the same point as origin
+    if (this->originValid && this->originID == pID)
+        return false;
+
+    this->scaleID2 = pID;
+    this->scale2Valid = true;
     return true;
 }
 
@@ -143,6 +165,16 @@ void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex)
     glDisable(GL_TEXTURE_2D);
 
     glPopMatrix();
+}
+
+void AR::Draw(GLfloat x, GLfloat y, GLfloat z, GLfloat x1, GLfloat y1, GLfloat z1)
+{
+    glBegin(GL_LINES);
+    glLineWidth(2.);
+    glVertex3f(x,y,z);
+    glVertex3f(x1,y1,z1);
+
+    glEnd();//end drawing of line loop
 }
 
 } //namespace ORB_SLAM

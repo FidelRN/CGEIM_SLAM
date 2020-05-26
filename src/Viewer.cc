@@ -104,6 +104,7 @@ void Viewer::Run()
     pangolin::Var<bool> menuShowPointsIDs("menu.Show Points IDs",false,true);
     pangolin::Var<string> menu_originID("menu.Origin-ID");
     pangolin::Var<string> menu_scaleID("menu.Scale-ID");
+    //pangolin::Var<string> menu_scaleID2("menu.Scale2-ID");
     pangolin::Var<bool> menu_insert_ar("menu.Insert AR",false,false);
     pangolin::Var<bool> menu_clear_last_ar("menu.Clear last AR",false,false);
     pangolin::Var<bool> menu_clear_ar("menu.Clear all AR",false,false);
@@ -144,7 +145,8 @@ void Viewer::Run()
     // AR points
     bool ARorig = false;
     bool ARscale = false;
-    long unsigned int origAR, scaleAR; 
+    bool ARscale2 = false;
+    long unsigned int origAR, scaleAR, scaleAR2; 
 
 
     // Load model (OBJ)
@@ -187,7 +189,7 @@ void Viewer::Run()
                     long unsigned int originID = stoul(menu_originID);
                     bool addPoint;
                     if (!ARscale)
-                        addPoint = mpMapDrawer->CreateAR(originID,true);
+                        addPoint = mpMapDrawer->CreateAR(originID,0);
                     else
                         addPoint = mpMapDrawer->SetOriginARPoint(originID);
 
@@ -212,7 +214,7 @@ void Viewer::Run()
                     long unsigned int scaleID = stoul(menu_scaleID);
                     bool addPoint;
                     if (!ARorig)
-                        addPoint = mpMapDrawer->CreateAR(scaleID,false);
+                        addPoint = mpMapDrawer->CreateAR(scaleID,1);
                     else
                         addPoint = mpMapDrawer->SetScaleARPoint(scaleID);
 
@@ -231,6 +233,31 @@ void Viewer::Run()
                     menu_scaleID = "";       
                 }
             }
+         /*   if (!ARscale2) {
+                // Point 3
+                if (is_number(menu_scaleID2)){
+                    long unsigned int scaleID = stoul(menu_scaleID2);
+                    bool addPoint;
+                    if (!ARorig)
+                        addPoint = mpMapDrawer->CreateAR(scaleID,2); //CHANGE for 0,1,2 not false
+                    else
+                        addPoint = mpMapDrawer->SetScale2ARPoint(scaleID);
+
+                    if (addPoint) {
+                        ARscale2 = true;
+                        scaleAR2 = scaleID;
+                        cout << "Added scale2 point: " << scaleID << endl;
+                    }
+                    else {
+                        // Point not exists
+                        menu_scaleID2 = "";  
+                    }
+                }
+                else {
+                    // Bad argument
+                    menu_scaleID2 = "";       
+                }
+            }*/
             if (ARorig){
                 // Check if value has changed
                 // Origin point

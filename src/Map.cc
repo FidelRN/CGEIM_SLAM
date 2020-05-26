@@ -130,9 +130,9 @@ void Map::clear()
     mvpKeyFrameOrigins.clear();
 }
 
-void Map::CreateAR(unsigned long int pID, bool isOrigin)
+void Map::CreateAR(unsigned long int pID, int type)
 {
-    AR* elem = new AR(pID, isOrigin);
+    AR* elem = new AR(pID, type);
     elems_AR.push_back(elem);
 }
 
@@ -160,8 +160,7 @@ vector<AR*> Map::GetAR()
 bool Map::PointIsInAR(long unsigned int pID)
 {
     for (unsigned int i=0; i<elems_AR.size(); i++){
-        // Only if is origin
-        if (pID == elems_AR[i]->originID) // || pID == elems_AR[i]->scaleID)
+        if (pID == elems_AR[i]->originID || pID == elems_AR[i]->scaleID) // || pID == elems_AR[i]->scaleID2)
             return true;
     }
     return false;

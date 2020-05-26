@@ -66,3 +66,39 @@ Con eso mas o menos ya se puede hacer la memoria y presentacion, y luego si hay 
 
 
 Se carga objeto de una carpeta y tambien una imagen PNG para la textura. Esto se realiza con el codigo de las practicas de la asignatura de otros bloques.
+
+
+
+
+
+
+
+
+
+
+
+Orientacion: tengo plano del mundo (inicializacion camara, suponer siempre es paralelo al suelo)
+Con 3 puntos obtengo otro plano?
+Rotar plano del mundo hasta ese otro plano
+
+TODO:
+
+Mostrar tal vez pequeño video con 2 lineas (o 1 con dos puntos) que muestre que se mueve ligeramente la AR, porque SLAM llega hasta ahi, esa es su limitacion
+
+Orientacion puedo calcular la normal (o eso creo) pero no se seguir. Habria que aplicar rotation pero ni idea (y no hay ganas)
+
+Tal vez video con bucle que muestre ar en una superficie y de lejos se vea que sigue ahi, y que al pasar por bucle se corrige (eso ya lo tengo, aunque estaria mejor que se viese en una pared en una posicion y al corregir se eleve a la posicion adecuada por ejemplo)
+
+Tal vez experimentos estaria muy bien, aunque lo mismo: ni idea, ni ganas de hacerlo
+
+video que muestre AR desde lejos, para que se vea que sale bien. He probado alejando sin mover la camara (solo me movia yo hacia atras con el movil pero apuntaba al mismo sitio) y funciona bien, se ve mas pequeños (desde lejos). Falta hacer el video
+
+HACER presentacion y entregar. Tambien videos.
+Tampoco hacer mas, dejarlo como opcional (copiar sistema, restaurar de git). Hacer presentacion y videos para conseguir el aprobado, y si hay tiempo algo mas
+
+
+
+TODO URGENTE:
+Revisar memoria
+
+Si esta todo bien el jueves o asi subir videos a moodle (en entrega trabajo), y enviar correo al profesor con la presentación (decir no hay tiempo para mas). Esperar a que de el visto bueno y subirlo a moodle

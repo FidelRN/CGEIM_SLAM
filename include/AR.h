@@ -18,21 +18,23 @@ class MapPoint;
 class AR
 {
 public:
-    AR(long unsigned int pID, bool isOrigin);
+    AR(long unsigned int pID, int type);
 
     bool SetOriginID(long unsigned int pID);
     bool SetScaleID(long unsigned int pID);
+	bool SetScaleID2(long unsigned int pID);
 
     bool SetValid(const std::vector<MapPoint*> allvMPs, vector<vec3> vert, vector<vec3> uv);
     float distance(const std::vector<MapPoint*> allvMPs);
     void scale3DModel(float scaleFactor);
 
     void Draw(GLfloat x, GLfloat y, GLfloat z, GLuint tex);
+    void Draw(GLfloat x, GLfloat y, GLfloat z, GLfloat x1, GLfloat y1, GLfloat z1);
 
-    long unsigned int originID, scaleID;
+    long unsigned int originID, scaleID, scaleID2;
 
     bool valid;
-    bool originValid, scaleValid;
+    bool originValid, scaleValid, scale2Valid;
 
     vector<vec3> vertices;
 	vector<vec3> uvs;

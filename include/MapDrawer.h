@@ -48,9 +48,10 @@ public:
     void GetCurrentOpenGLCameraMatrix(pangolin::OpenGlMatrix &M);
 
     bool PointExist(long unsigned int pID);
-    bool CreateAR(long unsigned int pID, bool isOrigin);
+    bool CreateAR(long unsigned int pID, int type);
     bool SetOriginARPoint(long unsigned int pID);
     bool SetScaleARPoint(long unsigned int pID);
+    bool SetScale2ARPoint(long unsigned int pID);
     bool InsertAR(std::vector<glm::vec3> vert, std::vector<glm::vec3> uv);
     void ClearLastAR();
     void ResetAR();

@@ -357,14 +357,14 @@ bool MapDrawer::PointExist(long unsigned int pID)
 
 //////////////// AR
 // Check if point exist and create AR object and add it to map
-bool MapDrawer::CreateAR(long unsigned int pID, bool isOrigin)
+bool MapDrawer::CreateAR(long unsigned int pID, int type)
 {
     bool existPoint = PointExist(pID);
     if(!existPoint)
         return false;
 
     // Point exist in map
-    if (isOrigin){
+    if (type == 0){
         // Check if the same point is already taken by other AR object
         vector<AR*> elems_AR = mpMap->GetAR();
         for (size_t i=0; i<elems_AR.size(); i++){
@@ -373,7 +373,7 @@ bool MapDrawer::CreateAR(long unsigned int pID, bool isOrigin)
         }
     }
     // Point is valid -> create AR object
-    mpMap->CreateAR(pID,isOrigin);
+    mpMap->CreateAR(pID,type);
     return true;
 }
 
@@ -412,6 +412,20 @@ bool MapDrawer::SetScaleARPoint(long unsigned int pID)
     return isSet;
 }
 
+bool MapDrawer::SetScale2ARPoint(long unsigned int pID)
+{
+    bool existPoint = PointExist(pID);
+    if(!existPoint)
+        return false;
+
+    // Get last AR object
+    vector<AR*> elems_AR = mpMap->GetAR();
+    AR* AR_elem = elems_AR[elems_AR.size()-1];
+
+    bool isSet = AR_elem->SetScaleID2(pID);
+    return isSet;
+}
+
 // Insert AR to map
 bool MapDrawer::InsertAR(std::vector<glm::vec3> vert, std::vector<glm::vec3> uv)
 {
@@ -444,22 +458,35 @@ void MapDrawer::DrawAR(GLuint tex)
     if (!lastValid)
         num_elems -= 1;
 
-
     for (size_t j=0; j<num_elems; j++)
     {
-        cv::Mat posOrig;
+        bool p1 = false;
+        bool p2 = false;
+        cv::Mat pos1, pos2;
+
         // Get points of each AR object
         for(size_t i=0, iend=allvMPs.size(); i<iend;i++)
         {
             // Get position of AR point
-            if (allvMPs[i]->mnId == elems_AR[j]->originID){
-                posOrig = allvMPs[i]->GetWorldPos();
-                break;
+            if (!p1 && allvMPs[i]->mnId == elems_AR[j]->originID){
+                pos1 = allvMPs[i]->GetWorldPos();
+                p1 = true;
             }
+            if (!p2 && allvMPs[i]->mnId == elems_AR[j]->scaleID){
+                pos2 = allvMPs[i]->GetWorldPos();
+                p2 = true;
+            }
+            if (p1 && p2)
+                break;
+
         }
         // Draw AR object
+        //glColor4f(1.0f, 0.0f, 1.0f, 1.0f);
+        //elems_AR[j]->Draw(pos1.at<float>(0), pos1.at<float>(1), pos1.at<float>(2), pos2.at<float>(0), pos2.at<float>(1), pos2.at<float>(2));
         glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-        elems_AR[j]->Draw(posOrig.at<float>(0), posOrig.at<float>(1), posOrig.at<float>(2), tex); 
+        elems_AR[j]->Draw(pos1.at<float>(0), pos1.at<float>(1), pos1.at<float>(2), tex); 
     }
+
+
 }
 } //namespace ORB_SLAM
